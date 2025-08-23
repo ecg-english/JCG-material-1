@@ -290,25 +290,179 @@ const DATA = [
         title: "3. Mealtime Reactions",
         phrases: [
           { 
-            jp: "すごく美味しいです！", 
-            en: "This is really delicious!", 
-            ro: "Sugoku oishii desu!",
-            context: "料理に対する率直な感想を伝える表現です。日本では「いただきます」「ごちそうさま」と共に、料理への感謝を表すことが大切です。",
-            example: "客：すごく美味しいです！\n店員：ありがとうございます。お気に入りいただけて嬉しいです。\n客：また来ます！"
+            jp: "ナイフとフォークはありますか？", 
+            en: "Do you have knives and forks?", 
+            ro: "Naifu to fōku wa arimasu ka?",
+            context: "洋食を食べる際に必要な食器を確認する表現です。日本では箸が主流ですが、洋食ではナイフとフォークも使用します。",
+            example: "客：ナイフとフォークはありますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
           },
           { 
-            jp: "思ったより量が多いですね。", 
-            en: "It's more than I expected.", 
-            ro: "Omotta yori ryō ga ōi desu ne.",
-            context: "量についての感想を伝える表現です。日本では「もったいない」という文化があるため、残す場合は事前に伝えるのがマナーです。",
-            example: "客：思ったより量が多いですね。\n店員：お持ち帰りも承っておりますが、いかがでしょうか？\n客：ありがとうございます。"
+            jp: "どのタレがおすすめですか？", 
+            en: "Which sauce do you recommend?", 
+            ro: "Dono tare ga osusume desu ka?",
+            context: "複数のソースがある場合におすすめを聞く表現です。",
+            example: "客：どのタレがおすすめですか？\n店員：当店の特製タレがおすすめです。\n客：それをお願いします。"
           },
           { 
-            jp: "すみません、少し冷めているようです。", 
-            en: "Excuse me, it seems a bit cold.", 
-            ro: "Sumimasen, sukoshi samete iru yō desu.",
-            context: "料理に問題がある場合の丁寧な伝え方です。感情的にならず、事実を伝えることで適切に対応してもらえます。",
-            example: "客：すみません、少し冷めているようです。\n店員：申し訳ございません。温め直してお持ちいたします。\n客：ありがとうございます。"
+            jp: "美味しいですね！ / うまい！", 
+            en: "This is delicious! / Yummy!", 
+            ro: "Oishii desu ne! / Umai!",
+            context: "料理に対する率直な感想を伝える表現です。「うまい」はカジュアルな表現です。",
+            example: "客：美味しいですね！\n店員：ありがとうございます。\n客：また来ます！"
+          },
+          { 
+            jp: "塩を取ってください", 
+            en: "Please pass the salt.", 
+            ro: "Shio o totte kudasai.",
+            context: "テーブルにある塩を取ってもらうよう依頼する表現です。",
+            example: "客：塩を取ってください。\n店員：はい、どうぞ。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "猫舌なんですよね", 
+            en: "I can't eat hot food.", 
+            ro: "Nekojita nan desu yo ne.",
+            context: "熱いものが苦手であることを伝える表現です。日本では「猫舌」という表現がよく使われます。",
+            example: "客：猫舌なんですよね。\n店員：かしこまりました。少し冷ましてからお出しします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "甘党ですか？（誤用）", 
+            en: "Do you like sweet things? (incorrect usage)", 
+            ro: "Amadō desu ka? (goyō)",
+            context: "甘いものが好きかどうかを聞く表現ですが、これは誤用です。正しくは「甘党なんですか？」です。",
+            example: "客：甘党ですか？\n店員：はい、甘いものが好きです。\n客：そうですね。"
+          },
+          { 
+            jp: "いただきます。", 
+            en: "Thank you for the meal.", 
+            ro: "Itadakimasu.",
+            context: "食事を始める際の挨拶です。日本では食事の前に必ず言う習慣があります。",
+            example: "客：いただきます。\n店員：どうぞ、お召し上がりください。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "思ったよりボリュームありますね。", 
+            en: "It's more filling than I expected.", 
+            ro: "Omotta yori boryūmu arimasu ne.",
+            context: "料理の量についての感想を伝える表現です。",
+            example: "客：思ったよりボリュームありますね。\n店員：はい、お腹いっぱいになっていただけると思います。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "この辛さ、ちょうどいいです。", 
+            en: "This spiciness is just right.", 
+            ro: "Kono karasa, chōdo ii desu.",
+            context: "辛さの加減が適切であることを伝える表現です。",
+            example: "客：この辛さ、ちょうどいいです。\n店員：ありがとうございます。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "思ったよりさっぱりしてますね。", 
+            en: "It's lighter than I expected.", 
+            ro: "Omotta yori sappari shite masu ne.",
+            context: "料理が予想より軽い味であることを伝える表現です。",
+            example: "客：思ったよりさっぱりしてますね。\n店員：はい、さっぱりとした味付けになっております。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "このソース、何が入ってますか？", 
+            en: "What's in this sauce?", 
+            ro: "Kono sōsu, nani ga haitte masu ka?",
+            context: "ソースの材料を確認する表現です。アレルギーがある場合に重要です。",
+            example: "客：このソース、何が入ってますか？\n店員：醤油、みりん、砂糖が入っております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "レモンをもう少しいただけますか？", 
+            en: "Could I have a bit more lemon?", 
+            ro: "Remon o mō sukoshi itadakemasu ka?",
+            context: "レモンを追加で依頼する表現です。",
+            example: "客：レモンをもう少しいただけますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "パン（またはライス）、おかわりできますか？", 
+            en: "Can I get a refill of bread (or rice)?", 
+            ro: "Pan (matawa raisu), okawari dekimasu ka?",
+            context: "パンやご飯のおかわりを依頼する表現です。",
+            example: "客：パン、おかわりできますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "すごく香ばしいですね。", 
+            en: "It's very aromatic.", 
+            ro: "Sugoku kōbashii desu ne.",
+            context: "料理の香りが良いことを伝える表現です。",
+            example: "客：すごく香ばしいですね。\n店員：ありがとうございます。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "皮がパリッとしてていい食感です。", 
+            en: "The skin is crispy and has a nice texture.", 
+            ro: "Kawa ga paritto shite te ii shokkan desu.",
+            context: "料理の食感についての感想を伝える表現です。",
+            example: "客：皮がパリッとしてていい食感です。\n店員：ありがとうございます。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "出汁がしっかりきいてますね。", 
+            en: "The broth has a rich flavor.", 
+            ro: "Dashi ga shikkari kiite masu ne.",
+            context: "出汁の味がしっかりと効いていることを伝える表現です。",
+            example: "客：出汁がしっかりきいてますね。\n店員：ありがとうございます。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "これ、どうやって食べるのが正解ですか？", 
+            en: "What's the correct way to eat this?", 
+            ro: "Kore, dō yatte taberu no ga seikai desu ka?",
+            context: "料理の正しい食べ方を確認する表現です。",
+            example: "客：これ、どうやって食べるのが正解ですか？\n店員：箸で一口ずつお召し上がりください。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ちょっとレアめですね。（肉料理など）", 
+            en: "It's a bit rare. (for meat dishes)", 
+            ro: "Chotto rea me desu ne. (nikuryōri nado)",
+            context: "肉料理の焼き加減についての感想を伝える表現です。",
+            example: "客：ちょっとレアめですね。\n店員：申し訳ございません。もう少し焼き直しましょうか？\n客：いえ、このままで大丈夫です。"
+          },
+          { 
+            jp: "後から辛さがきますね。", 
+            en: "The spiciness hits you later.", 
+            ro: "Ato kara karasa ga kimasu ne.",
+            context: "辛さが後から感じられることを伝える表現です。",
+            example: "客：後から辛さがきますね。\n店員：はい、じわじわと辛さが広がる味付けになっております。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "ビール、よく冷えてますね。", 
+            en: "The beer is nicely chilled.", 
+            ro: "Bīru, yoku hiete masu ne.",
+            context: "ビールの温度が適切であることを伝える表現です。",
+            example: "客：ビール、よく冷えてますね。\n店員：ありがとうございます。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "香りがいいですね。", 
+            en: "It smells good.", 
+            ro: "Kaori ga ii desu ne.",
+            context: "料理の香りが良いことを伝える表現です。",
+            example: "客：香りがいいですね。\n店員：ありがとうございます。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "この量、ちょうどいいです。", 
+            en: "This amount is just right.", 
+            ro: "Kono ryō, chōdo ii desu.",
+            context: "料理の量が適切であることを伝える表現です。",
+            example: "客：この量、ちょうどいいです。\n店員：ありがとうございます。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "このメニュー、季節限定なんですね。", 
+            en: "This menu item is seasonal, isn't it?", 
+            ro: "Kono menyū, kisetsu gentei nan desu ne.",
+            context: "季節限定メニューであることを確認する表現です。",
+            example: "客：このメニュー、季節限定なんですね。\n店員：はい、春限定の桜メニューです。\n客：とても美味しいです。"
+          },
+          { 
+            jp: "箸置きはありますか？", 
+            en: "Do you have chopstick rests?", 
+            ro: "Hashioki wa arimasu ka?",
+            context: "箸置きの有無を確認する表現です。",
+            example: "客：箸置きはありますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ごちそうさま、まだ温かいうちに食べ進めます。", 
+            en: "Thank you for the meal, I'll continue eating while it's still warm.", 
+            ro: "Gochisōsama, mada atatakai uchi ni tabe susume masu.",
+            context: "食事を終える際の挨拶です。日本では「ごちそうさま」が定番です。",
+            example: "客：ごちそうさま、まだ温かいうちに食べ進めます。\n店員：ありがとうございました。\n客：とても美味しかったです。"
           },
         ],
       },
