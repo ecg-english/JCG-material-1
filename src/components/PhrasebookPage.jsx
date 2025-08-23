@@ -1011,7 +1011,7 @@ function Toggle({ checked, onChange, label }) {
 }
 
 function Section({ title, phrases, learnedPhrases, updateLearnedPhrases }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [showEn, setShowEn] = useLocal(`showEn`, true);
   const [showRo, setShowRo] = useLocal(`showRo`, false);
   const [copyState, setCopyState] = useState(null); // {i:number, ok:boolean}
