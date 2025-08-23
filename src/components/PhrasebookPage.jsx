@@ -483,12 +483,12 @@ function Section({ title, phrases }) {
             const isLearned = learnedPhrases[phraseId];
             
             return (
-              <li key={i} className={`group rounded-xl border transition-all duration-200 p-3 ${
+              <li key={i} className={`group rounded-xl border transition-all duration-200 p-4 ${
                 isLearned 
                   ? 'border-green-200 bg-green-50/50 hover:border-green-300' 
                   : 'border-zinc-100 hover:border-indigo-200 hover:bg-indigo-50/50'
               }`}>
-                <div className="flex items-start justify-between gap-3">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
                   <div className="flex-1">
                     <div className="flex items-center gap-2">
                       <input
@@ -511,27 +511,33 @@ function Section({ title, phrases }) {
 
                     {/* 文化的コンテキストと使用例のボタン */}
                     {(p.context || p.example) && (
-                      <div className="flex gap-2 mt-2">
+                      <div className="flex flex-wrap gap-2 mt-3">
                         {p.context && (
                           <button
-                            className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-md hover:bg-blue-100 transition-colors"
+                            className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-slate-50 to-slate-100 text-slate-700 px-3 py-2 rounded-lg border border-slate-200 hover:from-slate-100 hover:to-slate-200 hover:border-slate-300 transition-all duration-200 shadow-sm"
                             onClick={() => {
                               const details = document.getElementById(`context-${phraseId}`);
                               details.classList.toggle('hidden');
                             }}
                           >
-                            📚 詳細
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            詳細
                           </button>
                         )}
                         {p.example && (
                           <button
-                            className="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded-md hover:bg-purple-100 transition-colors"
+                            className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-indigo-50 to-indigo-100 text-indigo-700 px-3 py-2 rounded-lg border border-indigo-200 hover:from-indigo-100 hover:to-indigo-200 hover:border-indigo-300 transition-all duration-200 shadow-sm"
                             onClick={() => {
                               const details = document.getElementById(`example-${phraseId}`);
                               details.classList.toggle('hidden');
                             }}
                           >
-                            💬 例文
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                            </svg>
+                            例文
                           </button>
                         )}
                       </div>
@@ -558,22 +564,38 @@ function Section({ title, phrases }) {
                     )}
                   </div>
                   
-                  <div className="flex items-center gap-2 shrink-0 opacity-0 group-hover:opacity-100 transition">
+                  <div className="flex flex-wrap items-center gap-2 shrink-0 opacity-100 transition-all duration-200 w-full sm:w-auto">
                     <button
-                      className="text-xs rounded-lg border px-2 py-1 hover:bg-white transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 px-3 py-2 rounded-lg border border-emerald-200 hover:from-emerald-100 hover:to-emerald-200 hover:border-emerald-300 transition-all duration-200 shadow-sm"
                       onClick={() => onCopy(p.jp, i)}
                       title="コピー"
-                    >コピー</button>
+                    >
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
+                        <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/>
+                      </svg>
+                      コピー
+                    </button>
                     <button
-                      className="text-xs rounded-lg border px-2 py-1 hover:bg-white transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-violet-50 to-violet-100 text-violet-700 px-3 py-2 rounded-lg border border-violet-200 hover:from-violet-100 hover:to-violet-200 hover:border-violet-300 transition-all duration-200 shadow-sm"
                       onClick={() => onChatGPT(p.jp)}
                       title="ChatGPTで質問"
-                    >🤖 ChatGPT</button>
+                    >
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"/>
+                      </svg>
+                      ChatGPT
+                    </button>
                     <button
-                      className="text-xs rounded-lg border px-2 py-1 hover:bg-white transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-rose-50 to-rose-100 text-rose-700 px-3 py-2 rounded-lg border border-rose-200 hover:from-rose-100 hover:to-rose-200 hover:border-rose-300 transition-all duration-200 shadow-sm"
                       onClick={() => speak(p.jp)}
                       title="音声再生"
-                    >再生</button>
+                    >
+                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.5 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.5l3.883-2.717a1 1 0 011.617.793zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd"/>
+                      </svg>
+                      再生
+                    </button>
                   </div>
                 </div>
               </li>
@@ -707,10 +729,12 @@ export default function PhrasebookPage() {
     <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-white text-zinc-900">
       {/* ヘッダー */}
       <header className="sticky top-0 z-30 backdrop-blur bg-white/70 border-b">
-        <div className="mx-auto max-w-6xl px-4 py-3 flex items-center gap-3">
-          <div className="text-2xl">🗂️</div>
-          <div className="font-semibold">実用日本語会話表現集</div>
-          <div className="ml-auto w-1/2 max-md:w-full">
+        <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col sm:flex-row items-center gap-3">
+          <div className="flex items-center gap-3 w-full sm:w-auto">
+            <div className="text-2xl">🗂️</div>
+            <div className="font-semibold text-sm sm:text-base">実用日本語会話表現集</div>
+          </div>
+          <div className="w-full sm:w-1/2 sm:ml-auto">
             <input
               type="search"
               value={query}
@@ -723,9 +747,9 @@ export default function PhrasebookPage() {
       </header>
 
       {/* コンテンツ */}
-      <main className="mx-auto max-w-6xl px-4 py-6 grid md:grid-cols-[220px,1fr] gap-6">
+      <main className="mx-auto max-w-6xl px-4 py-6 grid grid-cols-1 lg:grid-cols-[220px,1fr] gap-6">
         {/* サイドナビ */}
-        <nav className="md:sticky md:top-[72px] h-max space-y-4">
+        <nav className="lg:sticky lg:top-[72px] h-max space-y-4 order-2 lg:order-1">
           <div className="rounded-2xl border bg-white/70 p-3 shadow-sm">
             <div className="text-xs font-semibold text-zinc-500 mb-2">場面別</div>
             <ul className="space-y-1">
@@ -745,7 +769,7 @@ export default function PhrasebookPage() {
         </nav>
 
         {/* 本文 */}
-        <div className="space-y-10">
+        <div className="space-y-10 order-1 lg:order-2">
           {DATA.map((cat) => (
             <Category key={cat.id} cat={cat} query={query} />
           ))}
