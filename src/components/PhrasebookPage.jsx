@@ -436,6 +436,7 @@ function Section({ title, phrases }) {
   const [showRo, setShowRo] = useLocal(`showRo`, false);
   const [copyState, setCopyState] = useState(null); // {i:number, ok:boolean}
   const [learnedPhrases, setLearnedPhrases] = useLocal(`learnedPhrases`, {});
+  const [expandedActions, setExpandedActions] = useState({}); // アクションボタンの展開状態
 
   const onCopy = async (text, i) => {
     const ok = await safeCopyText(text);
@@ -455,6 +456,13 @@ function Section({ title, phrases }) {
 
   const toggleLearned = (phraseId) => {
     setLearnedPhrases(prev => ({
+      ...prev,
+      [phraseId]: !prev[phraseId]
+    }));
+  };
+
+  const toggleActions = (phraseId) => {
+    setExpandedActions(prev => ({
       ...prev,
       [phraseId]: !prev[phraseId]
     }));
@@ -488,115 +496,133 @@ function Section({ title, phrases }) {
                   ? 'border-green-200 bg-green-50/50 hover:border-green-300' 
                   : 'border-zinc-100 hover:border-indigo-200 hover:bg-indigo-50/50'
               }`}>
-                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <input
-                        type="checkbox"
-                        checked={isLearned}
-                        onChange={() => toggleLearned(phraseId)}
-                        className="w-4 h-4 text-green-600 rounded focus:ring-green-500"
-                      />
-                      <div className={`font-medium leading-relaxed ${isLearned ? 'text-green-800' : 'text-zinc-900'}`}>
-                        {i + 1}. {p.jp}
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2">
+                        <input
+                          type="checkbox"
+                          checked={isLearned}
+                          onChange={() => toggleLearned(phraseId)}
+                          className="w-4 h-4 text-green-600 rounded focus:ring-green-500"
+                        />
+                        <div className={`font-medium leading-relaxed ${isLearned ? 'text-green-800' : 'text-zinc-900'}`}>
+                          {i + 1}. {p.jp}
+                        </div>
                       </div>
-                    </div>
                     
-                    {showEn && p.en && (
-                      <div className="text-sm text-zinc-600 mt-0.5">{p.en}</div>
-                    )}
-                    {showRo && p.ro && (
-                      <div className="text-xs text-zinc-500 mt-0.5">{p.ro}</div>
-                    )}
+                      {showEn && p.en && (
+                        <div className="text-sm text-zinc-600 mt-0.5">{p.en}</div>
+                      )}
+                      {showRo && p.ro && (
+                        <div className="text-xs text-zinc-500 mt-0.5">{p.ro}</div>
+                      )}
 
-                    {/* 文化的コンテキストと使用例のボタン */}
-                    {(p.context || p.example) && (
-                      <div className="flex flex-wrap gap-2 mt-3">
-                        {p.context && (
-                          <button
-                            className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-slate-50 to-slate-100 text-slate-700 px-3 py-2 rounded-lg border border-slate-200 hover:from-slate-100 hover:to-slate-200 hover:border-slate-300 transition-all duration-200 shadow-sm"
-                            onClick={() => {
-                              const details = document.getElementById(`context-${phraseId}`);
-                              details.classList.toggle('hidden');
-                            }}
-                          >
-                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                            詳細
-                          </button>
-                        )}
-                        {p.example && (
-                          <button
-                            className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-indigo-50 to-indigo-100 text-indigo-700 px-3 py-2 rounded-lg border border-indigo-200 hover:from-indigo-100 hover:to-indigo-200 hover:border-indigo-300 transition-all duration-200 shadow-sm"
-                            onClick={() => {
-                              const details = document.getElementById(`example-${phraseId}`);
-                              details.classList.toggle('hidden');
-                            }}
-                          >
-                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
-                            </svg>
-                            例文
-                          </button>
-                        )}
-                      </div>
-                    )}
+                      {/* 文化的コンテキストと使用例のボタン */}
+                      {(p.context || p.example) && (
+                        <div className="flex flex-wrap gap-2 mt-3">
+                          {p.context && (
+                            <button
+                              className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-slate-50 to-slate-100 text-slate-700 px-3 py-2 rounded-lg border border-slate-200 hover:from-slate-100 hover:to-slate-200 hover:border-slate-300 transition-all duration-200 shadow-sm"
+                              onClick={() => {
+                                const details = document.getElementById(`context-${phraseId}`);
+                                details.classList.toggle('hidden');
+                              }}
+                            >
+                              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                              </svg>
+                              詳細
+                            </button>
+                          )}
+                          {p.example && (
+                            <button
+                              className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-indigo-50 to-indigo-100 text-indigo-700 px-3 py-2 rounded-lg border border-indigo-200 hover:from-indigo-100 hover:to-indigo-200 hover:border-indigo-300 transition-all duration-200 shadow-sm"
+                              onClick={() => {
+                                const details = document.getElementById(`example-${phraseId}`);
+                                details.classList.toggle('hidden');
+                              }}
+                            >
+                              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                              </svg>
+                              例文
+                            </button>
+                          )}
+                        </div>
+                      )}
 
-                    {/* 文化的コンテキスト */}
-                    {p.context && (
-                      <div id={`context-${phraseId}`} className="hidden mt-2 p-2 bg-blue-50 rounded-md">
-                        <div className="text-xs text-blue-800 whitespace-pre-line">{p.context}</div>
-                      </div>
-                    )}
+                      {/* 文化的コンテキスト */}
+                      {p.context && (
+                        <div id={`context-${phraseId}`} className="hidden mt-2 p-2 bg-blue-50 rounded-md">
+                          <div className="text-xs text-blue-800 whitespace-pre-line">{p.context}</div>
+                        </div>
+                      )}
 
-                    {/* 使用例 */}
-                    {p.example && (
-                      <div id={`example-${phraseId}`} className="hidden mt-2 p-2 bg-purple-50 rounded-md">
-                        <div className="text-xs text-purple-800 whitespace-pre-line font-mono">{p.example}</div>
-                      </div>
-                    )}
+                      {/* 使用例 */}
+                      {p.example && (
+                        <div id={`example-${phraseId}`} className="hidden mt-2 p-2 bg-purple-50 rounded-md">
+                          <div className="text-xs text-purple-800 whitespace-pre-line font-mono">{p.example}</div>
+                        </div>
+                      )}
 
-                    {copyState?.i === i && (
-                      <div className={`mt-1 text-xs ${copyState.ok ? "text-green-600" : "text-rose-600"}`}>
-                        {copyState.ok ? "コピーしました！" : "コピーがブロックされました。長押しで選択してコピーしてください。"}
-                      </div>
-                    )}
+                      {copyState?.i === i && (
+                        <div className={`mt-1 text-xs ${copyState.ok ? "text-green-600" : "text-rose-600"}`}>
+                          {copyState.ok ? "コピーしました！" : "コピーがブロックされました。長押しで選択してコピーしてください。"}
+                        </div>
+                      )}
+                    </div>
                   </div>
                   
-                  <div className="flex flex-wrap items-center gap-2 shrink-0 opacity-100 transition-all duration-200 w-full sm:w-auto">
+                  {/* アクショントグルボタン */}
+                  <div className="flex justify-end">
                     <button
-                      className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 px-3 py-2 rounded-lg border border-emerald-200 hover:from-emerald-100 hover:to-emerald-200 hover:border-emerald-300 transition-all duration-200 shadow-sm"
-                      onClick={() => onCopy(p.jp, i)}
-                      title="コピー"
+                      onClick={() => toggleActions(phraseId)}
+                      className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-zinc-50 to-zinc-100 text-zinc-600 px-3 py-2 rounded-lg border border-zinc-200 hover:from-zinc-100 hover:to-zinc-200 hover:border-zinc-300 transition-all duration-200 shadow-sm"
                     >
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
-                        <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/>
+                      <svg className={`w-3 h-3 transition-transform duration-200 ${expandedActions[phraseId] ? 'rotate-180' : ''}`} fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"/>
                       </svg>
-                      コピー
-                    </button>
-                    <button
-                      className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-violet-50 to-violet-100 text-violet-700 px-3 py-2 rounded-lg border border-violet-200 hover:from-violet-100 hover:to-violet-200 hover:border-violet-300 transition-all duration-200 shadow-sm"
-                      onClick={() => onChatGPT(p.jp)}
-                      title="ChatGPTで質問"
-                    >
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"/>
-                      </svg>
-                      ChatGPT
-                    </button>
-                    <button
-                      className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-rose-50 to-rose-100 text-rose-700 px-3 py-2 rounded-lg border border-rose-200 hover:from-rose-100 hover:to-rose-200 hover:border-rose-300 transition-all duration-200 shadow-sm"
-                      onClick={() => speak(p.jp)}
-                      title="音声再生"
-                    >
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.5 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.5l3.883-2.717a1 1 0 011.617.793zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd"/>
-                      </svg>
-                      再生
+                      アクション
                     </button>
                   </div>
+                  
+                  {/* アクションボタン */}
+                  {expandedActions[phraseId] && (
+                    <div className="flex flex-wrap items-center gap-2 transition-all duration-200">
+                      <button
+                        className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-emerald-50 to-emerald-100 text-emerald-700 px-3 py-2 rounded-lg border border-emerald-200 hover:from-emerald-100 hover:to-emerald-200 hover:border-emerald-300 transition-all duration-200 shadow-sm"
+                        onClick={() => onCopy(p.jp, i)}
+                        title="コピー"
+                      >
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"/>
+                          <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"/>
+                        </svg>
+                        コピー
+                      </button>
+                      <button
+                        className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-violet-50 to-violet-100 text-violet-700 px-3 py-2 rounded-lg border border-violet-200 hover:from-violet-100 hover:to-violet-200 hover:border-violet-300 transition-all duration-200 shadow-sm"
+                        onClick={() => onChatGPT(p.jp)}
+                        title="ChatGPTで質問"
+                      >
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"/>
+                        </svg>
+                        ChatGPT
+                      </button>
+                      <button
+                        className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-rose-50 to-rose-100 text-rose-700 px-3 py-2 rounded-lg border border-rose-200 hover:from-rose-100 hover:to-rose-200 hover:border-rose-300 transition-all duration-200 shadow-sm"
+                        onClick={() => speak(p.jp)}
+                        title="音声再生"
+                      >
+                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.5 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.5l3.883-2.717a1 1 0 011.617.793zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd"/>
+                        </svg>
+                        再生
+                      </button>
+                    </div>
+                  )}
                 </div>
               </li>
             );
