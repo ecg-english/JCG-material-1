@@ -123,6 +123,13 @@ const DATA = [
         title: "2. Ordering",
         phrases: [
           { 
+            jp: "おまかせでお願いします。", 
+            en: "I'll leave it to you.", 
+            ro: "Omakase de onegaishimasu.",
+            context: "店員やシェフに料理を任せる表現です。日本では「おまかせ」が高級な料理店でよく使われます。",
+            example: "客：おまかせでお願いします。\n店員：かしこまりました。季節の食材を使った料理をご用意いたします。\n客：ありがとうございます。"
+          },
+          { 
             jp: "おすすめは何ですか？", 
             en: "What do you recommend?", 
             ro: "Osusume wa nan desu ka?",
@@ -130,39 +137,151 @@ const DATA = [
             example: "客：おすすめは何ですか？\n店員：当店の名物、海鮮丼はいかがでしょうか？\n客：それにします。"
           },
           { 
-            jp: "これを一つお願いします。", 
-            en: "I'd like this one, please.", 
-            ro: "Kore o hitotsu onegaishimasu.",
-            context: "メニューを指さしながら注文する際の表現です。指さしは世界共通のコミュニケーション方法です。",
-            example: "客：これを一つお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+            jp: "先にドリンクだけお願いします。", 
+            en: "Just drinks first, please.", 
+            ro: "Saki ni dorinku dake onegaishimasu.",
+            context: "料理の前にドリンクだけ先に注文する表現です。メニューを決める時間が欲しい時に便利です。",
+            example: "客：先にドリンクだけお願いします。\n店員：かしこまりました。何になさいますか？\n客：ビールをお願いします。"
           },
           { 
-            jp: "辛さは控えめにできますか？", 
-            en: "Can you make it less spicy?", 
-            ro: "Karasa wa hikaeme ni dekimasu ka?",
-            context: "辛さの調整を依頼する表現です。日本の料理は比較的マイルドですが、辛い料理もあります。",
-            example: "客：辛さは控えめにできますか？\n店員：はい、辛さを調整いたします。\n客：ありがとうございます。"
+            jp: "料理はまとめてお願いします。", 
+            en: "Please bring all the dishes together.", 
+            ro: "Ryōri wa matomete onegaishimasu.",
+            context: "複数の料理を同時に出すよう依頼する表現です。家族やグループでの食事時に便利です。",
+            example: "客：料理はまとめてお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
           },
           { 
-            jp: "アレルギーがあるので〇〇抜きでお願いします。", 
-            en: "I'm allergic to ____. Please leave it out.", 
-            ro: "Arerugī ga aru no de ____ nuki de onegaishimasu.",
-            context: "アレルギーがある場合の重要な表現です。命に関わることもあるので、しっかりと伝えることが大切です。",
-            example: "客：アレルギーがあるので卵抜きでお願いします。\n店員：承知いたしました。卵は使用いたしません。\n客：ありがとうございます。"
+            jp: "二人前ください。", 
+            en: "Two portions, please.", 
+            ro: "Futari mae kudasai.",
+            context: "料理の分量を指定する表現です。日本では「前」が人数分を表す単位として使われます。",
+            example: "客：二人前ください。\n店員：かしこまりました。\n客：ありがとうございます。"
           },
           { 
-            jp: "取り皿をいただけますか？", 
-            en: "Could we have some extra small plates?", 
-            ro: "Torizara o itadakemasu ka?",
-            context: "料理を分け合う際に必要な小皿を依頼する表現です。日本の料理は分け合って食べることも多いです。",
-            example: "客：取り皿をいただけますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+            jp: "私も同じものをください。", 
+            en: "I'll have the same thing.", 
+            ro: "Watashi mo onaji mono o kudasai.",
+            context: "他の人が注文したものと同じものを注文する表現です。",
+            example: "客：私も同じものをください。\n店員：かしこまりました。\n客：ありがとうございます。"
           },
           { 
-            jp: "お水をもう一杯いただけますか？", 
-            en: "Could I get another glass of water?", 
-            ro: "Omizu o mō ippai itadakemasu ka?",
-            context: "追加の飲み物を依頼する表現です。日本では水は無料で提供されることが多いです。",
-            example: "客：お水をもう一杯いただけますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+            jp: "ご飯の大盛りは無料ですか？", 
+            en: "Is the large portion of rice free?", 
+            ro: "Gohan no ōmori wa muryō desu ka?",
+            context: "大盛りサービスの有無を確認する表現です。多くの店で大盛りは無料で提供されます。",
+            example: "客：ご飯の大盛りは無料ですか？\n店員：はい、大盛りは無料です。\n客：大盛りでお願いします。"
+          },
+          { 
+            jp: "ハーフ＆ハーフにできますか？", 
+            en: "Can you make it half and half?", 
+            ro: "Hāfu & hāfu ni dekimasu ka?",
+            context: "2つの料理を半分ずつ組み合わせるよう依頼する表現です。",
+            example: "客：ハーフ＆ハーフにできますか？\n店員：はい、可能です。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "辛さ控えめでお願いします。", 
+            en: "Please make it less spicy.", 
+            ro: "Karasa hikaeme de onegaishimasu.",
+            context: "辛さを調整するよう依頼する表現です。日本の料理は比較的マイルドですが、辛い料理もあります。",
+            example: "客：辛さ控えめでお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ソースは別添えでお願いします。", 
+            en: "Please serve the sauce separately.", 
+            ro: "Sōsu wa betsu soe de onegaishimasu.",
+            context: "ソースを料理とは別に出すよう依頼する表現です。好みに応じて量を調整できます。",
+            example: "客：ソースは別添えでお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ソース多めでお願いします。", 
+            en: "Please add extra sauce.", 
+            ro: "Sōsu ōme de onegaishimasu.",
+            context: "ソースを多めに入れるよう依頼する表現です。",
+            example: "客：ソース多めでお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "チーズをトッピングでお願いします。", 
+            en: "Please add cheese as a topping.", 
+            ro: "Chīzu o topping de onegaishimasu.",
+            context: "チーズを追加でトッピングするよう依頼する表現です。",
+            example: "客：チーズをトッピングでお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "砂糖抜きでお願いします。", 
+            en: "Please leave out the sugar.", 
+            ro: "Satō nuki de onegaishimasu.",
+            context: "砂糖を入れないよう依頼する表現です。健康やダイエットの理由で使われます。",
+            example: "客：砂糖抜きでお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "温かいままでお願いします。", 
+            en: "Please keep it hot.", 
+            ro: "Atatakai mama de onegaishimasu.",
+            context: "料理を温かい状態で出すよう依頼する表現です。",
+            example: "客：温かいままでお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "期間限定メニューはありますか？", 
+            en: "Do you have any limited-time menu items?", 
+            ro: "Kikan gentei menyū wa arimasu ka?",
+            context: "期間限定メニューの有無を確認する表現です。季節限定や特別なメニューを楽しめます。",
+            example: "客：期間限定メニューはありますか？\n店員：はい、春限定の桜メニューがございます。\n客：それにします。"
+          },
+          { 
+            jp: "すみません、メニューを見せていただけますか？", 
+            en: "Excuse me, could you show me the menu?", 
+            ro: "Sumimasen, menyū o misete itadakemasu ka?",
+            context: "メニューを見せてもらうよう依頼する表現です。",
+            example: "客：すみません、メニューを見せていただけますか？\n店員：はい、どうぞ。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "とりあえず生（ビール）お願いします。", 
+            en: "I'll start with a draft beer, please.", 
+            ro: "Toriaezu nama (bīru) onegaishimasu.",
+            context: "最初に生ビールを注文する表現です。日本では「とりあえず生」が定番の注文です。",
+            example: "客：とりあえず生（ビール）お願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "お水（お冷や）を人数分いただけますか？", 
+            en: "Could we have water for everyone?", 
+            ro: "Omizu (ohiya) o ninzū bun itadakemasu ka?",
+            context: "人数分の水を注文する表現です。日本では「お冷や」が水を表す丁寧な表現です。",
+            example: "客：お水（お冷や）を人数分いただけますか？\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "お水（お冷や）、おかわりいただけますか？", 
+            en: "Could I get a refill of water?", 
+            ro: "Omizu (ohiya), okawari itadakemasu ka?",
+            context: "水のおかわりを依頼する表現です。",
+            example: "客：お水（お冷や）、おかわりいただけますか？\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "子ども用メニューはありますか？", 
+            en: "Do you have a children's menu?", 
+            ro: "Kodomo yō menyū wa arimasu ka?",
+            context: "子ども用メニューの有無を確認する表現です。",
+            example: "客：子ども用メニューはありますか？\n店員：はい、ございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "急ぎでお願いします。", 
+            en: "Please hurry.", 
+            ro: "Isogi de onegaishimasu.",
+            context: "料理を急いで出すよう依頼する表現です。時間がない時に使います。",
+            example: "客：急ぎでお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "取り分け用に小皿をお願いできますか？", 
+            en: "Could we have small plates for sharing?", 
+            ro: "Toriwake yō ni kozara o onegai dekimasu ka?",
+            context: "料理を分け合うための小皿を依頼する表現です。",
+            example: "客：取り分け用に小皿をお願いできますか？\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "飲み放題でお願いします。", 
+            en: "All-you-can-drink, please.", 
+            ro: "Nomihōdai de onegaishimasu.",
+            context: "飲み放題プランを選択する表現です。日本では「飲み放題」が人気のサービスです。",
+            example: "客：飲み放題でお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
           },
         ],
       },
