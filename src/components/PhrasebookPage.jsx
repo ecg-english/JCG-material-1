@@ -1336,15 +1336,15 @@ export default function PhrasebookPage() {
           {/* Categories */}
           <div className="rounded-2xl border bg-white/70 p-4 shadow-sm">
             <div className="text-sm font-semibold text-zinc-700 mb-3">Categories</div>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 gap-2">
               {DATA.map((c) => (
                 <a 
                   key={c.id} 
                   href={`#${c.id}`} 
-                  className="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-indigo-50 transition-colors"
+                  className="flex items-center gap-3 rounded-lg px-3 py-2.5 hover:bg-indigo-50 transition-colors"
                 >
-                  <span className="text-lg">{c.emoji}</span>
-                  <span className="text-sm font-medium">{c.title}</span>
+                  <span className="text-lg flex-shrink-0">{c.emoji}</span>
+                  <span className="text-sm font-medium truncate">{c.title}</span>
                 </a>
               ))}
             </div>
@@ -1368,10 +1368,7 @@ export default function PhrasebookPage() {
             />
           ))}
 
-          {/* フッターメモ */}
-          <div className="text-xs text-zinc-500 pt-6">
-            ※ Demo version. Expressions will be expanded gradually, and features like audio accuracy, cultural notes, and favorite saving will be added. If copying is blocked in your environment, please select text by long-press/drag and copy with Ctrl/⌘+C.
-          </div>
+
         </div>
       </main>
     </div>
