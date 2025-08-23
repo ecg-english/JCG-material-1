@@ -471,25 +471,172 @@ const DATA = [
         title: "4. Problems & Requests",
         phrases: [
           { 
-            jp: "注文がまだ来ていないようです。", 
-            en: "Our order hasn't arrived yet.", 
-            ro: "Chūmon ga mada kite inai yō desu.",
-            context: "注文が遅い場合の丁寧な伝え方です。感情的にならず、事実を伝えることで適切に対応してもらえます。",
-            example: "客：注文がまだ来ていないようです。\n店員：申し訳ございません。確認いたします。\n客：ありがとうございます。"
+            jp: "すみません、注文した◯◯がまだ来ていないようです。", 
+            en: "Excuse me, the ____ I ordered hasn't arrived yet.", 
+            ro: "Sumimasen, chūmon shita ____ ga mada kite inai yō desu.",
+            context: "注文した料理が遅い場合の丁寧な伝え方です。感情的にならず、事実を伝えることで適切に対応してもらえます。",
+            example: "客：すみません、注文したパスタがまだ来ていないようです。\n店員：申し訳ございません。確認いたします。\n客：ありがとうございます。"
           },
           { 
-            jp: "別の料理に変えてもいいですか？", 
-            en: "May I change my order?", 
-            ro: "Betsu no ryōri ni kaete mo ii desu ka?",
-            context: "注文変更を依頼する際の表現です。調理が始まっている場合は変更できないこともあります。",
-            example: "客：別の料理に変えてもいいですか？\n店員：申し訳ございませんが、調理が始まっております。\n客：分かりました。"
+            jp: "こちら、注文と違うようです。（◯◯ではなく◯◯が来ました）", 
+            en: "This seems different from what I ordered. (I got ____ instead of ____)", 
+            ro: "Kochira, chūmon to chigau yō desu. (____ dewa naku ____ ga kimashita)",
+            context: "注文と異なる料理が来た場合の丁寧な伝え方です。",
+            example: "客：こちら、注文と違うようです。パスタではなくラーメンが来ました。\n店員：申し訳ございません。すぐに取り替えいたします。\n客：ありがとうございます。"
           },
           { 
-            jp: "ナイフをもう一本いただけますか？", 
-            en: "Could I have another knife?", 
-            ro: "Naifu o mō ippon itadakemasu ka?",
-            context: "追加の食器を依頼する際の表現です。日本では箸が主流ですが、洋食ではナイフやフォークも使用します。",
-            example: "客：ナイフをもう一本いただけますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+            jp: "すみません、ひとつ変更しても大丈夫ですか？", 
+            en: "Excuse me, is it okay to change one item?", 
+            ro: "Sumimasen, hitotsu henkō shite mo daijōbu desu ka?",
+            context: "注文を変更したい場合の丁寧な依頼表現です。",
+            example: "客：すみません、ひとつ変更しても大丈夫ですか？\n店員：はい、承知いたしました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "料理、少し遅らせて出していただけますか？", 
+            en: "Could you serve the dishes a bit later?", 
+            ro: "Ryōri, sukoshi okurasete dashite itadakemasu ka?",
+            context: "料理の出し方を調整してもらうよう依頼する表現です。",
+            example: "客：料理、少し遅らせて出していただけますか？\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ぬるいようなので、温め直していただけますか？", 
+            en: "It seems lukewarm, could you heat it up again?", 
+            ro: "Nurui yō na no de, atatame naoshite itadakemasu ka?",
+            context: "料理がぬるい場合に温め直してもらうよう依頼する表現です。",
+            example: "客：ぬるいようなので、温め直していただけますか？\n店員：申し訳ございません。すぐに温め直いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "フォーク（スプーン）をもう一本いただけますか？", 
+            en: "Could I have another fork (spoon)?", 
+            ro: "Fōku (supūn) o mō ippon itadakemasu ka?",
+            context: "追加の食器を依頼する表現です。",
+            example: "客：フォークをもう一本いただけますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "箸を落としてしまいました。新しいものをいただけますか？", 
+            en: "I dropped my chopsticks. Could I have a new pair?", 
+            ro: "Hashi o otoshite shimaimashita. Atarashii mono o itadakemasu ka?",
+            context: "箸を落としてしまった場合に新しいものを依頼する表現です。",
+            example: "客：箸を落としてしまいました。新しいものをいただけますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ナプキン（おしぼり）をもう一ついただけますか？", 
+            en: "Could I have another napkin (wet towel)?", 
+            ro: "Napukin (oshibori) o mō hitotsu itadakemasu ka?",
+            context: "ナプキンやおしぼりを追加で依頼する表現です。",
+            example: "客：ナプキンをもう一ついただけますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ストローをいただけますか？", 
+            en: "Could I have a straw?", 
+            ro: "Sutorō o itadakemasu ka?",
+            context: "ストローを依頼する表現です。",
+            example: "客：ストローをいただけますか？\n店員：はい、お持ちいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "氷を少なめ（または抜き）にできますか？", 
+            en: "Could you make it with less ice (or no ice)?", 
+            ro: "Kōri o sukuname (matawa nuki) ni dekimasu ka?",
+            context: "氷の量を調整してもらうよう依頼する表現です。",
+            example: "客：氷を少なめにできますか？\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "アレルギーがあるので、ナッツ抜きにできますか？", 
+            en: "I have an allergy, could you leave out the nuts?", 
+            ro: "Arerugī ga aru no de, nattsu nuki ni dekimasu ka?",
+            context: "アレルギーがある場合の重要な表現です。命に関わることもあるので、しっかりと伝えることが大切です。",
+            example: "客：アレルギーがあるので、ナッツ抜きにできますか？\n店員：承知いたしました。ナッツは使用いたしません。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "できれば香菜（パクチー）抜きでお願いします。", 
+            en: "If possible, please leave out the cilantro (coriander).", 
+            ro: "Dekireba kōsai (pakuchī) nuki de onegaishimasu.",
+            context: "香菜が苦手な場合に抜いてもらうよう依頼する表現です。",
+            example: "客：できれば香菜抜きでお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "量を少なめにしていただけますか？", 
+            en: "Could you make it a smaller portion?", 
+            ro: "Ryō o sukuname ni shite itadakemasu ka?",
+            context: "料理の量を少なくしてもらうよう依頼する表現です。",
+            example: "客：量を少なめにしていただけますか？\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "もう少し火を通していただけますか？（焼き加減）", 
+            en: "Could you cook it a bit more? (doneness)", 
+            ro: "Mō sukoshi hi o tōshite itadakemasu ka? (yakigagen)",
+            context: "料理の焼き加減を調整してもらうよう依頼する表現です。",
+            example: "客：もう少し火を通していただけますか？\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "グラスにヒビがあるようです。交換していただけますか？", 
+            en: "There seems to be a crack in the glass. Could you replace it?", 
+            ro: "Gurasu ni hibi ga aru yō desu. Kōkan shite itadakemasu ka?",
+            context: "グラスにヒビがある場合に交換してもらうよう依頼する表現です。",
+            example: "客：グラスにヒビがあるようです。交換していただけますか？\n店員：申し訳ございません。すぐに取り替えいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "すみません、髪の毛が入っているようです。取り替えていただけますか？", 
+            en: "Excuse me, there seems to be a hair in it. Could you replace it?", 
+            ro: "Sumimasen, kaminoke ga haitte iru yō desu. Torikaete itadakemasu ka?",
+            context: "料理に髪の毛が入っている場合に取り替えてもらうよう依頼する表現です。",
+            example: "客：すみません、髪の毛が入っているようです。取り替えていただけますか？\n店員：申し訳ございません。すぐに取り替えいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "テーブルを拭いていただけますか？", 
+            en: "Could you wipe the table?", 
+            ro: "Tēburu o fuite itadakemasu ka?",
+            context: "テーブルを拭いてもらうよう依頼する表現です。",
+            example: "客：テーブルを拭いていただけますか？\n店員：はい、すぐに拭かせていただきます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "もう少し静かな席に移れますか？", 
+            en: "Could we move to a quieter table?", 
+            ro: "Mō sukoshi shizuka na seki ni utsuremasu ka?",
+            context: "静かな席に移動したい場合の依頼表現です。",
+            example: "客：もう少し静かな席に移れますか？\n店員：はい、奥の席にご案内いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "子ども用の椅子はありますか？", 
+            en: "Do you have children's chairs?", 
+            ro: "Kodomo yō no isu wa arimasu ka?",
+            context: "子ども用の椅子の有無を確認する表現です。",
+            example: "客：子ども用の椅子はありますか？\n店員：はい、ございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ベビーカーを置ける場所はありますか？", 
+            en: "Is there a place to put the stroller?", 
+            ro: "Bebīkā o okeru basho wa arimasu ka?",
+            context: "ベビーカーを置く場所の有無を確認する表現です。",
+            example: "客：ベビーカーを置ける場所はありますか？\n店員：はい、入口付近に置いていただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "充電しても大丈夫でしょうか？（コンセントは使えますか？）", 
+            en: "Is it okay to charge? (Can I use the outlet?)", 
+            ro: "Jūden shite mo daijōbu deshō ka? (Konsento wa tsukaemasu ka?)",
+            context: "充電してもよいか確認する表現です。",
+            example: "客：充電しても大丈夫でしょうか？\n店員：はい、お気軽にどうぞ。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "お水は常温でお願いできますか？", 
+            en: "Could I have water at room temperature?", 
+            ro: "Omizu wa jōon de onegai dekimasu ka?",
+            context: "水を常温で出してもらうよう依頼する表現です。",
+            example: "客：お水は常温でお願いできますか？\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "シェアするので、取り分け用にスプーン／フォークを追加でお願いします。", 
+            en: "We're sharing, so could we have extra spoons/forks for serving?", 
+            ro: "Shea suru no de, toriwake yō ni supūn/fōku o tsuika de onegaishimasu.",
+            context: "料理を分け合うための食器を追加で依頼する表現です。",
+            example: "客：シェアするので、取り分け用にスプーンを追加でお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "先ほどの注文、まだでしたら一点キャンセルできますか？", 
+            en: "If it's not too late, could I cancel one item from my previous order?", 
+            ro: "Saki hodo no chūmon, mada deshitara itten kyanseru dekimasu ka?",
+            context: "先ほどの注文をキャンセルしたい場合の依頼表現です。",
+            example: "客：先ほどの注文、まだでしたら一点キャンセルできますか？\n店員：はい、承知いたしました。\n客：ありがとうございます。"
           },
         ],
       },
