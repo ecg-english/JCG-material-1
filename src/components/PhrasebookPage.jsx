@@ -315,7 +315,7 @@ const DATA = [
             en: "Please pass the salt.", 
             ro: "Shio o totte kudasai.",
             context: "テーブルにある塩を取ってもらうよう依頼する表現です。",
-            example: "客：塩を取ってください。\n店員：はい、どうぞ。\n客：ありがとうございます。"
+            example: "あなた：塩を取ってください。\n友人：はい、どうぞ。\nあなた：ありがとうございます。"
           },
           { 
             jp: "猫舌なんですよね", 
@@ -327,9 +327,9 @@ const DATA = [
           { 
             jp: "甘党ですか？（誤用）", 
             en: "Do you like sweet things? (incorrect usage)", 
-            ro: "Amadō desu ka? (goyō)",
-            context: "甘いものが好きかどうかを聞く表現ですが、これは誤用です。正しくは「甘党なんですか？」です。",
-            example: "客：甘党ですか？\n店員：はい、甘いものが好きです。\n客：そうですね。"
+            ro: "Amatō desu ka?",
+            context: "本来、お酒（辛いもの）を好む人である「辛党（からとう）」の対義語として、お酒よりも甘い菓子類を好む人を指す言葉です。現代では甘いものが好きな人を指して使われることが一般的です。",
+            example: "友人：甘党ですか？\nあなた：はい、甘いものが好きです。"
           },
           { 
             jp: "いただきます。", 
@@ -645,32 +645,158 @@ const DATA = [
         title: "5. Paying the Bill",
         phrases: [
           { 
-            jp: "お会計をお願いします。", 
+            jp: "お会計お願いします。", 
             en: "Check, please.", 
-            ro: "Okaikei o onegaishimasu.",
+            ro: "Okaikei onegaishimasu.",
             context: "日本では手を上げて店員を呼ぶのは失礼とされています。この表現で静かに声をかけるのがマナーです。",
-            example: "客：お会計をお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+            example: "客：お会計お願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
           },
           { 
-            jp: "別々に支払えますか？", 
-            en: "Can we pay separately?", 
-            ro: "Betsubetsu ni shiharaemasu ka?",
-            context: "複数人での食事時に使用する表現です。日本では割り勘が一般的ですが、事前に確認するのがマナーです。",
-            example: "客：別々に支払えますか？\n店員：はい、別々にお支払いいただけます。\n客：ありがとうございます。"
+            jp: "こちらでお支払いですか？（テーブル会計ですか？）", 
+            en: "Will you pay here? (Table payment?)", 
+            ro: "Kochira de oshiharai desu ka? (Tēburu kaikei desu ka?)",
+            context: "店員が客に支払い方法を確認する表現です。テーブル会計かレジ会計かを確認します。",
+            example: "店員：こちらでお支払いですか？\n客：はい、お願いします。\n店員：かしこまりました。"
           },
           { 
-            jp: "カードは使えますか？", 
-            en: "Do you accept cards?", 
-            ro: "Kādo wa tsukaemasu ka?",
-            context: "支払い方法を確認する表現です。日本では現金が主流ですが、最近はカード決済も普及しています。",
-            example: "客：カードは使えますか？\n店員：はい、クレジットカードをお使いいただけます。\n客：ありがとうございます。"
+            jp: "まとめてお願いします。", 
+            en: "All together, please.", 
+            ro: "Matomete onegaishimasu.",
+            context: "複数人での食事時に一人が全員分を支払う場合の表現です。",
+            example: "あなた：まとめてお願いします。\n友人：ありがとう！\nあなた：どういたしまして。"
           },
           { 
-            jp: "レシートをください。", 
-            en: "Please give me the receipt.", 
-            ro: "Reshīto o kudasai.",
-            context: "領収書を依頼する表現です。経費精算や記録のために必要です。",
-            example: "客：レシートをください。\n店員：はい、お渡しいたします。\n客：ありがとうございます。"
+            jp: "別々でお願いします。", 
+            en: "Separately, please.", 
+            ro: "Betsubetsu de onegaishimasu.",
+            context: "複数人での食事時に各自が支払う場合の表現です。日本では割り勘が一般的です。",
+            example: "あなた：別々でお願いします。\n友人：はい、そうしましょう。\nあなた：ありがとうございます。"
+          },
+          { 
+            jp: "現金で払います。", 
+            en: "I'll pay in cash.", 
+            ro: "Genkin de haraimasu.",
+            context: "現金で支払うことを伝える表現です。",
+            example: "客：現金で払います。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "カード使えますか？", 
+            en: "Can I use a card?", 
+            ro: "Kādo tsukaemasu ka?",
+            context: "カード決済の可否を確認する表現です。日本では現金が主流ですが、最近はカード決済も普及しています。",
+            example: "客：カード使えますか？\n店員：はい、クレジットカードをお使いいただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "タッチ決済は使えますか？", 
+            en: "Can I use touch payment?", 
+            ro: "Tatchi kessai wa tsukaemasu ka?",
+            context: "タッチ決済の可否を確認する表現です。",
+            example: "客：タッチ決済は使えますか？\n店員：はい、Apple PayやGoogle Payがご利用いただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "交通系IC（Suicaなど）は使えますか？", 
+            en: "Can I use transportation IC cards (like Suica)?", 
+            ro: "Kōtsūkei IC (Suica nado) wa tsukaemasu ka?",
+            context: "交通系ICカードでの決済可否を確認する表現です。",
+            example: "客：交通系IC（Suicaなど）は使えますか？\n店員：はい、SuicaやPASMOがご利用いただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "PayPayは使えますか？", 
+            en: "Can I use PayPay?", 
+            ro: "PayPay wa tsukaemasu ka?",
+            context: "PayPayでの決済可否を確認する表現です。",
+            example: "客：PayPayは使えますか？\n店員：はい、PayPayがご利用いただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "レシートください。", 
+            en: "Receipt, please.", 
+            ro: "Reshīto kudasai.",
+            context: "レシートを依頼する表現です。経費精算や記録のために必要です。",
+            example: "客：レシートください。\n店員：はい、お渡しいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "領収書をお願いします。宛名は◯◯で。", 
+            en: "A receipt, please. Make it out to ____.", 
+            ro: "Ryōshūsho o onegaishimasu. Ate na wa ____ de.",
+            context: "領収書を依頼する際に宛名を指定する表現です。",
+            example: "客：領収書をお願いします。宛名は田中で。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "但し書きは「飲食代」でお願いします。", 
+            en: "Please write 'Food and beverage expenses' in the description.", 
+            ro: "Tadashigaki wa 'inshokudai' de onegaishimasu.",
+            context: "領収書の但し書きを指定する表現です。経費精算の際に重要です。",
+            example: "客：但し書きは「飲食代」でお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "クーポン使えますか？", 
+            en: "Can I use a coupon?", 
+            ro: "Kūpon tsukaemasu ka?",
+            context: "クーポンの使用可否を確認する表現です。",
+            example: "客：クーポン使えますか？\n店員：はい、ご利用いただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ポイント付けてもらえますか？", 
+            en: "Can I earn points?", 
+            ro: "Pointo tsukete moraemasu ka?",
+            context: "ポイントカードの使用可否を確認する表現です。",
+            example: "客：ポイント付けてもらえますか？\n店員：はい、ポイントカードをお持ちでしたらお付けいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "これは税込みですか？税別ですか？", 
+            en: "Is this including tax or excluding tax?", 
+            ro: "Kore wa zeikomi desu ka? Zeibetsu desu ka?",
+            context: "税込み価格か税別価格かを確認する表現です。",
+            example: "客：これは税込みですか？税別ですか？\n店員：税込み価格となっております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "サービス料は含まれていますか？", 
+            en: "Is the service charge included?", 
+            ro: "Sābisu ryō wa fukumarete imasu ka?",
+            context: "サービス料の有無を確認する表現です。",
+            example: "客：サービス料は含まれていますか？\n店員：はい、サービス料は含まれております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "現金とカードで分けても大丈夫ですか？", 
+            en: "Is it okay to split between cash and card?", 
+            ro: "Genkin to kādo de wakete mo daijōbu desu ka?",
+            context: "現金とカードで分けて支払うことを確認する表現です。",
+            example: "客：現金とカードで分けても大丈夫ですか？\n店員：はい、可能です。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "◯◯円からお願いします。（現金）", 
+            en: "From ____ yen, please. (cash)", 
+            ro: "____ en kara onegaishimasu. (genkin)",
+            context: "現金で支払う際に、お釣りを計算しやすくするための表現です。",
+            example: "客：1000円からお願いします。\n店員：かしこまりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "お釣りは要りません。", 
+            en: "Keep the change.", 
+            ro: "Otsuri wa irimasen.",
+            context: "お釣りをチップとして渡す表現です。日本ではチップの習慣はありませんが、この表現で伝わります。",
+            example: "客：お釣りは要りません。\n店員：ありがとうございます。\n客：どういたしまして。"
+          },
+          { 
+            jp: "領収書、電子でもらえますか？", 
+            en: "Can I get an electronic receipt?", 
+            ro: "Ryōshūsho, denshi de moraemasu ka?",
+            context: "電子領収書の可否を確認する表現です。",
+            example: "客：領収書、電子でもらえますか？\n店員：はい、メールでお送りいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "サインはこちらでいいですか？", 
+            en: "Should I sign here?", 
+            ro: "Sain wa kochira de ii desu ka?",
+            context: "カード決済時のサイン位置を確認する表現です。",
+            example: "客：サインはこちらでいいですか？\n店員：はい、その通りです。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "QRコードはどちらで読み取ればいいですか？", 
+            en: "Where should I scan the QR code?", 
+            ro: "QR kōdo wa dochira de yomitoreba ii desu ka?",
+            context: "QRコード決済時の読み取り位置を確認する表現です。",
+            example: "客：QRコードはどちらで読み取ればいいですか？\n店員：こちらの端末でお読み取りください。\n客：ありがとうございます。"
           },
         ],
       },
