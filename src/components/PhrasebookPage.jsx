@@ -829,11 +829,162 @@ const DATA = [
     sections: [
       {
         id: "entering",
-        title: "1. Entering/Browsing",
+        title: "1. Entering & Browsing（入店・見て回る）",
         phrases: [
-          { jp: "見ているだけです。", en: "I'm just looking, thanks.", ro: "Miteiru dake desu." },
-          { jp: "これ、試着できますか？", en: "Can I try this on?", ro: "Kore, shichaku dekimasu ka?" },
-          { jp: "別の色はありますか？", en: "Do you have another color?", ro: "Betsu no iro wa arimasu ka?" },
+          { 
+            jp: "こんにちは。ちょっと見るだけです。", 
+            en: "Hello. I'm just looking around.", 
+            ro: "Konnichiwa. Chotto miru dake desu.",
+            context: "店員に声をかけられた際の丁寧な返答です。日本では店員が積極的に声をかけることが多いです。",
+            example: "店員：いらっしゃいませ。何かお探しでしょうか？\n客：こんにちは。ちょっと見るだけです。\n店員：かしこまりました。ごゆっくりどうぞ。"
+          },
+          { 
+            jp: "ぐるっと見させてください。", 
+            en: "Let me look around.", 
+            ro: "Gurutto misasete kudasai.",
+            context: "店内を一通り見て回りたいことを伝える表現です。",
+            example: "店員：いらっしゃいませ。何かお探しでしょうか？\n客：ぐるっと見させてください。\n店員：かしこまりました。ごゆっくりどうぞ。"
+          },
+          { 
+            jp: "店内、撮影は大丈夫ですか？", 
+            en: "Is it okay to take photos in the store?", 
+            ro: "Tennai, satsuei wa daijōbu desu ka?",
+            context: "店内での撮影許可を確認する表現です。多くの店では撮影が禁止されています。",
+            example: "客：店内、撮影は大丈夫ですか？\n店員：申し訳ございませんが、撮影はご遠慮いただいております。\n客：分かりました。"
+          },
+          { 
+            jp: "カゴ（カート）ありますか？", 
+            en: "Do you have baskets (carts)?", 
+            ro: "Kago (kāto) arimasu ka?",
+            context: "買い物かごやカートの有無を確認する表現です。",
+            example: "客：カゴ（カート）ありますか？\n店員：はい、入口付近にございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "セール品はどちらにありますか？", 
+            en: "Where are the sale items?", 
+            ro: "Sēru hin wa dochira ni arimasu ka?",
+            context: "セール商品の場所を確認する表現です。",
+            example: "客：セール品はどちらにありますか？\n店員：奥のコーナーにセール品を置いております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "新作はどこに並んでいますか？", 
+            en: "Where are the new arrivals?", 
+            ro: "Shinsaku wa doko ni narande imasu ka?",
+            context: "新商品の陳列場所を確認する表現です。",
+            example: "客：新作はどこに並んでいますか？\n店員：入口付近に新作コーナーがございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "サイズ別に並んでいますか？", 
+            en: "Are they arranged by size?", 
+            ro: "Saizu betsu ni narande imasu ka?",
+            context: "商品がサイズ別に整理されているかを確認する表現です。",
+            example: "客：サイズ別に並んでいますか？\n店員：はい、S、M、Lの順番で並んでおります。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "何かあれば声かけますね。（店員への返答）", 
+            en: "I'll call you if I need anything. (response to staff)", 
+            ro: "Nanika areba koegakemasu ne.",
+            context: "店員の声かけに対する丁寧な返答です。",
+            example: "店員：何かございましたら、お声がけください。\n客：何かあれば声かけますね。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "値札が見当たらないのですが…", 
+            en: "I can't find the price tag...", 
+            ro: "Nefuda ga miataranai no desu ga…",
+            context: "商品の値段が分からない場合の表現です。",
+            example: "客：値札が見当たらないのですが…\n店員：申し訳ございません。お調べいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "背の高いサイズ（トールサイズ）は扱っていますか？", 
+            en: "Do you carry tall sizes?", 
+            ro: "Se no takai saizu (tōru saizu) wa atsukatte imasu ka?",
+            context: "背の高い人向けのサイズの有無を確認する表現です。",
+            example: "客：背の高いサイズ（トールサイズ）は扱っていますか？\n店員：はい、トールサイズもございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "在庫は奥にもありますか？", 
+            en: "Do you have more stock in the back?", 
+            ro: "Zaiko wa oku ni mo arimasu ka?",
+            context: "店頭にない商品が倉庫にあるかを確認する表現です。",
+            example: "客：在庫は奥にもありますか？\n店員：はい、確認いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "取り置きできますか？", 
+            en: "Can you hold this for me?", 
+            ro: "Torioki dekimasu ka?",
+            context: "商品を一時的に確保してもらうよう依頼する表現です。",
+            example: "客：取り置きできますか？\n店員：はい、今日中でしたら取り置きいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "取り寄せできますか？", 
+            en: "Can you order this for me?", 
+            ro: "Toriyose dekimasu ka?",
+            context: "在庫のない商品を取り寄せてもらうよう依頼する表現です。",
+            example: "客：取り寄せできますか？\n店員：はい、取り寄せいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "再入荷の予定はありますか？", 
+            en: "Do you know when you'll get more in stock?", 
+            ro: "Sainyūka no yotei wa arimasu ka?",
+            context: "品切れ商品の再入荷予定を確認する表現です。",
+            example: "客：再入荷の予定はありますか？\n店員：来週の水曜日に入荷予定です。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "試着室はどこにありますか？", 
+            en: "Where is the fitting room?", 
+            ro: "Shichakushitsu wa doko ni arimasu ka?",
+            context: "試着室の場所を確認する表現です。",
+            example: "客：試着室はどこにありますか？\n店員：奥の右側にございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "試着は何点まで大丈夫ですか？", 
+            en: "How many items can I try on?", 
+            ro: "Shichaku wa nanten made daijōbu desu ka?",
+            context: "一度に試着できる商品の数を確認する表現です。",
+            example: "客：試着は何点まで大丈夫ですか？\n店員：一度に5点までお試しいただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "メジャー（採寸用）ありますか？", 
+            en: "Do you have a measuring tape?", 
+            ro: "Mejā (saizun yō) arimasu ka?",
+            context: "採寸用のメジャーの有無を確認する表現です。",
+            example: "客：メジャー（採寸用）ありますか？\n店員：はい、試着室にございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "テスターはありますか？（化粧品など）", 
+            en: "Do you have testers? (for cosmetics, etc.)", 
+            ro: "Tesutā wa arimasu ka?",
+            context: "化粧品などのテスターの有無を確認する表現です。",
+            example: "客：テスターはありますか？\n店員：はい、こちらのテスターをお使いいただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "展示品、触ってもいいですか？", 
+            en: "Can I touch the display items?", 
+            ro: "Tenjihin, sawatte mo ii desu ka?",
+            context: "展示品に触っても良いかを確認する表現です。",
+            example: "客：展示品、触ってもいいですか？\n店員：はい、お触りいただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "使い方、軽く教えてもらえますか？", 
+            en: "Could you briefly show me how to use this?", 
+            ro: "Tsukaikata, karuku oshiete moraemasu ka?",
+            context: "商品の使い方を簡単に教えてもらうよう依頼する表現です。",
+            example: "客：使い方、軽く教えてもらえますか？\n店員：はい、簡単にご説明いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "店内は現金のみですか？（支払い方法の確認）", 
+            en: "Is it cash only in the store? (payment method confirmation)", 
+            ro: "Tennai wa genkin nomi desu ka?",
+            context: "支払い方法を確認する表現です。",
+            example: "客：店内は現金のみですか？\n店員：いいえ、カードもご利用いただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "営業時間は何時までですか？", 
+            en: "What time do you close?", 
+            ro: "Eigyō jikan wa nanji made desu ka?",
+            context: "店の営業時間を確認する表現です。",
+            example: "客：営業時間は何時までですか？\n店員：20時まで営業しております。\n客：ありがとうございます。"
+          },
         ],
       },
       {
