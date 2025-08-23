@@ -1284,54 +1284,7 @@ function ProgressBar({ learnedPhrases, totalPhrases }) {
   );
 }
 
-// ======= 開発者向け：簡易テスト（ユーザー操作でのみ実行） =======
-function DevTests() {
-  const [result, setResult] = useState(null); // {name, pass}
 
-  const runTests = async () => {
-    const results = [];
-
-    // Test 1: Clipboard API available or secure check path (may still be blocked by policy)
-    try {
-      const ok = await safeCopyText("TEST");
-      results.push({ name: "safeCopyText basic call", pass: typeof ok === "boolean" });
-    } catch (e) {
-      results.push({ name: "safeCopyText basic call", pass: false });
-    }
-
-    // Test 2: Fallback path simulation by forcing failure
-    const original = navigator.clipboard && navigator.clipboard.writeText;
-    try {
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText = async () => { throw new Error("forced"); };
-      }
-      const ok2 = await safeCopyText("TEST-FALLBACK");
-      results.push({ name: "fallback works (forced)", pass: typeof ok2 === "boolean" });
-    } catch (e) {
-      results.push({ name: "fallback works (forced)", pass: false });
-    } finally {
-      if (navigator.clipboard && original) navigator.clipboard.writeText = original;
-    }
-
-    setResult(results);
-  };
-
-  return (
-    <div className="rounded-xl border bg-white/60 p-3 text-xs text-zinc-600">
-      <div className="font-semibold mb-2">開発者 • クリップボードテスト</div>
-      <button className="border rounded px-2 py-1 text-xs" onClick={runTests}>テスト実行</button>
-      {result && (
-        <ul className="mt-2 list-disc list-inside">
-          {result.map((r, i) => (
-            <li key={i} className={r.pass ? "text-green-600" : "text-rose-600"}>
-              {r.pass ? "成功" : "失敗"} – {r.name}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
 
 // ======= メイン =======
 export default function PhrasebookPage() {
@@ -1377,29 +1330,34 @@ export default function PhrasebookPage() {
       </header>
 
       {/* コンテンツ */}
-      <main className="mx-auto max-w-6xl px-4 py-6 grid grid-cols-1 lg:grid-cols-[220px,1fr] gap-6">
-        {/* サイドナビ */}
-        <nav className="lg:sticky lg:top-[72px] h-max space-y-4 order-2 lg:order-1">
-          <div className="rounded-2xl border bg-white/70 p-3 shadow-sm">
-            <div className="text-xs font-semibold text-zinc-500 mb-2">Categories</div>
-            <ul className="space-y-1">
+      <main className="mx-auto max-w-6xl px-4 py-6 space-y-6">
+        {/* 上部セクション（Categories & Learning Progress） */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Categories */}
+          <div className="rounded-2xl border bg-white/70 p-4 shadow-sm">
+            <div className="text-sm font-semibold text-zinc-700 mb-3">Categories</div>
+            <div className="grid grid-cols-2 gap-2">
               {DATA.map((c) => (
-                <li key={c.id}>
-                  <a href={`#${c.id}`} className="flex items-center gap-2 rounded-lg px-2 py-1.5 hover:bg-indigo-50">
-                    <span className="text-lg">{c.emoji}</span>
-                    <span className="text-sm">{c.title}</span>
-                  </a>
-                </li>
+                <a 
+                  key={c.id} 
+                  href={`#${c.id}`} 
+                  className="flex items-center gap-2 rounded-lg px-3 py-2 hover:bg-indigo-50 transition-colors"
+                >
+                  <span className="text-lg">{c.emoji}</span>
+                  <span className="text-sm font-medium">{c.title}</span>
+                </a>
               ))}
-            </ul>
+            </div>
           </div>
           
           {/* 学習進捗 */}
-          <ProgressBar learnedPhrases={learnedCount} totalPhrases={totalPhrases} />
-        </nav>
+          <div className="rounded-2xl border bg-white/70 p-4 shadow-sm">
+            <ProgressBar learnedPhrases={learnedCount} totalPhrases={totalPhrases} />
+          </div>
+        </div>
 
         {/* 本文 */}
-        <div className="space-y-10 order-1 lg:order-2">
+        <div className="space-y-10">
           {DATA.map((cat) => (
             <Category 
               key={cat.id} 
@@ -1409,9 +1367,6 @@ export default function PhrasebookPage() {
               updateLearnedPhrases={updateLearnedPhrases}
             />
           ))}
-
-          {/* Dev tests */}
-          <DevTests />
 
           {/* フッターメモ */}
           <div className="text-xs text-zinc-500 pt-6">
