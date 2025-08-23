@@ -520,35 +520,61 @@ function Section({ title, phrases }) {
 
                       {/* 文化的コンテキストと使用例のボタン */}
                       {(p.context || p.example) && (
-                        <div className="flex flex-wrap gap-2 mt-3">
-                          {p.context && (
-                            <button
-                              className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-slate-50 to-slate-100 text-slate-700 px-3 py-2 rounded-lg border border-slate-200 hover:from-slate-100 hover:to-slate-200 hover:border-slate-300 transition-all duration-200 shadow-sm"
-                              onClick={() => {
-                                const details = document.getElementById(`context-${phraseId}`);
-                                details.classList.toggle('hidden');
-                              }}
-                            >
-                              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                              </svg>
-                              詳細
-                            </button>
-                          )}
-                          {p.example && (
-                            <button
-                              className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-indigo-50 to-indigo-100 text-indigo-700 px-3 py-2 rounded-lg border border-indigo-200 hover:from-indigo-100 hover:to-indigo-200 hover:border-indigo-300 transition-all duration-200 shadow-sm"
-                              onClick={() => {
-                                const details = document.getElementById(`example-${phraseId}`);
-                                details.classList.toggle('hidden');
-                              }}
-                            >
-                              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
-                              </svg>
-                              例文
-                            </button>
-                          )}
+                        <div className="flex flex-wrap items-center justify-between gap-2 mt-3">
+                          <div className="flex flex-wrap gap-2">
+                            {p.context && (
+                              <button
+                                className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-slate-50 to-slate-100 text-slate-700 px-3 py-2 rounded-lg border border-slate-200 hover:from-slate-100 hover:to-slate-200 hover:border-slate-300 transition-all duration-200 shadow-sm"
+                                onClick={() => {
+                                  const details = document.getElementById(`context-${phraseId}`);
+                                  details.classList.toggle('hidden');
+                                }}
+                              >
+                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                詳細
+                              </button>
+                            )}
+                            {p.example && (
+                              <button
+                                className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-indigo-50 to-indigo-100 text-indigo-700 px-3 py-2 rounded-lg border border-indigo-200 hover:from-indigo-100 hover:to-indigo-200 hover:border-indigo-300 transition-all duration-200 shadow-sm"
+                                onClick={() => {
+                                  const details = document.getElementById(`example-${phraseId}`);
+                                  details.classList.toggle('hidden');
+                                }}
+                              >
+                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clipRule="evenodd"/>
+                                </svg>
+                                例文
+                              </button>
+                            )}
+                          </div>
+                          
+                          {/* アクショントグルボタン */}
+                          <button
+                            onClick={() => toggleActions(phraseId)}
+                            className="inline-flex items-center justify-center w-8 h-8 text-xs bg-gradient-to-r from-zinc-50 to-zinc-100 text-zinc-600 rounded-lg border border-zinc-200 hover:from-zinc-100 hover:to-zinc-200 hover:border-zinc-300 transition-all duration-200 shadow-sm"
+                          >
+                            <svg className={`w-3 h-3 transition-transform duration-200 ${expandedActions[phraseId] ? 'rotate-180' : ''}`} fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"/>
+                            </svg>
+                          </button>
+                        </div>
+                      )}
+
+                      {/* 文化的コンテキストと使用例のボタンがない場合のアクショントグルボタン */}
+                      {!(p.context || p.example) && (
+                        <div className="flex justify-end mt-3">
+                          <button
+                            onClick={() => toggleActions(phraseId)}
+                            className="inline-flex items-center justify-center w-8 h-8 text-xs bg-gradient-to-r from-zinc-50 to-zinc-100 text-zinc-600 rounded-lg border border-zinc-200 hover:from-zinc-100 hover:to-zinc-200 hover:border-zinc-300 transition-all duration-200 shadow-sm"
+                          >
+                            <svg className={`w-3 h-3 transition-transform duration-200 ${expandedActions[phraseId] ? 'rotate-180' : ''}`} fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"/>
+                            </svg>
+                          </button>
                         </div>
                       )}
 
@@ -572,19 +598,6 @@ function Section({ title, phrases }) {
                         </div>
                       )}
                     </div>
-                  </div>
-                  
-                  {/* アクショントグルボタン */}
-                  <div className="flex justify-end">
-                    <button
-                      onClick={() => toggleActions(phraseId)}
-                      className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-zinc-50 to-zinc-100 text-zinc-600 px-3 py-2 rounded-lg border border-zinc-200 hover:from-zinc-100 hover:to-zinc-200 hover:border-zinc-300 transition-all duration-200 shadow-sm"
-                    >
-                      <svg className={`w-3 h-3 transition-transform duration-200 ${expandedActions[phraseId] ? 'rotate-180' : ''}`} fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"/>
-                      </svg>
-                      アクション
-                    </button>
                   </div>
                   
                   {/* アクションボタン */}
