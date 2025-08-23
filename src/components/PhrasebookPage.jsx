@@ -447,6 +447,12 @@ function Section({ title, phrases }) {
     }
   };
 
+  const onChatGPT = (text) => {
+    const chatGPTUrl = "https://chatgpt.com/g/g-68a950f74a088191bafa2dd0a552ab4f-earthian";
+    // 新しいタブでChatGPTを開く
+    window.open(chatGPTUrl, '_blank');
+  };
+
   const toggleLearned = (phraseId) => {
     setLearnedPhrases(prev => ({
       ...prev,
@@ -558,6 +564,11 @@ function Section({ title, phrases }) {
                       onClick={() => onCopy(p.jp, i)}
                       title="コピー"
                     >コピー</button>
+                    <button
+                      className="text-xs rounded-lg border px-2 py-1 hover:bg-white transition-colors"
+                      onClick={() => onChatGPT(p.jp)}
+                      title="ChatGPTで質問"
+                    >🤖 ChatGPT</button>
                     <button
                       className="text-xs rounded-lg border px-2 py-1 hover:bg-white transition-colors"
                       onClick={() => speak(p.jp)}
