@@ -5,11 +5,11 @@ const DATA = [
   {
     id: "restaurant",
     emoji: "🍽️",
-    title: "レストラン会話",
+    title: "Restaurant Conversation",
     sections: [
       {
         id: "before-ordering",
-        title: "1. 注文前",
+        title: "1. Before Ordering",
         phrases: [
           { 
             jp: "今日は混んでますか？", 
@@ -106,7 +106,7 @@ const DATA = [
       },
       {
         id: "ordering",
-        title: "2. 注文",
+        title: "2. Ordering",
         phrases: [
           { 
             jp: "おすすめは何ですか？", 
@@ -154,7 +154,7 @@ const DATA = [
       },
       {
         id: "reactions",
-        title: "3. 食事中の反応",
+        title: "3. Mealtime Reactions",
         phrases: [
           { 
             jp: "すごく美味しいです！", 
@@ -181,7 +181,7 @@ const DATA = [
       },
       {
         id: "problems",
-        title: "4. 問題・リクエスト",
+        title: "4. Problems & Requests",
         phrases: [
           { 
             jp: "注文がまだ来ていないようです。", 
@@ -208,7 +208,7 @@ const DATA = [
       },
       {
         id: "paying",
-        title: "5. お会計",
+        title: "5. Paying the Bill",
         phrases: [
           { 
             jp: "お会計をお願いします。", 
@@ -240,16 +240,36 @@ const DATA = [
           },
         ],
       },
+      {
+        id: "additional",
+        title: "6. Additional Expressions",
+        phrases: [
+          { 
+            jp: "おいしいです！", 
+            en: "It's delicious!", 
+            ro: "Oishii desu!",
+            context: "料理に対する基本的な感想を伝える表現です。",
+            example: "客：おいしいです！\n店員：ありがとうございます。"
+          },
+          { 
+            jp: "ありがとうございました。", 
+            en: "Thank you very much.", 
+            ro: "Arigatō gozaimashita.",
+            context: "食事を終えて店を出る際の感謝の表現です。",
+            example: "客：ありがとうございました。\n店員：ありがとうございました。またお越しください。"
+          },
+        ],
+      },
     ],
   },
   {
     id: "shopping",
     emoji: "🛍️",
-    title: "ショッピング・購入",
+    title: "Shopping/Purchase",
     sections: [
       {
         id: "entering",
-        title: "1. 入店・見て回る",
+        title: "1. Entering/Browsing",
         phrases: [
           { jp: "見ているだけです。", en: "I'm just looking, thanks.", ro: "Miteiru dake desu." },
           { jp: "これ、試着できますか？", en: "Can I try this on?", ro: "Kore, shichaku dekimasu ka?" },
@@ -258,7 +278,7 @@ const DATA = [
       },
       {
         id: "price",
-        title: "2. 価格・割引・ポイント",
+        title: "2. Price/Discount/Points",
         phrases: [
           { jp: "これ、いくらですか？", en: "How much is this?", ro: "Kore, ikura desu ka?" },
           { jp: "セールはいつまでですか？", en: "Until when is the sale?", ro: "Sēru wa itsu made desu ka?" },
@@ -267,7 +287,7 @@ const DATA = [
       },
       {
         id: "checkout",
-        title: "3. レジ・支払い",
+        title: "3. Checkout",
         phrases: [
           { jp: "袋はいりません。", en: "I don't need a bag.", ro: "Fukuro wa irimasen." },
           { jp: "領収書をお願いします。", en: "A receipt, please.", ro: "Ryōshūsho o onegaishimasu." },
@@ -279,11 +299,11 @@ const DATA = [
   {
     id: "transportation",
     emoji: "🚇",
-    title: "交通・移動",
+    title: "Transportation/Movement",
     sections: [
       {
         id: "train",
-        title: "1. 電車・地下鉄",
+        title: "1. Train/Subway",
         phrases: [
           { jp: "〇〇駅までいくらですか？", en: "How much is it to ____ station?", ro: "____ eki made ikura desu ka?" },
           { jp: "この電車は〇〇行きですか？", en: "Does this train go to ____?", ro: "Kono densha wa ____ yuki desu ka?" },
@@ -293,7 +313,7 @@ const DATA = [
       },
       {
         id: "bus",
-        title: "2. バス",
+        title: "2. Bus",
         phrases: [
           { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
           { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
@@ -302,7 +322,7 @@ const DATA = [
       },
       {
         id: "taxi",
-        title: "3. タクシー",
+        title: "3. Taxi",
         phrases: [
           { jp: "〇〇までお願いします。", en: "To ____, please.", ro: "____ made onegaishimasu." },
           { jp: "料金はいくらくらいですか？", en: "About how much will it cost?", ro: "Ryōkin wa ikura kurai desu ka?" },
@@ -314,11 +334,11 @@ const DATA = [
   {
     id: "daily-life",
     emoji: "🏠",
-    title: "日常生活",
+    title: "Daily Life",
     sections: [
       {
         id: "greetings",
-        title: "1. 挨拶・自己紹介",
+        title: "1. Greetings/Introductions",
         phrases: [
           { jp: "はじめまして、〇〇です。", en: "Nice to meet you, I'm ____.", ro: "Hajimemashite, ____ desu." },
           { jp: "よろしくお願いします。", en: "Please treat me well.", ro: "Yoroshiku onegaishimasu." },
@@ -330,7 +350,7 @@ const DATA = [
       },
       {
         id: "weather",
-        title: "2. 天気・気候",
+        title: "2. Weather/Climate",
         phrases: [
           { jp: "今日はいい天気ですね。", en: "It's nice weather today.", ro: "Kyō wa ii tenki desu ne." },
           { jp: "明日は雨が降るそうです。", en: "I heard it will rain tomorrow.", ro: "Ashita wa ame ga furu sō desu." },
@@ -340,7 +360,7 @@ const DATA = [
       },
       {
         id: "hobbies",
-        title: "3. 趣味・興味",
+        title: "3. Hobbies/Interests",
         phrases: [
           { jp: "趣味は何ですか？", en: "What are your hobbies?", ro: "Shumi wa nan desu ka?" },
           { jp: "〇〇が好きです。", en: "I like ____.", ro: "____ ga suki desu." },
@@ -477,8 +497,8 @@ function Section({ title, phrases, learnedPhrases, updateLearnedPhrases }) {
       </button>
 
       <div className="mt-3 flex flex-wrap gap-4">
-        <Toggle checked={!!showEn} onChange={() => setShowEn(!showEn)} label="英語" />
-        <Toggle checked={!!showRo} onChange={() => setShowRo(!showRo)} label="ローマ字" />
+        <Toggle checked={!!showEn} onChange={() => setShowEn(!showEn)} label="English" />
+        <Toggle checked={!!showRo} onChange={() => setShowRo(!showRo)} label="Roman" />
       </div>
 
       {open && (
@@ -614,7 +634,7 @@ function Section({ title, phrases, learnedPhrases, updateLearnedPhrases }) {
                       <button
                         className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-violet-50 to-violet-100 text-violet-700 px-3 py-2 rounded-lg border border-violet-200 hover:from-violet-100 hover:to-violet-200 hover:border-violet-300 transition-all duration-200 shadow-sm"
                         onClick={() => onChatGPT(p.jp)}
-                        title="ChatGPTで質問"
+                        title="Ask ChatGPT"
                       >
                         <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"/>
@@ -624,7 +644,7 @@ function Section({ title, phrases, learnedPhrases, updateLearnedPhrases }) {
                       <button
                         className="inline-flex items-center gap-1.5 text-xs bg-gradient-to-r from-rose-50 to-rose-100 text-rose-700 px-3 py-2 rounded-lg border border-rose-200 hover:from-rose-100 hover:to-rose-200 hover:border-rose-300 transition-all duration-200 shadow-sm"
                         onClick={() => speak(p.jp)}
-                        title="音声再生"
+                        title="Play Audio"
                       >
                         <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.617.793L4.5 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.5l3.883-2.717a1 1 0 011.617.793zM12.293 7.293a1 1 0 011.414 0L15 8.586l1.293-1.293a1 1 0 111.414 1.414L16.414 10l1.293 1.293a1 1 0 01-1.414 1.414L15 11.414l-1.293 1.293a1 1 0 01-1.414-1.414L13.586 10l-1.293-1.293a1 1 0 010-1.414z" clipRule="evenodd"/>
@@ -688,7 +708,7 @@ function ProgressBar({ learnedPhrases, totalPhrases }) {
   return (
     <div className="rounded-xl border bg-white/60 p-3">
       <div className="flex items-center justify-between mb-2">
-        <div className="text-sm font-semibold text-zinc-700">学習進捗</div>
+        <div className="text-sm font-semibold text-zinc-700">Learning Progress</div>
         <div className="text-xs text-zinc-500">{learnedPhrases}/{totalPhrases}</div>
       </div>
       <div className="w-full bg-zinc-200 rounded-full h-2">
@@ -782,14 +802,14 @@ export default function PhrasebookPage() {
         <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col sm:flex-row items-center gap-3">
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <div className="text-2xl">🗂️</div>
-            <div className="font-semibold text-sm sm:text-base">実用日本語会話表現集</div>
+            <div className="font-semibold text-sm sm:text-base">Practical Japanese Conversation Expressions</div>
           </div>
           <div className="w-full sm:w-1/2 sm:ml-auto">
             <input
               type="search"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="日本語・英語・ローマ字で検索…"
+              placeholder="Search in Japanese, English, Romaji..."
               className="w-full rounded-xl border px-3 py-2 outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
             />
           </div>
@@ -801,7 +821,7 @@ export default function PhrasebookPage() {
         {/* サイドナビ */}
         <nav className="lg:sticky lg:top-[72px] h-max space-y-4 order-2 lg:order-1">
           <div className="rounded-2xl border bg-white/70 p-3 shadow-sm">
-            <div className="text-xs font-semibold text-zinc-500 mb-2">場面別</div>
+            <div className="text-xs font-semibold text-zinc-500 mb-2">Categories</div>
             <ul className="space-y-1">
               {DATA.map((c) => (
                 <li key={c.id}>
@@ -835,7 +855,7 @@ export default function PhrasebookPage() {
 
           {/* フッターメモ */}
           <div className="text-xs text-zinc-500 pt-6">
-            ※ デモ版です。表現は順次拡充し、音声の精度・文化メモ・お気に入り保存などを追加可能です。コピーがブロックされる環境では、テキストを長押し/ドラッグで選択し、Ctrl/⌘+Cでコピーしてください。
+            ※ Demo version. Expressions will be expanded gradually, and features like audio accuracy, cultural notes, and favorite saving will be added. If copying is blocked in your environment, please select text by long-press/drag and copy with Ctrl/⌘+C.
           </div>
         </div>
       </main>
