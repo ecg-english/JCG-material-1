@@ -430,12 +430,11 @@ function Toggle({ checked, onChange, label }) {
   );
 }
 
-function Section({ title, phrases }) {
+function Section({ title, phrases, learnedPhrases, updateLearnedPhrases }) {
   const [open, setOpen] = useState(true);
   const [showEn, setShowEn] = useLocal(`showEn`, true);
   const [showRo, setShowRo] = useLocal(`showRo`, false);
   const [copyState, setCopyState] = useState(null); // {i:number, ok:boolean}
-  const [learnedPhrases, setLearnedPhrases] = useLocal(`learnedPhrases`, {});
   const [expandedActions, setExpandedActions] = useState({}); // アクションボタンの展開状態
 
   const onCopy = async (text, i) => {
@@ -455,10 +454,8 @@ function Section({ title, phrases }) {
   };
 
   const toggleLearned = (phraseId) => {
-    setLearnedPhrases(prev => ({
-      ...prev,
-      [phraseId]: !prev[phraseId]
-    }));
+    const currentState = learnedPhrases[phraseId] || false;
+    updateLearnedPhrases(phraseId, !currentState);
   };
 
   const toggleActions = (phraseId) => {
@@ -646,7 +643,7 @@ function Section({ title, phrases }) {
   );
 }
 
-function Category({ cat, query }) {
+function Category({ cat, query, learnedPhrases, updateLearnedPhrases }) {
   // 検索フィルタ
   const filtered = useMemo(() => {
     if (!query) return cat.sections;
@@ -671,7 +668,13 @@ function Category({ cat, query }) {
       </div>
       <div className="grid gap-4">
         {filtered.map((s) => (
-          <Section key={s.id} title={s.title} phrases={s.phrases} />
+          <Section 
+            key={s.id} 
+            title={s.title} 
+            phrases={s.phrases} 
+            learnedPhrases={learnedPhrases}
+            updateLearnedPhrases={updateLearnedPhrases}
+          />
         ))}
       </div>
     </section>
@@ -764,6 +767,14 @@ export default function PhrasebookPage() {
   
   const learnedCount = Object.values(learnedPhrases).filter(Boolean).length;
 
+  // 学習状態を更新する関数
+  const updateLearnedPhrases = (phraseId, isLearned) => {
+    setLearnedPhrases(prev => ({
+      ...prev,
+      [phraseId]: isLearned
+    }));
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-white text-zinc-900">
       {/* ヘッダー */}
@@ -810,7 +821,13 @@ export default function PhrasebookPage() {
         {/* 本文 */}
         <div className="space-y-10 order-1 lg:order-2">
           {DATA.map((cat) => (
-            <Category key={cat.id} cat={cat} query={query} />
+            <Category 
+              key={cat.id} 
+              cat={cat} 
+              query={query} 
+              learnedPhrases={learnedPhrases}
+              updateLearnedPhrases={updateLearnedPhrases}
+            />
           ))}
 
           {/* Dev tests */}
