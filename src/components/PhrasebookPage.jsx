@@ -988,12 +988,177 @@ const DATA = [
         ],
       },
       {
-        id: "price",
-        title: "2. Price/Discount/Points",
+        id: "product-details",
+        title: "2. Product Details & Stock（商品仕様・在庫確認）",
         phrases: [
-          { jp: "これ、いくらですか？", en: "How much is this?", ro: "Kore, ikura desu ka?" },
-          { jp: "セールはいつまでですか？", en: "Until when is the sale?", ro: "Sēru wa itsu made desu ka?" },
-          { jp: "ポイントカードは使えますか？", en: "Can I use my point card?", ro: "Pointo kādo wa tsukaemasu ka?" },
+          { 
+            jp: "素材は何ですか？（綿100%など）", 
+            en: "What material is this? (100% cotton, etc.)", 
+            ro: "Sozai wa nan desu ka? (men 100% nado)",
+            context: "商品の素材を確認する表現です。アレルギーや肌への影響を考慮する際に重要です。",
+            example: "客：素材は何ですか？\n店員：綿100%でございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "洗濯機で洗えますか？", 
+            en: "Can I wash this in the washing machine?", 
+            ro: "Sentakuki de araemasu ka?",
+            context: "洗濯方法を確認する表現です。衣類の手入れ方法を知るために重要です。",
+            example: "客：洗濯機で洗えますか？\n店員：はい、洗濯機で洗えます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "手洗い表示ですか？クリーニングが必要ですか？", 
+            en: "Is it hand wash only? Do I need to dry clean it?", 
+            ro: "Tearai hyōji desu ka? Kurīningu ga hitsuyō desu ka?",
+            context: "洗濯方法の詳細を確認する表現です。手洗いやクリーニングが必要かどうかを確認します。",
+            example: "客：手洗い表示ですか？クリーニングが必要ですか？\n店員：手洗いでお願いいたします。\n客：分かりました。"
+          },
+          { 
+            jp: "防水ですか？それとも撥水ですか？", 
+            en: "Is it waterproof or water repellent?", 
+            ro: "Bōsui desu ka? Soretomo bassui desu ka?",
+            context: "防水性能を確認する表現です。防水と撥水は異なる性能です。",
+            example: "客：防水ですか？それとも撥水ですか？\n店員：撥水加工が施されております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "裏地は付いていますか？", 
+            en: "Does it have a lining?", 
+            ro: "Uraji wa tsuite imasu ka?",
+            context: "衣類の裏地の有無を確認する表現です。",
+            example: "客：裏地は付いていますか？\n店員：はい、裏地が付いております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "肌触りはどんな感じですか？", 
+            en: "How does it feel on the skin?", 
+            ro: "Hadazawari wa donna kanji desu ka?",
+            context: "商品の肌触りを確認する表現です。実際に触って確かめることが重要です。",
+            example: "客：肌触りはどんな感じですか？\n店員：とても柔らかくて気持ちいいですよ。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "型番（品番）を教えてください。", 
+            en: "Please tell me the model number.", 
+            ro: "Kataban (hinban) o oshiete kudasai.",
+            context: "商品の型番や品番を確認する表現です。後で同じ商品を探す際に便利です。",
+            example: "客：型番（品番）を教えてください。\n店員：ABC-123でございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "こちらのモデルと何が違いますか？（新旧比較）", 
+            en: "What's different about this model? (comparing old and new)", 
+            ro: "Kochira no moderu to nani ga chigaimasu ka?",
+            context: "新旧モデルの違いを確認する表現です。",
+            example: "客：こちらのモデルと何が違いますか？\n店員：バッテリーの持ちが良くなりました。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "対応機種はどれですか？（iPhone 15など）", 
+            en: "Which devices is it compatible with? (iPhone 15, etc.)", 
+            ro: "Taiō kishu wa dore desu ka?",
+            context: "電子機器の対応機種を確認する表現です。",
+            example: "客：対応機種はどれですか？\n店員：iPhone 13以降に対応しております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "バッテリーはどのくらい持ちますか？", 
+            en: "How long does the battery last?", 
+            ro: "Batterī wa dono kurai mochimasu ka?",
+            context: "バッテリーの持続時間を確認する表現です。",
+            example: "客：バッテリーはどのくらい持ちますか？\n店員：約8時間持続いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "動作確認（通電確認）してもらえますか？", 
+            en: "Could you test if it works? (check if it powers on)", 
+            ro: "Dōsa kakunin (tsūden kakunin) shite moraemasu ka?",
+            context: "電子機器の動作確認を依頼する表現です。",
+            example: "客：動作確認してもらえますか？\n店員：はい、確認いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "初期設定もお願いできますか？", 
+            en: "Could you also do the initial setup?", 
+            ro: "Shoki settei mo onegai dekimasu ka?",
+            context: "電子機器の初期設定を依頼する表現です。",
+            example: "客：初期設定もお願いできますか？\n店員：はい、設定いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "付属品は全部そろっていますか？（充電器・ケーブルなど）", 
+            en: "Are all the accessories included? (charger, cable, etc.)", 
+            ro: "Fuzokuhin wa zenbu sorotte imasu ka?",
+            context: "付属品の確認をする表現です。",
+            example: "客：付属品は全部そろっていますか？\n店員：はい、充電器とケーブルが付属しております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "保証期間はどれくらいですか？", 
+            en: "How long is the warranty?", 
+            ro: "Hoshō kikan wa dore kurai desu ka?",
+            context: "保証期間を確認する表現です。",
+            example: "客：保証期間はどれくらいですか？\n店員：1年間の保証が付いております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "延長保証はありますか？", 
+            en: "Do you offer extended warranty?", 
+            ro: "Enchō hoshō wa arimasu ka?",
+            context: "延長保証の有無を確認する表現です。",
+            example: "客：延長保証はありますか？\n店員：はい、2年間の延長保証がございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "説明書は日本語（英語）がありますか？", 
+            en: "Do you have the manual in Japanese (English)?", 
+            ro: "Setsumeisho wa nihongo (eigo) ga arimasu ka?",
+            context: "説明書の言語版を確認する表現です。",
+            example: "客：説明書は日本語がありますか？\n店員：はい、日本語版がございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "別売りの消耗品はどこにありますか？（替刃・インクなど）", 
+            en: "Where are the separately sold consumables? (replacement blades, ink, etc.)", 
+            ro: "Betsuuri no shōmōhin wa doko ni arimasu ka?",
+            context: "消耗品の場所を確認する表現です。",
+            example: "客：別売りの消耗品はどこにありますか？\n店員：3階の消耗品コーナーにございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "原材料に◯◯は含まれていますか？（アレルギー）", 
+            en: "Does it contain ____ in the ingredients? (allergies)", 
+            ro: "Genryō ni ____ wa fukumarete imasu ka?",
+            context: "アレルギー物質の有無を確認する表現です。",
+            example: "客：原材料に卵は含まれていますか？\n店員：申し訳ございませんが、卵が含まれております。\n客：分かりました。"
+          },
+          { 
+            jp: "産地はどこですか？（野菜・果物など）", 
+            en: "Where is it produced? (vegetables, fruits, etc.)", 
+            ro: "Sanchi wa doko desu ka?",
+            context: "食品の産地を確認する表現です。",
+            example: "客：産地はどこですか？\n店員：青森県産でございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "賞味期限（消費期限）はいつまでですか？", 
+            en: "What's the best before date (expiration date)?", 
+            ro: "Shōmi kigen (shōhi kigen) wa itsu made desu ka?",
+            context: "食品の賞味期限や消費期限を確認する表現です。",
+            example: "客：賞味期限はいつまでですか？\n店員：来月の15日まででございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "冷蔵／冷凍どちらですか？", 
+            en: "Should it be refrigerated or frozen?", 
+            ro: "Reizō / reitō dochira desu ka?",
+            context: "食品の保存方法を確認する表現です。",
+            example: "客：冷蔵／冷凍どちらですか？\n店員：冷蔵で保存してください。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "重さ（重量）はどれくらいですか？", 
+            en: "How much does it weigh?", 
+            ro: "Omosa (jūryō) wa dore kurai desu ka?",
+            context: "商品の重量を確認する表現です。",
+            example: "客：重さはどれくらいですか？\n店員：約500グラムでございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "展示品限りですか？予約購入はできますか？", 
+            en: "Is this display only? Can I pre-order?", 
+            ro: "Tenjihin kagiri desu ka? Yoyaku kōnyū wa dekimasu ka?",
+            context: "展示品の販売方法や予約購入の可否を確認する表現です。",
+            example: "客：展示品限りですか？予約購入はできますか？\n店員：はい、予約購入が可能でございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "臭い移りしにくい素材ですか？（バッグ・衣類）", 
+            en: "Is it a material that doesn't easily pick up odors? (bags, clothing)", 
+            ro: "Nioi utsuri shinikui sozai desu ka?",
+            context: "臭い移りのしにくさを確認する表現です。",
+            example: "客：臭い移りしにくい素材ですか？\n店員：はい、臭い移りしにくい加工が施されております。\n客：ありがとうございます。"
+          },
         ],
       },
       {
