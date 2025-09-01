@@ -1577,6 +1577,145 @@ const DATA = [
             example: "客：熱いので、持ち手を二重にしてもらえますか？\n店員：はい、二重にしておきます。"
           },
         ],
+      },
+      {
+        id: "delivery-gift-returns-warranty",
+        title: "6. Delivery, Gift Wrap, Returns & Warranty（配送・ギフト・返品・保証）",
+        phrases: [
+          { 
+            jp: "配送できますか？", 
+            en: "Do you offer delivery?", 
+            ro: "Haisō dekimasu ka?",
+            context: "商品の配送サービスの有無を確認する表現です。",
+            example: "客：配送できますか？\n店員：はい、配送サービスがございます。"
+          },
+          { 
+            jp: "送料はいくらですか？", 
+            en: "How much is the shipping fee?", 
+            ro: "Sōryō wa ikura desu ka?",
+            context: "配送料金を確認する表現です。",
+            example: "客：送料はいくらですか？\n店員：500円でございます。"
+          },
+          { 
+            jp: "いつ届きますか？（最短はいつですか？）", 
+            en: "When will it arrive? (What's the earliest?)", 
+            ro: "Itsu todokimasu ka? (Saitan wa itsu desu ka?)",
+            context: "配送到着予定日を確認する表現です。",
+            example: "客：いつ届きますか？\n店員：3日後にお届けいたします。"
+          },
+          { 
+            jp: "日時指定はできますか？", 
+            en: "Can I specify the delivery date and time?", 
+            ro: "Nichiji shitei wa dekimasu ka?",
+            context: "配送の日時指定が可能かを確認する表現です。",
+            example: "客：日時指定はできますか？\n店員：はい、午前中か午後で指定可能です。"
+          },
+          { 
+            jp: "受け取り場所をコンビニにできますか？", 
+            en: "Can I have it delivered to a convenience store?", 
+            ro: "Uketori basho o konbini ni dekimasu ka?",
+            context: "コンビニでの受け取り可否を確認する表現です。",
+            example: "客：受け取り場所をコンビニにできますか？\n店員：はい、コンビニ受け取りが可能です。"
+          },
+          { 
+            jp: "海外発送は可能ですか？", 
+            en: "Is international shipping available?", 
+            ro: "Kaigai hassō wa kanō desu ka?",
+            context: "海外への配送サービスの有無を確認する表現です。",
+            example: "客：海外発送は可能ですか？\n店員：申し訳ございませんが、国内配送のみとなっております。"
+          },
+          { 
+            jp: "同梱して送ってもらえますか？", 
+            en: "Can you ship them together?", 
+            ro: "Dōkon shite okutte moraemasu ka?",
+            context: "複数商品を一緒に梱包して配送してもらうよう依頼する表現です。",
+            example: "客：同梱して送ってもらえますか？\n店員：はい、一緒にお送りいたします。"
+          },
+          { 
+            jp: "ラッピングをお願いします。", 
+            en: "Please gift wrap it.", 
+            ro: "Rappingu o onegaishimasu.",
+            context: "ギフト用のラッピングを依頼する表現です。",
+            example: "客：ラッピングをお願いします。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "のしを付けてもらえますか？", 
+            en: "Could you add a gift card?", 
+            ro: "Noshi o tsukete moraemasu ka?",
+            context: "ギフト用ののし（熨斗）を付けるよう依頼する表現です。",
+            example: "客：のしを付けてもらえますか？\n店員：はい、のしをお付けいたします。"
+          },
+          { 
+            jp: "メッセージカードを添えられますか？", 
+            en: "Can you include a message card?", 
+            ro: "Messēji kādo o soeraremasu ka?",
+            context: "メッセージカードの添付可否を確認する表現です。",
+            example: "客：メッセージカードを添えられますか？\n店員：はい、メッセージカードをお付けいたします。"
+          },
+          { 
+            jp: "納品書は金額なしでお願いします。", 
+            en: "Please include an invoice without the price.", 
+            ro: "Nōhinsho wa kingaku nashi de onegaishimasu.",
+            context: "ギフト用に金額を記載しない納品書を依頼する表現です。",
+            example: "客：納品書は金額なしでお願いします。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "返品したいのですが、手続き方法を教えてください。", 
+            en: "I'd like to return this. Could you tell me the procedure?", 
+            ro: "Henpin shitai no desu ga, tetsuzuki hōhō o oshiete kudasai.",
+            context: "返品手続きの方法を教えてもらう表現です。",
+            example: "客：返品したいのですが、手続き方法を教えてください。\n店員：はい、返品手続きをご説明いたします。"
+          },
+          { 
+            jp: "返品は未開封のみですか？", 
+            en: "Can I only return unopened items?", 
+            ro: "Henpin wa mikaifu nomi desu ka?",
+            context: "返品条件を確認する表現です。",
+            example: "客：返品は未開封のみですか？\n店員：はい、未開封の商品のみ返品可能です。"
+          },
+          { 
+            jp: "交換は可能ですか？サイズを変えたいです。", 
+            en: "Is exchange possible? I'd like to change the size.", 
+            ro: "Kōkan wa kanō desu ka? Saizu o kaetai desu.",
+            context: "商品の交換可否を確認する表現です。",
+            example: "客：交換は可能ですか？サイズを変えたいです。\n店員：はい、サイズ交換が可能です。"
+          },
+          { 
+            jp: "返品期限は何日以内ですか？", 
+            en: "What's the return deadline?", 
+            ro: "Henpin kigen wa nannichi inai desu ka?",
+            context: "返品可能期間を確認する表現です。",
+            example: "客：返品期限は何日以内ですか？\n店員：7日以内でございます。"
+          },
+          { 
+            jp: "レシートをなくしてしまいましたが返品対応できますか？", 
+            en: "I lost the receipt. Can you still process the return?", 
+            ro: "Reshīto o nakushite shimaimashita ga henpin taiō dekimasu ka?",
+            context: "レシートがない場合の返品対応を確認する表現です。",
+            example: "客：レシートをなくしてしまいましたが返品対応できますか？\n店員：申し訳ございませんが、レシートが必要でございます。"
+          },
+          { 
+            jp: "初期不良のようです。確認してもらえますか？", 
+            en: "It seems to have a manufacturing defect. Could you check it?", 
+            ro: "Shoki furyō no yō desu. Kakunin shite moraemasu ka?",
+            context: "商品の初期不良を報告し、確認を依頼する表現です。",
+            example: "客：初期不良のようです。確認してもらえますか？\n店員：はい、確認いたします。"
+          },
+          { 
+            jp: "修理をお願いしたいです。期間はどれくらいですか？", 
+            en: "I'd like to have it repaired. How long will it take?", 
+            ro: "Shūri o onegai shitai desu. Kikan wa dore kurai desu ka?",
+            context: "修理サービスの利用と期間を確認する表現です。",
+            example: "客：修理をお願いしたいです。期間はどれくらいですか？\n店員：約2週間で完了いたします。"
+          },
+          { 
+            jp: "保証期間は購入日からですか？到着日からですか？", 
+            en: "Does the warranty period start from the purchase date or delivery date?", 
+            ro: "Hoshō kikan wa kōnyū bi kara desu ka? Tōchaku bi kara desu ka?",
+            context: "保証期間の開始日を確認する表現です。",
+            example: "客：保証期間は購入日からですか？\n店員：購入日から1年間の保証が付いております。"
+          },
+        ],
       }
     ],
   },
