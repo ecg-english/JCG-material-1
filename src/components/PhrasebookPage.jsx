@@ -1722,16 +1722,166 @@ const DATA = [
   {
     id: "transportation",
     emoji: "🚇",
-    title: "Transportation/Movement",
+    title: "Using Public Transportation",
     sections: [
       {
-        id: "train",
-        title: "1. Train/Subway",
+        id: "at-station-stop",
+        title: "1. At the Station/Stop（駅・停留所での基本確認）",
         phrases: [
-          { jp: "〇〇駅までいくらですか？", en: "How much is it to ____ station?", ro: "____ eki made ikura desu ka?" },
-          { jp: "この電車は〇〇行きですか？", en: "Does this train go to ____?", ro: "Kono densha wa ____ yuki desu ka?" },
-          { jp: "次の電車は何時ですか？", en: "What time is the next train?", ro: "Tsugi no densha wa nanji desu ka?" },
-          { jp: "定期券を買いたいんですが。", en: "I'd like to buy a commuter pass.", ro: "Teikiken o kaitai n desu ga." },
+          { 
+            jp: "◯◯線のホームはどこですか？", 
+            en: "Where is the platform for the ____ line?", 
+            ro: "____ sen no hōmu wa doko desu ka?",
+            context: "特定の路線のホームの場所を確認する表現です。",
+            example: "客：山手線のホームはどこですか？\n駅員：2番線でございます。"
+          },
+          { 
+            jp: "上り（のぼり）／下り（くだり）はどちらですか？", 
+            en: "Which is the upbound/downbound direction?", 
+            ro: "Nobori / Kudari wa dochira desu ka?",
+            context: "列車の進行方向を確認する表現です。",
+            example: "客：上りはどちらですか？\n駅員：こちらのホームでございます。"
+          },
+          { 
+            jp: "快速と各駅停車、どちらが早いですか？", 
+            en: "Which is faster, the express or local train?", 
+            ro: "Kaisoku to kakueki teisha, dochira ga hayai desu ka?",
+            context: "列車の種類による所要時間の違いを確認する表現です。",
+            example: "客：快速と各駅停車、どちらが早いですか？\n駅員：快速の方が早いです。"
+          },
+          { 
+            jp: "次の電車（バス）は何分に来ますか？", 
+            en: "When does the next train (bus) come?", 
+            ro: "Tsugi no densha (basu) wa nanpun ni kimasu ka?",
+            context: "次の交通機関の到着時刻を確認する表現です。",
+            example: "客：次の電車は何分に来ますか？\n駅員：5分後に到着いたします。"
+          },
+          { 
+            jp: "終電は何時ですか？", 
+            en: "What time is the last train?", 
+            ro: "Shūden wa nanji desu ka?",
+            context: "最終列車の時刻を確認する表現です。",
+            example: "客：終電は何時ですか？\n駅員：24時30分でございます。"
+          },
+          { 
+            jp: "◯番乗り場はどこですか？", 
+            en: "Where is platform number ____?", 
+            ro: "____ ban noriba wa doko desu ka?",
+            context: "特定の番号の乗り場の場所を確認する表現です。",
+            example: "客：3番乗り場はどこですか？\n駅員：こちらの階段を上がってください。"
+          },
+          { 
+            jp: "このバス、◯◯駅まで行きますか？", 
+            en: "Does this bus go to ____ station?", 
+            ro: "Kono basu, ____ eki made ikimasu ka?",
+            context: "バスの行き先を確認する表現です。",
+            example: "客：このバス、渋谷駅まで行きますか？\n運転手：はい、渋谷駅まで行きます。"
+          },
+          { 
+            jp: "途中で乗り換えが必要ですか？", 
+            en: "Do I need to transfer on the way?", 
+            ro: "Tochū de norikae ga hitsuyō desu ka?",
+            context: "乗り換えの必要性を確認する表現です。",
+            example: "客：途中で乗り換えが必要ですか？\n駅員：はい、新宿駅で乗り換えが必要です。"
+          },
+          { 
+            jp: "車両の前寄り／後ろ寄り、どちらが空いていますか？", 
+            en: "Which is less crowded, the front or back of the train?", 
+            ro: "Sharyō no mae yori / ushiro yori, dochira ga suite imasu ka?",
+            context: "車両内の混雑状況を確認する表現です。",
+            example: "客：車両の前寄りと後ろ寄り、どちらが空いていますか？\n駅員：後ろ寄りが空いています。"
+          },
+          { 
+            jp: "降り口は前ですか？後ろですか？（バス）", 
+            en: "Is the exit at the front or back? (for buses)", 
+            ro: "Origuchi wa mae desu ka? Ushiro desu ka?",
+            context: "バスの降り口の位置を確認する表現です。",
+            example: "客：降り口は前ですか？後ろですか？\n運転手：前でございます。"
+          },
+          { 
+            jp: "ベビーカーで乗っても大丈夫ですか？", 
+            en: "Is it okay to board with a stroller?", 
+            ro: "Bebīkā de notte mo daijōbu desu ka?",
+            context: "ベビーカーでの乗車可否を確認する表現です。",
+            example: "客：ベビーカーで乗っても大丈夫ですか？\n駅員：はい、折りたたんでいただければ大丈夫です。"
+          },
+          { 
+            jp: "優先席の位置はどのあたりですか？", 
+            en: "Where are the priority seats?", 
+            ro: "Yūsen seki no ichi wa dono atari desu ka?",
+            context: "優先席の位置を確認する表現です。",
+            example: "客：優先席の位置はどのあたりですか？\n駅員：車両の両端にございます。"
+          },
+          { 
+            jp: "女性専用車はどこから並べばいいですか？", 
+            en: "Where should I line up for the women-only car?", 
+            ro: "Josei senyō sha wa doko kara narabe ba ii desu ka?",
+            context: "女性専用車の乗車位置を確認する表現です。",
+            example: "客：女性専用車はどこから並べばいいですか？\n駅員：1番線の先頭でございます。"
+          },
+          { 
+            jp: "エレベーター（エスカレーター）はどこですか？", 
+            en: "Where is the elevator (escalator)?", 
+            ro: "Erebētā (esukarētā) wa doko desu ka?",
+            context: "エレベーターやエスカレーターの場所を確認する表現です。",
+            example: "客：エレベーターはどこですか？\n駅員：改札口の右側にございます。"
+          },
+          { 
+            jp: "トイレは駅の中にありますか？", 
+            en: "Are there restrooms in the station?", 
+            ro: "Toire wa eki no naka ni arimasu ka?",
+            context: "駅内のトイレの有無を確認する表現です。",
+            example: "客：トイレは駅の中にありますか？\n駅員：はい、改札内にございます。"
+          },
+          { 
+            jp: "コインロッカーはどこですか？", 
+            en: "Where are the coin lockers?", 
+            ro: "Koin rokkā wa doko desu ka?",
+            context: "コインロッカーの場所を確認する表現です。",
+            example: "客：コインロッカーはどこですか？\n駅員：改札外の右側にございます。"
+          },
+          { 
+            jp: "駅の案内図（構内図）ありますか？", 
+            en: "Do you have a station map?", 
+            ro: "Eki no annai zu (kōnai zu) arimasu ka?",
+            context: "駅の案内図の有無を確認する表現です。",
+            example: "客：駅の案内図ありますか？\n駅員：はい、改札口にございます。"
+          },
+          { 
+            jp: "団体で乗りますが、並ぶ場所を分けた方がいいですか？", 
+            en: "We're boarding as a group. Should we split up when lining up?", 
+            ro: "Dantai de norimasu ga, narabu basho o waketa hō ga ii desu ka?",
+            context: "団体での乗車時の並び方を確認する表現です。",
+            example: "客：団体で乗りますが、並ぶ場所を分けた方がいいですか？\n駅員：はい、分散していただいた方が乗りやすくなります。"
+          },
+          { 
+            jp: "両替できますか？（小銭が必要で）", 
+            en: "Can I exchange money? (I need small change)", 
+            ro: "Ryōgae dekimasu ka? (Kozeni ga hitsuyō de)",
+            context: "小銭への両替可否を確認する表現です。",
+            example: "客：両替できますか？小銭が必要で。\n駅員：申し訳ございませんが、両替はできません。"
+          },
+          { 
+            jp: "券売機は英語表示に切り替えられますか？", 
+            en: "Can I switch the ticket machine to English display?", 
+            ro: "Kenbaiki wa eigo hyōji ni kirikaeraremasu ka?",
+            context: "券売機の言語表示切り替え可否を確認する表現です。",
+            example: "客：券売機は英語表示に切り替えられますか？\n駅員：はい、画面の右下のボタンで切り替えできます。"
+          },
+          { 
+            jp: "この停留所は同じ名前の別ルートがありますか？", 
+            en: "Are there other routes with the same name at this stop?", 
+            ro: "Kono teiryūjo wa onaji namae no betsu rūto ga arimasu ka?",
+            context: "同名の別ルートの有無を確認する表現です。",
+            example: "客：この停留所は同じ名前の別ルートがありますか？\n運転手：はい、2番乗り場に別ルートがございます。"
+          },
+          { 
+            jp: "次は何番線発ですか？", 
+            en: "Which platform does the next train depart from?", 
+            ro: "Tsugi wa nanban sen hatsu desu ka?",
+            context: "次の列車の発車ホームを確認する表現です。",
+            example: "客：次は何番線発ですか？\n駅員：3番線から発車いたします。"
+          },
         ],
       },
       {
