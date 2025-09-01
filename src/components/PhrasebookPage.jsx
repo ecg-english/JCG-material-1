@@ -2205,8 +2205,147 @@ const DATA = [
         ],
       },
       {
+        id: "boarding-in-vehicle",
+        title: "4. Boarding & In-vehicle Phrases（乗車・車内で）",
+        phrases: [
+          { 
+            jp: "すみません、通ります。（乗り込む／降りるとき）", 
+            en: "Excuse me, I'm passing through. (when boarding/exiting)", 
+            ro: "Sumimasen, tōrimasu.",
+            context: "乗車時や降車時に他の乗客に声をかける表現です。",
+            example: "客：すみません、通ります。\n乗客：はい、どうぞ。"
+          },
+          { 
+            jp: "失礼します、降ります。（降車前の声かけ）", 
+            en: "Excuse me, I'm getting off. (announcement before exiting)", 
+            ro: "Shitsurei shimasu, orimasu.",
+            context: "降車前に周囲の乗客に声をかける表現です。",
+            example: "客：失礼します、降ります。\n乗客：はい、どうぞ。"
+          },
+          { 
+            jp: "もう少し奥に詰めますね。", 
+            en: "I'll move a bit further back.", 
+            ro: "Mō sukoshi oku ni tsumimasu ne.",
+            context: "車内で他の乗客のためにより奥に移動する際の表現です。",
+            example: "客：もう少し奥に詰めますね。\n乗客：ありがとうございます。"
+          },
+          { 
+            jp: "席、どうぞ。（譲るとき）", 
+            en: "Here, have a seat. (when offering)", 
+            ro: "Seki, dōzo.",
+            context: "席を譲る際の表現です。",
+            example: "客：席、どうぞ。\n乗客：ありがとうございます。"
+          },
+          { 
+            jp: "リュックは前に持ちますね。", 
+            en: "I'll carry my backpack in front.", 
+            ro: "Ryakku wa mae ni mochimasu ne.",
+            context: "リュックサックを前に持つことを周囲に伝える表現です。",
+            example: "客：リュックは前に持ちますね。\n乗客：ありがとうございます。"
+          },
+          { 
+            jp: "ベビーカー、ここで大丈夫ですか？", 
+            en: "Is it okay to put the stroller here?", 
+            ro: "Bebīkā, koko de daijōbu desu ka?",
+            context: "ベビーカーの置き場所を確認する表現です。",
+            example: "客：ベビーカー、ここで大丈夫ですか？\n乗客：はい、大丈夫です。"
+          },
+          { 
+            jp: "荷物を上に上げますね。（網棚など）", 
+            en: "I'll put my luggage up above. (on the rack, etc.)", 
+            ro: "Nimotsu o ue ni agemasu ne.",
+            context: "荷物を網棚などに置くことを周囲に伝える表現です。",
+            example: "客：荷物を上に上げますね。\n乗客：はい、どうぞ。"
+          },
+          { 
+            jp: "次、◯◯で降ります。", 
+            en: "I'm getting off at ____ next.", 
+            ro: "Tsugi, ____ de orimasu.",
+            context: "次の駅で降りることを周囲に伝える表現です。",
+            example: "客：次、新宿で降ります。\n乗客：はい、どうぞ。"
+          },
+          { 
+            jp: "この席、空いていますか？", 
+            en: "Is this seat available?", 
+            ro: "Kono seki, suite imasu ka?",
+            context: "席の空き状況を確認する表現です。",
+            example: "客：この席、空いていますか？\n乗客：はい、空いています。"
+          },
+          { 
+            jp: "窓を少し開けてもいいですか？（バス・路面電車）", 
+            en: "Is it okay to open the window a bit? (for buses/streetcars)", 
+            ro: "Mado o sukoshi akete mo ii desu ka?",
+            context: "窓を開ける許可を求める表現です。",
+            example: "客：窓を少し開けてもいいですか？\n乗客：はい、どうぞ。"
+          },
+          { 
+            jp: "冷房が強いのですが、弱めてもらえますか？（バス）", 
+            en: "The air conditioning is too strong. Could you turn it down? (for buses)", 
+            ro: "Reibō ga tsuyoi no desu ga, yowamete moraemasu ka?",
+            context: "バスの冷房を弱めてもらうよう依頼する表現です。",
+            example: "客：冷房が強いのですが、弱めてもらえますか？\n運転手：はい、調整いたします。"
+          },
+          { 
+            jp: "車内での通話は控えますね。（配慮の一言）", 
+            en: "I'll refrain from making calls on the train. (considerate remark)", 
+            ro: "Shanai de no tsūwa wa hikaemasu ne.",
+            context: "車内での通話を控えることを周囲に伝える配慮の表現です。",
+            example: "客：車内での通話は控えますね。\n乗客：ありがとうございます。"
+          },
+          { 
+            jp: "ベル（降車ボタン）押してもらえますか？（バス）", 
+            en: "Could you press the bell (stop button)? (for buses)", 
+            ro: "Beru (kōsha botan) oshite moraemasu ka?",
+            context: "バスの降車ボタンを押してもらうよう依頼する表現です。",
+            example: "客：ベル押してもらえますか？\n乗客：はい、押します。"
+          },
+          { 
+            jp: "優先席なので、席を替わります。", 
+            en: "Since this is a priority seat, I'll move.", 
+            ro: "Yūsen seki na node, seki o kawarimasu.",
+            context: "優先席を譲る際の表現です。",
+            example: "客：優先席なので、席を替わります。\n乗客：ありがとうございます。"
+          },
+          { 
+            jp: "ドア付近を空けましょう。（降りる人優先の配慮）", 
+            en: "Let's clear the area near the door. (consideration for those exiting)", 
+            ro: "Doa fukin o akemashō.",
+            context: "降車する人のためにドア付近を空けるよう促す表現です。",
+            example: "客：ドア付近を空けましょう。\n乗客：はい、そうしましょう。"
+          },
+          { 
+            jp: "大きい荷物、邪魔になっていたら言ってください。", 
+            en: "If my large luggage is in the way, please let me know.", 
+            ro: "Ōkii nimotsu, jama ni natte itara itte kudasai.",
+            context: "大きな荷物が邪魔になっている場合に声をかけてほしいと伝える表現です。",
+            example: "客：大きい荷物、邪魔になっていたら言ってください。\n乗客：ありがとうございます。"
+          },
+          { 
+            jp: "すみません、網棚からカバンを取らせてください。", 
+            en: "Excuse me, let me get my bag from the rack.", 
+            ro: "Sumimasen, ami yana kara kaban o torasete kudasai.",
+            context: "網棚から荷物を取る際に周囲に声をかける表現です。",
+            example: "客：すみません、網棚からカバンを取らせてください。\n乗客：はい、どうぞ。"
+          },
+          { 
+            jp: "乗り過ごしたので、次で降ります。", 
+            en: "I missed my stop, so I'll get off at the next one.", 
+            ro: "Norisugoshita node, tsugi de orimasu.",
+            context: "乗り過ごしたことを周囲に伝える表現です。",
+            example: "客：乗り過ごしたので、次で降ります。\n乗客：大丈夫ですよ。"
+          },
+          { 
+            jp: "こちら、車内販売はありますか？（新幹線）", 
+            en: "Do you have onboard sales? (for Shinkansen)", 
+            ro: "Kochira, shanai hanbai wa arimasu ka?",
+            context: "新幹線などでの車内販売の有無を確認する表現です。",
+            example: "客：こちら、車内販売はありますか？\n車掌：はい、車内販売がございます。"
+          },
+        ],
+      },
+      {
         id: "bus",
-        title: "4. Bus",
+        title: "5. Bus",
         phrases: [
           { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
           { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
