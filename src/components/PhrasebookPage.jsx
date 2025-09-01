@@ -1877,11 +1877,12 @@ export default function PhrasebookPage() {
   const [learnedPhrases, setLearnedPhrases] = useLocal(`learnedPhrases`, {});
 
   // 学習進捗を計算
-  const totalPhrases = DATA.reduce((total, cat) => 
-    total + cat.sections.reduce((sectionTotal, section) => 
-      sectionTotal + section.phrases.length, 0
-    ), 0
-  );
+  const totalPhrases = DATA.reduce((total, cat) => {
+    const sections = Array.isArray(cat.sections) ? cat.sections : [];
+    return total + sections.reduce((sectionTotal, section) => (
+      sectionTotal + section.phrases.length
+    ), 0);
+  }, 0);
   
   const learnedCount = Object.values(learnedPhrases).filter(Boolean).length;
 
