@@ -2497,8 +2497,168 @@ const DATA = [
         ],
       },
       {
+        id: "shinkansen-limited-express-problems",
+        title: "6. Shinkansen & Limited Express / Problems & Assistance（新幹線・特急／遅延・忘れ物・支援）",
+        phrases: [
+          { 
+            jp: "自由席と指定席、混み具合はどうですか？", 
+            en: "How crowded are the unreserved and reserved seats?", 
+            ro: "Jiyū seki to shiteki seki, komi gurai wa dō desu ka?",
+            context: "自由席と指定席の混雑状況を確認する表現です。",
+            example: "客：自由席と指定席、混み具合はどうですか？\n駅員：自由席は混雑していますが、指定席は空いています。"
+          },
+          { 
+            jp: "グリーン車はどこですか？", 
+            en: "Where is the Green Car?", 
+            ro: "Gurīn sha wa doko desu ka?",
+            context: "グリーン車（一等車）の場所を確認する表現です。",
+            example: "客：グリーン車はどこですか？\n駅員：1号車と2号車がグリーン車でございます。"
+          },
+          { 
+            jp: "特大荷物スペースは予約が必要ですか？", 
+            en: "Do I need to reserve the oversized luggage space?", 
+            ro: "Tokudai nimotsu supēsu wa yoyaku ga hitsuyō desu ka?",
+            context: "特大荷物スペースの予約必要性を確認する表現です。",
+            example: "客：特大荷物スペースは予約が必要ですか？\n駅員：はい、事前予約が必要でございます。"
+          },
+          { 
+            jp: "座席の向きを変えてもいいですか？", 
+            en: "Can I change the direction of my seat?", 
+            ro: "Zaseki no muki o kaete mo ii desu ka?",
+            context: "座席の向き変更可否を確認する表現です。",
+            example: "客：座席の向きを変えてもいいですか？\n乗務員：はい、座席の向きを変更できます。"
+          },
+          { 
+            jp: "コンセントは各席にありますか？", 
+            en: "Are there power outlets at each seat?", 
+            ro: "Konsento wa kakuseki ni arimasu ka?",
+            context: "各席のコンセント有無を確認する表現です。",
+            example: "客：コンセントは各席にありますか？\n乗務員：はい、各席にコンセントがございます。"
+          },
+          { 
+            jp: "車内Wi-Fiは使えますか？", 
+            en: "Can I use the onboard Wi-Fi?", 
+            ro: "Shanai Wi-Fi wa tsukaemasu ka?",
+            context: "車内Wi-Fiの利用可否を確認する表現です。",
+            example: "客：車内Wi-Fiは使えますか？\n乗務員：はい、車内Wi-Fiがご利用いただけます。"
+          },
+          { 
+            jp: "車内販売は何時ごろ来ますか？", 
+            en: "What time does the onboard sales cart come around?", 
+            ro: "Shanai hanbai wa nanji goro kimasu ka?",
+            context: "車内販売の巡回時刻を確認する表現です。",
+            example: "客：車内販売は何時ごろ来ますか？\n乗務員：約30分後に車内販売が参ります。"
+          },
+          { 
+            jp: "多目的室の利用はどこで申し込めますか？", 
+            en: "Where can I apply to use the multipurpose room?", 
+            ro: "Tamokuteki shitsu no riyō wa doko de mōshikomemasu ka?",
+            context: "多目的室の利用申し込み場所を確認する表現です。",
+            example: "客：多目的室の利用はどこで申し込めますか？\n駅員：窓口でお申し込みいただけます。"
+          },
+          { 
+            jp: "デッキで通話しても大丈夫ですか？", 
+            en: "Is it okay to make calls on the deck?", 
+            ro: "Dekki de tsūwa shite mo daijōbu desu ka?",
+            context: "デッキでの通話許可を確認する表現です。",
+            example: "客：デッキで通話しても大丈夫ですか？\n乗務員：はい、デッキでの通話は可能です。"
+          },
+          { 
+            jp: "途中停車駅での乗り換え時間は十分ですか？", 
+            en: "Is there enough time to transfer at intermediate stops?", 
+            ro: "Tochū teisha eki de no norikae jikan wa jūbun desu ka?",
+            context: "途中停車駅での乗り換え時間の十分性を確認する表現です。",
+            example: "客：途中停車駅での乗り換え時間は十分ですか？\n駅員：はい、十分な乗り換え時間がございます。"
+          },
+          { 
+            jp: "遅延の見込みはどれくらいですか？", 
+            en: "How long is the delay expected to be?", 
+            ro: "Chien no mikomi wa dore kurai desu ka?",
+            context: "遅延の予想時間を確認する表現です。",
+            example: "客：遅延の見込みはどれくらいですか？\n駅員：約30分程度の遅延が見込まれます。"
+          },
+          { 
+            jp: "目的地の最終接続に間に合わない場合の案内はありますか？", 
+            en: "Is there guidance if I miss the final connection to my destination?", 
+            ro: "Mokutekichi no saishū setsuzoku ni maniawanai baai no annai wa arimasu ka?",
+            context: "最終接続に間に合わない場合の案内の有無を確認する表現です。",
+            example: "客：目的地の最終接続に間に合わない場合の案内はありますか？\n駅員：はい、代替ルートの案内がございます。"
+          },
+          { 
+            jp: "忘れ物をしました。どこに連絡すればいいですか？", 
+            en: "I left something behind. Where should I contact?", 
+            ro: "Wasuremono o shimashita. Doko ni renraku sureba ii desu ka?",
+            context: "忘れ物の連絡先を確認する表現です。",
+            example: "客：忘れ物をしました。どこに連絡すればいいですか？\n駅員：忘れ物センターにお電話ください。"
+          },
+          { 
+            jp: "さっきの車両にカバンを置き忘れました。追いかけられますか？", 
+            en: "I left my bag on the previous car. Can you chase after it?", 
+            ro: "Sakki no sharyō ni kaban o oki wasuremashita. Oikakeraremasu ka?",
+            context: "前の車両に置き忘れた荷物の追跡可否を確認する表現です。",
+            example: "客：さっきの車両にカバンを置き忘れました。追いかけられますか？\n駅員：はい、追跡いたします。"
+          },
+          { 
+            jp: "落とし物センターの場所を教えてください。", 
+            en: "Please tell me where the lost and found center is.", 
+            ro: "Otoshimono sentā no basho o oshiete kudasai.",
+            context: "落とし物センターの場所を確認する表現です。",
+            example: "客：落とし物センターの場所を教えてください。\n駅員：改札外の右側にございます。"
+          },
+          { 
+            jp: "体調が悪い人がいます。駅員さん（乗務員）を呼んでもらえますか？", 
+            en: "There's someone who's not feeling well. Could you call a station staff (crew member)?", 
+            ro: "Taichō ga warui hito ga imasu. Ekii san o yonde moraemasu ka?",
+            context: "体調不良者のために駅員や乗務員を呼んでもらう表現です。",
+            example: "客：体調が悪い人がいます。駅員さんを呼んでもらえますか？\n乗客：はい、駅員さんを呼びます。"
+          },
+          { 
+            jp: "車いすで乗車します。スロープの手配をお願いします。", 
+            en: "I'm boarding with a wheelchair. Please arrange for a ramp.", 
+            ro: "Kuruma isu de jōsha shimasu. Surōpu no tehai o onegaishimasu.",
+            context: "車いすでの乗車時にスロープの手配を依頼する表現です。",
+            example: "客：車いすで乗車します。スロープの手配をお願いします。\n駅員：はい、スロープの手配をいたします。"
+          },
+          { 
+            jp: "盲導犬と一緒に乗れますか？", 
+            en: "Can I board with my guide dog?", 
+            ro: "Mōdōken to issho ni noremasu ka?",
+            context: "盲導犬との同伴乗車可否を確認する表現です。",
+            example: "客：盲導犬と一緒に乗れますか？\n駅員：はい、盲導犬との同伴乗車が可能です。"
+          },
+          { 
+            jp: "ベビールーム（授乳室）はありますか？", 
+            en: "Is there a baby room (nursing room)?", 
+            ro: "Bebī rūmu wa arimasu ka?",
+            context: "ベビールームや授乳室の有無を確認する表現です。",
+            example: "客：ベビールームはありますか？\n駅員：はい、ベビールームがございます。"
+          },
+          { 
+            jp: "喫煙ルームは利用できますか？", 
+            en: "Can I use the smoking room?", 
+            ro: "Kitsuen rūmu wa riyō dekimasu ka?",
+            context: "喫煙ルームの利用可否を確認する表現です。",
+            example: "客：喫煙ルームは利用できますか？\n駅員：はい、喫煙ルームがご利用いただけます。"
+          },
+          { 
+            jp: "車内が非常に混雑しています。次発の方が空いていますか？", 
+            en: "The train is very crowded. Is the next departure less crowded?", 
+            ro: "Shanai ga hijō ni konzatsu shite imasu. Jihatsu no hō ga suite imasu ka?",
+            context: "混雑時の次発列車の空き状況を確認する表現です。",
+            example: "客：車内が非常に混雑しています。次発の方が空いていますか？\n駅員：はい、次発の方が空いています。"
+          },
+          { 
+            jp: "代替便やホテル手配の案内はありますか？（長時間運転見合わせ時）", 
+            en: "Is there guidance for alternative services or hotel arrangements? (during long-term service suspensions)", 
+            ro: "Daitai bin ya hoteru tehai no annai wa arimasu ka?",
+            context: "長時間運転見合わせ時の代替手段案内の有無を確認する表現です。",
+            example: "客：代替便やホテル手配の案内はありますか？\n駅員：はい、代替便の案内がございます。"
+          },
+        ],
+      },
+      {
         id: "bus",
-        title: "6. Bus",
+        title: "7. Bus",
         phrases: [
           { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
           { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
