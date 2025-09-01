@@ -2856,172 +2856,172 @@ const DATA = [
         title: "1. Reception & Check-in（受付・初診／再診・予約）",
         phrases: [
           { 
-            jp: "初診です。", 
-            en: "This is my first visit.", 
-            ro: "Shoshin desu.",
-            context: "初診であることを伝える表現です。",
-            example: "患者：初診です。\n受付：はい、初診の方はこちらの用紙に記入してください。"
+            jp: "予約している◯◯です。◯時に来院の予定です。", 
+            en: "I'm ____ with an appointment. I'm scheduled to come at ____ o'clock.", 
+            ro: "Yoyaku shite iru ____ desu. ____ ji ni rain no yotei desu.",
+            context: "予約の確認をする表現です。",
+            example: "患者：予約している田中です。2時に来院の予定です。\n受付：はい、田中様ですね。確認いたします。"
           },
           { 
-            jp: "再診です。", 
-            en: "This is a follow-up visit.", 
-            ro: "Saishin desu.",
-            context: "再診であることを伝える表現です。",
-            example: "患者：再診です。\n受付：はい、診察券をお持ちですか？"
+            jp: "初診です。保険証をお渡しします。", 
+            en: "This is my first visit. Here's my insurance card.", 
+            ro: "Shoshin desu. Hokenshō o owatashi shimasu.",
+            context: "初診であることと保険証を渡すことを伝える表現です。",
+            example: "患者：初診です。保険証をお渡しします。\n受付：はい、初診の方はこちらの用紙に記入してください。"
           },
           { 
-            jp: "予約をしたいのですが。", 
-            en: "I would like to make an appointment.", 
-            ro: "Yoyaku o shitai no desu ga.",
-            context: "予約を希望することを伝える表現です。",
-            example: "患者：予約をしたいのですが。\n受付：はい、いつ頃がご希望でしょうか？"
+            jp: "再診です。診察券を忘れてしまいました。", 
+            en: "This is a follow-up visit. I forgot my medical card.", 
+            ro: "Saishin desu. Shinsatsuken o wasurete shimaimashita.",
+            context: "再診であることと診察券を忘れたことを伝える表現です。",
+            example: "患者：再診です。診察券を忘れてしまいました。\n受付：大丈夫です。お名前で確認いたします。"
           },
           { 
-            jp: "予約の変更をお願いします。", 
-            en: "I would like to change my appointment.", 
-            ro: "Yoyaku no henkō o onegaishimasu.",
-            context: "予約の変更を依頼する表現です。",
-            example: "患者：予約の変更をお願いします。\n受付：はい、いつに変更されますか？"
+            jp: "紹介状があります。こちらでよろしいですか？", 
+            en: "I have a referral letter. Is this the right place?", 
+            ro: "Shōkaijō ga arimasu. Kochira de yoroshii desu ka?",
+            context: "紹介状の有無と受診場所の確認をする表現です。",
+            example: "患者：紹介状があります。こちらでよろしいですか？\n受付：はい、正しい受診科です。"
           },
           { 
-            jp: "予約をキャンセルしたいのですが。", 
-            en: "I would like to cancel my appointment.", 
-            ro: "Yoyaku o kyanseru shitai no desu ga.",
-            context: "予約のキャンセルを希望する表現です。",
-            example: "患者：予約をキャンセルしたいのですが。\n受付：はい、承知いたしました。"
+            jp: "今日の受診科はどちらですか？（内科／皮膚科 など）", 
+            en: "Which department am I visiting today? (Internal Medicine/Dermatology, etc.)", 
+            ro: "Kyō no jushinka wa dochira desu ka?",
+            context: "受診科を確認する表現です。",
+            example: "患者：今日の受診科はどちらですか？\n受付：内科です。"
           },
           { 
-            jp: "診察券をお忘れですか？", 
-            en: "Did you forget your medical card?", 
-            ro: "Shinsatsuken o owasure desu ka?",
-            context: "診察券の有無を確認する表現です。",
-            example: "受付：診察券をお忘れですか？\n患者：はい、忘れてしまいました。"
+            jp: "受付はこのまま並べばいいですか？", 
+            en: "Should I just wait in line at the reception desk?", 
+            ro: "Uketsuke wa kono mama narabeba ii desu ka?",
+            context: "受付での待機方法を確認する表現です。",
+            example: "患者：受付はこのまま並べばいいですか？\n受付：はい、そのままお並びください。"
           },
           { 
-            jp: "保険証をお持ちですか？", 
-            en: "Do you have your insurance card?", 
-            ro: "Hokenshō o omochi desu ka?",
-            context: "保険証の有無を確認する表現です。",
-            example: "受付：保険証をお持ちですか？\n患者：はい、こちらです。"
+            jp: "問診票はどこで書けばいいですか？", 
+            en: "Where should I fill out the medical questionnaire?", 
+            ro: "Monshinhyō wa doko de kakeba ii desu ka?",
+            context: "問診票の記入場所を確認する表現です。",
+            example: "患者：問診票はどこで書けばいいですか？\n受付：こちらのテーブルでお書きください。"
           },
           { 
-            jp: "問診票に記入してください。", 
-            en: "Please fill out the medical questionnaire.", 
-            ro: "Monshinhyō ni kinyū shite kudasai.",
-            context: "問診票の記入を依頼する表現です。",
-            example: "受付：問診票に記入してください。\n患者：はい、記入いたします。"
+            jp: "ペンをお借りできますか？", 
+            en: "Can I borrow a pen?", 
+            ro: "Pen o okari dekimasu ka?",
+            context: "ペンを借りることを依頼する表現です。",
+            example: "患者：ペンをお借りできますか？\n受付：はい、こちらです。"
           },
           { 
-            jp: "お待ちください。", 
-            en: "Please wait.", 
-            ro: "Omachi kudasai.",
-            context: "待機を依頼する表現です。",
-            example: "受付：お待ちください。\n患者：はい、お願いします。"
+            jp: "体温はここで測ればいいですか？", 
+            en: "Should I take my temperature here?", 
+            ro: "Taion wa koko de kasureba ii desu ka?",
+            context: "体温測定の場所を確認する表現です。",
+            example: "患者：体温はここで測ればいいですか？\n受付：はい、こちらの体温計をお使いください。"
           },
           { 
-            jp: "お名前をお聞かせください。", 
-            en: "May I have your name, please?", 
-            ro: "Onamae o okikase kudasai.",
-            context: "名前を聞く表現です。",
-            example: "受付：お名前をお聞かせください。\n患者：田中太郎です。"
+            jp: "呼ばれたらどこに行けばいいですか？", 
+            en: "Where should I go when I'm called?", 
+            ro: "Yobaretara doko ni ikeba ii desu ka?",
+            context: "呼ばれた時の行き先を確認する表現です。",
+            example: "患者：呼ばれたらどこに行けばいいですか？\n受付：診察室の前でお待ちください。"
           },
           { 
-            jp: "生年月日をお聞かせください。", 
-            en: "May I have your date of birth, please?", 
-            ro: "Seinengappi o okikase kudasai.",
-            context: "生年月日を聞く表現です。",
-            example: "受付：生年月日をお聞かせください。\n患者：1985年3月15日です。"
+            jp: "だいたいどれくらいの待ち時間ですか？", 
+            en: "About how long is the wait?", 
+            ro: "Daitai dore kurai no machi jikan desu ka?",
+            context: "待ち時間の目安を確認する表現です。",
+            example: "患者：だいたいどれくらいの待ち時間ですか？\n受付：30分程度です。"
           },
           { 
-            jp: "住所をお聞かせください。", 
-            en: "May I have your address, please?", 
-            ro: "Jūsho o okikase kudasai.",
-            context: "住所を聞く表現です。",
-            example: "受付：住所をお聞かせください。\n患者：東京都渋谷区...です。"
+            jp: "付き添いも一緒に入れますか？", 
+            en: "Can my companion come in with me?", 
+            ro: "Tsukisoi mo issho ni hairemasu ka?",
+            context: "付き添いの同伴可否を確認する表現です。",
+            example: "患者：付き添いも一緒に入れますか？\n受付：はい、1名まで同伴可能です。"
           },
           { 
-            jp: "電話番号をお聞かせください。", 
-            en: "May I have your phone number, please?", 
-            ro: "Denwa bangō o okikase kudasai.",
-            context: "電話番号を聞く表現です。",
-            example: "受付：電話番号をお聞かせください。\n患者：090-1234-5678です。"
+            jp: "支払いは後払い（会計）で大丈夫ですか？", 
+            en: "Is it okay to pay later (at checkout)?", 
+            ro: "Shiharai wa atobarai de daijōbu desu ka?",
+            context: "後払いの可否を確認する表現です。",
+            example: "患者：支払いは後払いで大丈夫ですか？\n受付：はい、診察後に会計していただきます。"
           },
           { 
-            jp: "緊急連絡先をお聞かせください。", 
-            en: "May I have your emergency contact, please?", 
-            ro: "Kinkyū renrakusaki o okikase kudasai.",
-            context: "緊急連絡先を聞く表現です。",
-            example: "受付：緊急連絡先をお聞かせください。\n患者：妻の田中花子です。"
+            jp: "マイナ保険証は使えますか？", 
+            en: "Can I use my My Number insurance card?", 
+            ro: "Maina hokenshō wa tsukaemasu ka?",
+            context: "マイナ保険証の使用可否を確認する表現です。",
+            example: "患者：マイナ保険証は使えますか？\n受付：はい、マイナ保険証がご利用いただけます。"
           },
           { 
-            jp: "アレルギーはありますか？", 
-            en: "Do you have any allergies?", 
-            ro: "Arerugī wa arimasu ka?",
-            context: "アレルギーの有無を確認する表現です。",
-            example: "受付：アレルギーはありますか？\n患者：はい、ペニシリンアレルギーがあります。"
+            jp: "海外旅行保険の書類があるのですが対応できますか？", 
+            en: "I have overseas travel insurance documents. Can you handle them?", 
+            ro: "Kaigai ryokō hoken no shorui ga aru no desu ga taiō dekimasu ka?",
+            context: "海外旅行保険書類の対応可否を確認する表現です。",
+            example: "患者：海外旅行保険の書類があるのですが対応できますか？\n受付：はい、対応いたします。"
           },
           { 
-            jp: "現在服用中の薬はありますか？", 
-            en: "Are you currently taking any medications?", 
-            ro: "Genzai fukuyō chū no kusuri wa arimasu ka?",
-            context: "現在の服薬状況を確認する表現です。",
-            example: "受付：現在服用中の薬はありますか？\n患者：はい、血圧の薬を飲んでいます。"
+            jp: "予約なしでも診てもらえますか？", 
+            en: "Can I be seen without an appointment?", 
+            ro: "Yoyaku nashi demo mite moraemasu ka?",
+            context: "予約なしでの診察可否を確認する表現です。",
+            example: "患者：予約なしでも診てもらえますか？\n受付：はい、急患の方は予約なしでも診察いたします。"
           },
           { 
-            jp: "既往歴をお聞かせください。", 
-            en: "May I have your medical history, please?", 
-            ro: "Kio reki o okikase kudasai.",
-            context: "既往歴を聞く表現です。",
-            example: "受付：既往歴をお聞かせください。\n患者：特に大きな病気はありません。"
+            jp: "熱があるので隔離スペースはありますか？", 
+            en: "I have a fever. Do you have an isolation area?", 
+            ro: "Netsu ga aru node kakuri supēsu wa arimasu ka?",
+            context: "発熱時の隔離スペースの有無を確認する表現です。",
+            example: "患者：熱があるので隔離スペースはありますか？\n受付：はい、別室をご用意いたします。"
           },
           { 
-            jp: "家族歴をお聞かせください。", 
-            en: "May I have your family medical history, please?", 
-            ro: "Kazoku reki o okikase kudasai.",
-            context: "家族歴を聞く表現です。",
-            example: "受付：家族歴をお聞かせください。\n患者：父が糖尿病です。"
+            jp: "注射だけで来院したのですが、受付は必要ですか？", 
+            en: "I came just for an injection. Do I need to check in?", 
+            ro: "Chūsha dake de rain shita no desu ga, uketsuke wa hitsuyō desu ka?",
+            context: "注射のみの来院時の受付の必要性を確認する表現です。",
+            example: "患者：注射だけで来院したのですが、受付は必要ですか？\n受付：はい、受付は必要です。"
           },
           { 
-            jp: "症状はいつからですか？", 
-            en: "When did your symptoms start?", 
-            ro: "Shōjō wa itsu kara desu ka?",
-            context: "症状の開始時期を聞く表現です。",
-            example: "受付：症状はいつからですか？\n患者：3日前からです。"
+            jp: "住所や電話番号の変更はここで伝えればいいですか？", 
+            en: "Should I report changes to my address and phone number here?", 
+            ro: "Jūsho ya denwa bangō no henkō wa koko de tsutaereba ii desu ka?",
+            context: "個人情報の変更手続き場所を確認する表現です。",
+            example: "患者：住所や電話番号の変更はここで伝えればいいですか？\n受付：はい、ここで変更手続きができます。"
           },
           { 
-            jp: "痛みの程度はどのくらいですか？", 
-            en: "How severe is the pain?", 
-            ro: "Itami no teido wa dono kurai desu ka?",
-            context: "痛みの程度を聞く表現です。",
-            example: "受付：痛みの程度はどのくらいですか？\n患者：我慢できないほど痛いです。"
+            jp: "診療時間は何時までですか？", 
+            en: "What time does the clinic close?", 
+            ro: "Shinryō jikan wa nan ji made desu ka?",
+            context: "診療時間を確認する表現です。",
+            example: "患者：診療時間は何時までですか？\n受付：18時までです。"
           },
           { 
-            jp: "他の病院で診てもらったことはありますか？", 
-            en: "Have you been examined at other hospitals?", 
-            ro: "Hoka no byōin de mite moratta koto wa arimasu ka?",
-            context: "他院での診察歴を確認する表現です。",
-            example: "受付：他の病院で診てもらったことはありますか？\n患者：はい、先週別の病院に行きました。"
+            jp: "薬は院内処方ですか？院外処方ですか？", 
+            en: "Is medication dispensed in-house or at an external pharmacy?", 
+            ro: "Kusuri wa innai shohō desu ka? Ingai shohō desu ka?",
+            context: "処方方法を確認する表現です。",
+            example: "患者：薬は院内処方ですか？院外処方ですか？\n受付：院外処方です。"
           },
           { 
-            jp: "紹介状をお持ちですか？", 
-            en: "Do you have a referral letter?", 
-            ro: "Shōkaijō o omochi desu ka?",
-            context: "紹介状の有無を確認する表現です。",
-            example: "受付：紹介状をお持ちですか？\n患者：はい、こちらです。"
+            jp: "次回の予約を取りたいです。いつが空いていますか？", 
+            en: "I would like to make a next appointment. When do you have availability?", 
+            ro: "Jikai no yoyaku o toritai desu. Itsu ga suite imasu ka?",
+            context: "次回予約の空き状況を確認する表現です。",
+            example: "患者：次回の予約を取りたいです。いつが空いていますか？\n受付：来週の火曜日が空いています。"
           },
           { 
-            jp: "診察料はいくらですか？", 
-            en: "How much is the consultation fee?", 
-            ro: "Shinsatsuryō wa ikura desu ka?",
-            context: "診察料を確認する表現です。",
-            example: "患者：診察料はいくらですか？\n受付：初診料は3,000円です。"
+            jp: "当日キャンセルした場合、連絡はどこにすればいいですか？", 
+            en: "If I need to cancel on the same day, where should I contact?", 
+            ro: "Tōjitsu kyanseru shita baai, renraku wa doko ni sureba ii desu ka?",
+            context: "当日キャンセル時の連絡先を確認する表現です。",
+            example: "患者：当日キャンセルした場合、連絡はどこにすればいいですか？\n受付：この電話番号にお電話ください。"
           },
           { 
-            jp: "支払い方法は何がありますか？", 
-            en: "What payment methods do you accept?", 
-            ro: "Shiharai hōhō wa nani ga arimasu ka?",
-            context: "支払い方法を確認する表現です。",
-            example: "患者：支払い方法は何がありますか？\n受付：現金、クレジットカード、電子マネーがご利用いただけます。"
+            jp: "診断書を後日受け取りたいのですが可能ですか？", 
+            en: "Can I pick up the medical certificate on another day?", 
+            ro: "Shindansho o gojitsu uketoritai no desu ga kanō desu ka?",
+            context: "診断書の後日受け取りの可否を確認する表現です。",
+            example: "患者：診断書を後日受け取りたいのですが可能ですか？\n受付：はい、可能です。"
           }
         ],
       }
