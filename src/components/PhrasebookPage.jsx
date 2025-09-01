@@ -1811,9 +1811,10 @@ function Section({ title, phrases, learnedPhrases, updateLearnedPhrases }) {
 function Category({ cat, query, learnedPhrases, updateLearnedPhrases }) {
   // 検索フィルタ
   const filtered = useMemo(() => {
-    if (!query) return cat.sections;
+    const sections = Array.isArray(cat.sections) ? cat.sections : [];
+    if (!query) return sections;
     const q = String(query).toLowerCase();
-    return cat.sections
+    return sections
       .map((s) => ({
         ...s,
         phrases: s.phrases.filter((p) =>
