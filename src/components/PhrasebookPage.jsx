@@ -3024,6 +3024,180 @@ const DATA = [
             example: "患者：診断書を後日受け取りたいのですが可能ですか？\n受付：はい、可能です。"
           }
         ],
+      },
+      {
+        id: "symptoms-triage",
+        title: "2. Symptoms & Triage（症状説明・問診）",
+        phrases: [
+          { 
+            jp: "昨日から発熱があります。最高で◯度でした。", 
+            en: "I have had a fever since yesterday. The highest was ____ degrees.", 
+            ro: "Kinō kara hatsunetsu ga arimasu. Saikō de ____ do deshita.",
+            context: "発熱の症状と最高体温を伝える表現です。",
+            example: "患者：昨日から発熱があります。最高で39度でした。\n医師：39度ですね。他に症状はありますか？"
+          },
+          { 
+            jp: "のどが痛くて、咳が出ます。痰は少しあります。", 
+            en: "My throat hurts and I have a cough. I have some phlegm.", 
+            ro: "Nodo ga itakute, seki ga demasu. Tan wa sukoshi arimasu.",
+            context: "のどの痛み、咳、痰の症状を伝える表現です。",
+            example: "患者：のどが痛くて、咳が出ます。痰は少しあります。\n医師：のどの痛みはいつからですか？"
+          },
+          { 
+            jp: "胸が締め付けられるように痛いです。", 
+            en: "My chest feels tight and painful.", 
+            ro: "Mune ga shimetsukerareru yō ni itai desu.",
+            context: "胸の締め付けられるような痛みを伝える表現です。",
+            example: "患者：胸が締め付けられるように痛いです。\n医師：痛みはどのくらい続いていますか？"
+          },
+          { 
+            jp: "お腹が差し込むように痛みます（右下あたり）。", 
+            en: "I have stabbing pain in my stomach (around the lower right).", 
+            ro: "Onaka ga sashikomu yō ni itamimasu (kashin migi atari).",
+            context: "右下腹部の差し込むような痛みを伝える表現です。",
+            example: "患者：お腹が差し込むように痛みます（右下あたり）。\n医師：痛みはどのくらい続いていますか？"
+          },
+          { 
+            jp: "吐き気がして、今朝一度吐きました。", 
+            en: "I feel nauseous and vomited once this morning.", 
+            ro: "Hakike ga shite, kesa ichido hakimashita.",
+            context: "吐き気と嘔吐の症状を伝える表現です。",
+            example: "患者：吐き気がして、今朝一度吐きました。\n医師：嘔吐物の色はどうでしたか？"
+          },
+          { 
+            jp: "下痢が続いています。血は混じっていません。", 
+            en: "I have persistent diarrhea. There's no blood in it.", 
+            ro: "Geri ga tsuzuite imasu. Chi wa majitte imasen.",
+            context: "下痢の症状と血の有無を伝える表現です。",
+            example: "患者：下痢が続いています。血は混じっていません。\n医師：下痢はいつからですか？"
+          },
+          { 
+            jp: "めまいがして、立ちくらみがあります。", 
+            en: "I feel dizzy and have lightheadedness when standing up.", 
+            ro: "Memai ga shite, tachikurashi ga arimasu.",
+            context: "めまいと立ちくらみの症状を伝える表現です。",
+            example: "患者：めまいがして、立ちくらみがあります。\n医師：めまいはいつからですか？"
+          },
+          { 
+            jp: "息苦しくて、階段で特につらいです。", 
+            en: "I have difficulty breathing, especially when climbing stairs.", 
+            ro: "Iki kurushikute, kaidan de toku ni tsurai desu.",
+            context: "呼吸困難と階段での症状を伝える表現です。",
+            example: "患者：息苦しくて、階段で特につらいです。\n医師：平地を歩く時は大丈夫ですか？"
+          },
+          { 
+            jp: "関節が痛く、寒気があります。", 
+            en: "My joints hurt and I have chills.", 
+            ro: "Kansetsu ga itaku, samuke ga arimasu.",
+            context: "関節痛と寒気の症状を伝える表現です。",
+            example: "患者：関節が痛く、寒気があります。\n医師：どの関節が痛みますか？"
+          },
+          { 
+            jp: "かゆみを伴う発疹が出ています。", 
+            en: "I have a rash with itching.", 
+            ro: "Kayumi o tomonau hasshin ga dete imasu.",
+            context: "かゆみを伴う発疹の症状を伝える表現です。",
+            example: "患者：かゆみを伴う発疹が出ています。\n医師：発疹はどこにありますか？"
+          },
+          { 
+            jp: "痛みは１０段階中◯くらいです。", 
+            en: "The pain is about ____ out of 10.", 
+            ro: "Itami wa 10-dankai chū ____ kurai desu.",
+            context: "痛みの強さを10段階で表現する表現です。",
+            example: "患者：痛みは１０段階中７くらいです。\n医師：7段階ですね。かなり痛いということですね。"
+          },
+          { 
+            jp: "動くと痛みが強くなります／安静にすると楽です。", 
+            en: "The pain gets worse when I move / It feels better when I rest.", 
+            ro: "Ugoku to itami ga tsuyoku narimasu / ansei ni suru to raku desu.",
+            context: "動作時と安静時の痛みの変化を伝える表現です。",
+            example: "患者：動くと痛みが強くなります。安静にすると楽です。\n医師：安静にしていれば痛みは軽くなりますか？"
+          },
+          { 
+            jp: "いつから症状が始まりましたか？→（回答の例）一昨日の夜からです。", 
+            en: "When did the symptoms start? → (Example answer) Since the night before last.", 
+            ro: "Itsu kara shōjō ga hajimarimashita ka? → ototoi no yoru kara desu.",
+            context: "症状の開始時期を質問し、回答例を示す表現です。",
+            example: "医師：いつから症状が始まりましたか？\n患者：一昨日の夜からです。"
+          },
+          { 
+            jp: "既往歴は高血圧があります。薬を飲んでいます。", 
+            en: "My medical history includes hypertension. I'm taking medication for it.", 
+            ro: "Kio reki wa kōketsuatsu ga arimasu. Kusuri o nonde imasu.",
+            context: "既往歴と現在の服薬状況を伝える表現です。",
+            example: "患者：既往歴は高血圧があります。薬を飲んでいます。\n医師：血圧の薬は何を飲んでいますか？"
+          },
+          { 
+            jp: "薬のアレルギーはありません／ペニシリンにアレルギーがあります。", 
+            en: "I have no drug allergies / I'm allergic to penicillin.", 
+            ro: "Kusuri no arerugī wa arimasen / penishirin ni arerugī ga arimasu.",
+            context: "薬のアレルギーの有無を伝える表現です。",
+            example: "患者：ペニシリンにアレルギーがあります。\n医師：アレルギーの症状はどのようなものですか？"
+          },
+          { 
+            jp: "市販の薬を飲みました。効果はあまり感じませんでした。", 
+            en: "I took over-the-counter medication. I didn't feel much effect.", 
+            ro: "Shihan no kusuri o nomimashita. Kōka wa amari kanjimasen deshita.",
+            context: "市販薬の使用と効果を伝える表現です。",
+            example: "患者：市販の薬を飲みました。効果はあまり感じませんでした。\n医師：どのような薬を飲みましたか？"
+          },
+          { 
+            jp: "食欲がありません／水分は取れています。", 
+            en: "I have no appetite / I can take fluids.", 
+            ro: "Shokuyoku ga arimasen / suibun wa torete imasu.",
+            context: "食欲と水分摂取の状況を伝える表現です。",
+            example: "患者：食欲がありません。水分は取れています。\n医師：水分はどのくらい取れていますか？"
+          },
+          { 
+            jp: "最後に食事をしたのは◯時ごろです。", 
+            en: "The last time I ate was around ____ o'clock.", 
+            ro: "Saigo ni shokuji o shita no wa ____ ji goro desu.",
+            context: "最後の食事時間を伝える表現です。",
+            example: "患者：最後に食事をしたのは昨日の夜8時ごろです。\n医師：それから何も食べていませんか？"
+          },
+          { 
+            jp: "妊娠の可能性はありません／あるかもしれません。", 
+            en: "There's no possibility of pregnancy / There might be a possibility.", 
+            ro: "Ninshin no kanōsei wa arimasen / aru kamoshiremasen.",
+            context: "妊娠の可能性の有無を伝える表現です。",
+            example: "患者：妊娠の可能性はあるかもしれません。\n医師：最後の生理はいつでしたか？"
+          },
+          { 
+            jp: "コンタクトは外しています／メガネです。", 
+            en: "I've removed my contact lenses / I wear glasses.", 
+            ro: "Kontakuto wa hazushite imasu / megane desu.",
+            context: "コンタクトレンズとメガネの使用状況を伝える表現です。",
+            example: "患者：コンタクトは外しています。\n医師：視力はどのくらいですか？"
+          },
+          { 
+            jp: "けがをした原因は転んだためです。", 
+            en: "The cause of my injury was falling down.", 
+            ro: "Kega o shita gen'in wa taoreta tame desu.",
+            context: "けがの原因を説明する表現です。",
+            example: "患者：けがをした原因は転んだためです。\n医師：いつ転びましたか？"
+          },
+          { 
+            jp: "痛む場所はここです（指差し）。触ると響きます。", 
+            en: "The painful area is here (pointing). It hurts when touched.", 
+            ro: "Itamu basho wa koko desu. Sawaru to hibikimasu.",
+            context: "痛む場所を指差し、触った時の痛みを伝える表現です。",
+            example: "患者：痛む場所はここです（指差し）。触ると響きます。\n医師：ここですね。どのような痛みですか？"
+          },
+          { 
+            jp: "夜間になると咳がひどくなります。", 
+            en: "The cough gets worse at night.", 
+            ro: "Yakan ni naru to seki ga hidoku narimasu.",
+            context: "夜間の咳の悪化を伝える表現です。",
+            example: "患者：夜間になると咳がひどくなります。\n医師：夜は眠れますか？"
+          },
+          { 
+            jp: "以前にも同じ症状がありました／今回が初めてです。", 
+            en: "I've had the same symptoms before / This is the first time.", 
+            ro: "Izen ni mo onaji shōjō ga arimashita / konkai ga hajimete desu.",
+            context: "以前の同様症状の有無を伝える表現です。",
+            example: "患者：以前にも同じ症状がありました。\n医師：いつ頃に同じ症状がありましたか？"
+          }
+        ],
       }
     ],
   },
