@@ -2656,24 +2656,7 @@ const DATA = [
           },
         ],
       },
-      {
-        id: "bus",
-        title: "7. Bus",
-        phrases: [
-          { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
-          { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
-          { jp: "運賃はいくらですか？", en: "How much is the fare?", ro: "Unchin wa ikura desu ka?" },
-        ],
-      },
-      {
-        id: "taxi",
-        title: "3. Taxi",
-        phrases: [
-          { jp: "〇〇までお願いします。", en: "To ____, please.", ro: "____ made onegaishimasu." },
-          { jp: "料金はいくらくらいですか？", en: "About how much will it cost?", ro: "Ryōkin wa ikura kurai desu ka?" },
-          { jp: "領収書をください。", en: "Please give me a receipt.", ro: "Ryōshūsho o kudasai." },
-        ],
-      },
+
     ],
   },
   {
