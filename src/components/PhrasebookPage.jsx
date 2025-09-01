@@ -1327,80 +1327,6 @@ const DATA = [
             example: "客：試着したものはどうすれば良いですか？\n店員：試着室の外のカゴにお入れください。\n客：ありがとうございます。"
           },
         ],
-      }
-    ],
-  },
-  {
-    id: "transportation",
-    emoji: "🚇",
-    title: "Transportation/Movement",
-    sections: [
-      {
-        id: "train",
-        title: "1. Train/Subway",
-        phrases: [
-          { jp: "〇〇駅までいくらですか？", en: "How much is it to ____ station?", ro: "____ eki made ikura desu ka?" },
-          { jp: "この電車は〇〇行きですか？", en: "Does this train go to ____?", ro: "Kono densha wa ____ yuki desu ka?" },
-          { jp: "次の電車は何時ですか？", en: "What time is the next train?", ro: "Tsugi no densha wa nanji desu ka?" },
-          { jp: "定期券を買いたいんですが。", en: "I'd like to buy a commuter pass.", ro: "Teikiken o kaitai n desu ga." },
-        ],
-      },
-      {
-        id: "bus",
-        title: "2. Bus",
-        phrases: [
-          { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
-          { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
-          { jp: "運賃はいくらですか？", en: "How much is the fare?", ro: "Unchin wa ikura desu ka?" },
-        ],
-      },
-      {
-        id: "taxi",
-        title: "3. Taxi",
-        phrases: [
-          { jp: "〇〇までお願いします。", en: "To ____, please.", ro: "____ made onegaishimasu." },
-          { jp: "料金はいくらくらいですか？", en: "About how much will it cost?", ro: "Ryōkin wa ikura kurai desu ka?" },
-          { jp: "領収書をください。", en: "Please give me a receipt.", ro: "Ryōshūsho o kudasai." },
-        ],
-      },
-    ],
-  },
-  {
-    id: "daily-life",
-    emoji: "🏠",
-    title: "Daily Life",
-    sections: [
-      {
-        id: "greetings",
-        title: "1. Greetings/Introductions",
-        phrases: [
-          { jp: "はじめまして、〇〇です。", en: "Nice to meet you, I'm ____.", ro: "Hajimemashite, ____ desu." },
-          { jp: "よろしくお願いします。", en: "Please treat me well.", ro: "Yoroshiku onegaishimasu." },
-          { jp: "お疲れ様です。", en: "Thank you for your hard work.", ro: "Otsukaresama desu." },
-          { jp: "おはようございます。", en: "Good morning.", ro: "Ohayō gozaimasu." },
-          { jp: "こんにちは。", en: "Hello.", ro: "Konnichiwa." },
-          { jp: "こんばんは。", en: "Good evening.", ro: "Konbanwa." },
-        ],
-      },
-      {
-        id: "weather",
-        title: "2. Weather/Climate",
-        phrases: [
-          { jp: "今日はいい天気ですね。", en: "It's nice weather today.", ro: "Kyō wa ii tenki desu ne." },
-          { jp: "明日は雨が降るそうです。", en: "I heard it will rain tomorrow.", ro: "Ashita wa ame ga furu sō desu." },
-          { jp: "暑いですね。", en: "It's hot, isn't it?", ro: "Atsui desu ne." },
-          { jp: "寒いですね。", en: "It's cold, isn't it?", ro: "Samui desu ne." },
-        ],
-      },
-      {
-        id: "hobbies",
-        title: "3. Hobbies/Interests",
-        phrases: [
-          { jp: "趣味は何ですか？", en: "What are your hobbies?", ro: "Shumi wa nan desu ka?" },
-          { jp: "〇〇が好きです。", en: "I like ____.", ro: "____ ga suki desu." },
-          { jp: "〇〇を習っています。", en: "I'm learning ____.", ro: "____ o naratte imasu." },
-          { jp: "週末は何をしますか？", en: "What do you do on weekends?", ro: "Shūmatsu wa nani o shimasu ka?" },
-        ],
       },
       {
         id: "price-discount-points",
@@ -1512,7 +1438,82 @@ const DATA = [
             example: "客：返品は可能ですか？\n店員：はい、7日以内でしたら返品可能です。\n客：ありがとうございます。"
           },
         ],
+      }
+    ],
+  },
+  {
+    id: "transportation",
+    emoji: "🚇",
+    title: "Transportation/Movement",
+    sections: [
+      {
+        id: "train",
+        title: "1. Train/Subway",
+        phrases: [
+          { jp: "〇〇駅までいくらですか？", en: "How much is it to ____ station?", ro: "____ eki made ikura desu ka?" },
+          { jp: "この電車は〇〇行きですか？", en: "Does this train go to ____?", ro: "Kono densha wa ____ yuki desu ka?" },
+          { jp: "次の電車は何時ですか？", en: "What time is the next train?", ro: "Tsugi no densha wa nanji desu ka?" },
+          { jp: "定期券を買いたいんですが。", en: "I'd like to buy a commuter pass.", ro: "Teikiken o kaitai n desu ga." },
+        ],
       },
+      {
+        id: "bus",
+        title: "2. Bus",
+        phrases: [
+          { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
+          { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
+          { jp: "運賃はいくらですか？", en: "How much is the fare?", ro: "Unchin wa ikura desu ka?" },
+        ],
+      },
+      {
+        id: "taxi",
+        title: "3. Taxi",
+        phrases: [
+          { jp: "〇〇までお願いします。", en: "To ____, please.", ro: "____ made onegaishimasu." },
+          { jp: "料金はいくらくらいですか？", en: "About how much will it cost?", ro: "Ryōkin wa ikura kurai desu ka?" },
+          { jp: "領収書をください。", en: "Please give me a receipt.", ro: "Ryōshūsho o kudasai." },
+        ],
+      },
+    ],
+  },
+  {
+    id: "daily-life",
+    emoji: "🏠",
+    title: "Daily Life",
+    sections: [
+      {
+        id: "greetings",
+        title: "1. Greetings/Introductions",
+        phrases: [
+          { jp: "はじめまして、〇〇です。", en: "Nice to meet you, I'm ____.", ro: "Hajimemashite, ____ desu." },
+          { jp: "よろしくお願いします。", en: "Please treat me well.", ro: "Yoroshiku onegaishimasu." },
+          { jp: "お疲れ様です。", en: "Thank you for your hard work.", ro: "Otsukaresama desu." },
+          { jp: "おはようございます。", en: "Good morning.", ro: "Ohayō gozaimasu." },
+          { jp: "こんにちは。", en: "Hello.", ro: "Konnichiwa." },
+          { jp: "こんばんは。", en: "Good evening.", ro: "Konbanwa." },
+        ],
+      },
+      {
+        id: "weather",
+        title: "2. Weather/Climate",
+        phrases: [
+          { jp: "今日はいい天気ですね。", en: "It's nice weather today.", ro: "Kyō wa ii tenki desu ne." },
+          { jp: "明日は雨が降るそうです。", en: "I heard it will rain tomorrow.", ro: "Ashita wa ame ga furu sō desu." },
+          { jp: "暑いですね。", en: "It's hot, isn't it?", ro: "Atsui desu ne." },
+          { jp: "寒いですね。", en: "It's cold, isn't it?", ro: "Samui desu ne." },
+        ],
+      },
+      {
+        id: "hobbies",
+        title: "3. Hobbies/Interests",
+        phrases: [
+          { jp: "趣味は何ですか？", en: "What are your hobbies?", ro: "Shumi wa nan desu ka?" },
+          { jp: "〇〇が好きです。", en: "I like ____.", ro: "____ ga suki desu." },
+          { jp: "〇〇を習っています。", en: "I'm learning ____.", ro: "____ o naratte imasu." },
+          { jp: "週末は何をしますか？", en: "What do you do on weekends?", ro: "Shūmatsu wa nani o shimasu ka?" },
+        ],
+      },
+
     ],
   },
 ];
