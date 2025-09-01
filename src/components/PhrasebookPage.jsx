@@ -1885,8 +1885,168 @@ const DATA = [
         ],
       },
       {
+        id: "tickets-ic-cards",
+        title: "2. Tickets & IC Cards（切符・ICカード・チャージ）",
+        phrases: [
+          { 
+            jp: "◯◯までの切符をください。", 
+            en: "Please give me a ticket to ____.", 
+            ro: "____ made no kippu o kudasai.",
+            context: "特定の駅までの切符を購入する基本的な表現です。",
+            example: "客：渋谷までの切符をください。\n駅員：はい、渋谷まででございます。"
+          },
+          { 
+            jp: "どこまで買えばいいですか？（区間が分からないとき）", 
+            en: "How far should I buy a ticket for? (when I don't know the section)", 
+            ro: "Doko made kaeba ii desu ka?",
+            context: "目的地までの区間が分からない場合に切符の購入範囲を確認する表現です。",
+            example: "客：どこまで買えばいいですか？\n駅員：新宿までで大丈夫です。"
+          },
+          { 
+            jp: "一日乗車券はありますか？", 
+            en: "Do you have one-day passes?", 
+            ro: "Ichinichi jōsha ken wa arimasu ka?",
+            context: "一日乗車券の有無を確認する表現です。",
+            example: "客：一日乗車券はありますか？\n駅員：はい、一日乗車券がございます。"
+          },
+          { 
+            jp: "こちらのICカードは使えますか？（Suica／PASMOなど）", 
+            en: "Can I use this IC card? (Suica/PASMO, etc.)", 
+            ro: "Kochira no IC kādo wa tsukaemasu ka?",
+            context: "特定のICカードの使用可否を確認する表現です。",
+            example: "客：こちらのICカードは使えますか？\n駅員：はい、Suicaは使用可能です。"
+          },
+          { 
+            jp: "ICカードの残高を確認したいです。", 
+            en: "I'd like to check the balance on my IC card.", 
+            ro: "IC kādo no zangaku o kakunin shitai desu.",
+            context: "ICカードの残高確認を依頼する表現です。",
+            example: "客：ICカードの残高を確認したいです。\n駅員：改札機で確認できます。"
+          },
+          { 
+            jp: "チャージはどこでできますか？", 
+            en: "Where can I charge my IC card?", 
+            ro: "Chāji wa doko de dekimasu ka?",
+            context: "ICカードのチャージ場所を確認する表現です。",
+            example: "客：チャージはどこでできますか？\n駅員：券売機でチャージできます。"
+          },
+          { 
+            jp: "クレジットカードでチャージできますか？", 
+            en: "Can I charge with a credit card?", 
+            ro: "Kurejitto kādo de chāji dekimasu ka?",
+            context: "クレジットカードでのチャージ可否を確認する表現です。",
+            example: "客：クレジットカードでチャージできますか？\n駅員：はい、クレジットカードでチャージできます。"
+          },
+          { 
+            jp: "オートチャージの設定はできますか？", 
+            en: "Can I set up auto-charge?", 
+            ro: "Ōto chāji no settei wa dekimasu ka?",
+            context: "オートチャージ機能の設定可否を確認する表現です。",
+            example: "客：オートチャージの設定はできますか？\n駅員：はい、窓口で設定いたします。"
+          },
+          { 
+            jp: "子ども用ICカードを作りたいです。", 
+            en: "I'd like to create a child IC card.", 
+            ro: "Kodomo yō IC kādo o tsukuritai desu.",
+            context: "子ども用ICカードの作成を依頼する表現です。",
+            example: "客：子ども用ICカードを作りたいです。\n駅員：はい、窓口で作成いたします。"
+          },
+          { 
+            jp: "定期券を新規で作りたいです。", 
+            en: "I'd like to create a new commuter pass.", 
+            ro: "Teikiken o shinki de tsukuritai desu.",
+            context: "定期券の新規作成を依頼する表現です。",
+            example: "客：定期券を新規で作りたいです。\n駅員：はい、定期券の作成をいたします。"
+          },
+          { 
+            jp: "定期券の継続手続きはできますか？", 
+            en: "Can I renew my commuter pass?", 
+            ro: "Teikiken no keizoku tetsuzuki wa dekimasu ka?",
+            context: "定期券の継続手続きの可否を確認する表現です。",
+            example: "客：定期券の継続手続きはできますか？\n駅員：はい、継続手続きが可能です。"
+          },
+          { 
+            jp: "途中下車は可能ですか？", 
+            en: "Is it possible to get off mid-journey?", 
+            ro: "Tochū gesha wa kanō desu ka?",
+            context: "途中下車の可否を確認する表現です。",
+            example: "客：途中下車は可能ですか？\n駅員：はい、途中下車が可能です。"
+          },
+          { 
+            jp: "特急券は別に必要ですか？", 
+            en: "Do I need a separate express ticket?", 
+            ro: "Tokkyū ken wa betsu ni hitsuyō desu ka?",
+            context: "特急券の必要性を確認する表現です。",
+            example: "客：特急券は別に必要ですか？\n駅員：はい、特急券が別途必要です。"
+          },
+          { 
+            jp: "指定席券はここで取れますか？", 
+            en: "Can I get a reserved seat ticket here?", 
+            ro: "Shiteki seki ken wa koko de toremasu ka?",
+            context: "指定席券の購入可否を確認する表現です。",
+            example: "客：指定席券はここで取れますか？\n駅員：はい、指定席券をお取りできます。"
+          },
+          { 
+            jp: "整理券はどこで取りますか？（バス）", 
+            en: "Where do I get a numbered ticket? (for buses)", 
+            ro: "Seiri ken wa doko de torimasu ka?",
+            context: "バスの整理券の取り方を確認する表現です。",
+            example: "客：整理券はどこで取りますか？\n運転手：乗車口で整理券をお取りください。"
+          },
+          { 
+            jp: "回数券はありますか？", 
+            en: "Do you have multi-ride tickets?", 
+            ro: "Kaisū ken wa arimasu ka?",
+            context: "回数券の有無を確認する表現です。",
+            example: "客：回数券はありますか？\n駅員：はい、回数券がございます。"
+          },
+          { 
+            jp: "領収書を発行していただけますか？", 
+            en: "Could you issue a receipt?", 
+            ro: "Ryōshūsho o hakkō shite itadakemasu ka?",
+            context: "領収書の発行を依頼する表現です。",
+            example: "客：領収書を発行していただけますか？\n駅員：はい、領収書を発行いたします。"
+          },
+          { 
+            jp: "間違えて違う切符を買ってしまいました。変更できますか？", 
+            en: "I bought the wrong ticket by mistake. Can I change it?", 
+            ro: "Machigaete chigau kippu o katte shimaimashita. Henkō dekimasu ka?",
+            context: "間違って購入した切符の変更可否を確認する表現です。",
+            example: "客：間違えて違う切符を買ってしまいました。変更できますか？\n駅員：はい、切符の変更が可能です。"
+          },
+          { 
+            jp: "切符を落としてしまいました。どうすればいいですか？", 
+            en: "I dropped my ticket. What should I do?", 
+            ro: "Kippu o otoshite shimaimashita. Dō sureba ii desu ka?",
+            context: "切符を紛失した場合の対処法を確認する表現です。",
+            example: "客：切符を落としてしまいました。どうすればいいですか？\n駅員：改札口で再発行いたします。"
+          },
+          { 
+            jp: "ICカードを失くしました。再発行できますか？", 
+            en: "I lost my IC card. Can I get a replacement?", 
+            ro: "IC kādo o nakushimashita. Saihakken dekimasu ka?",
+            context: "ICカード紛失時の再発行可否を確認する表現です。",
+            example: "客：ICカードを失くしました。再発行できますか？\n駅員：はい、再発行が可能です。"
+          },
+          { 
+            jp: "乗車券と特急券の違いを教えてください。", 
+            en: "Please explain the difference between a regular ticket and an express ticket.", 
+            ro: "Jōsha ken to tokkyū ken no chigai o oshiete kudasai.",
+            context: "乗車券と特急券の違いについて説明を求める表現です。",
+            example: "客：乗車券と特急券の違いを教えてください。\n駅員：乗車券は基本運賃、特急券は特急料金でございます。"
+          },
+          { 
+            jp: "途中の駅で改札を出ても有効ですか？", 
+            en: "Is it still valid if I exit the gate at an intermediate station?", 
+            ro: "Tochū no eki de kaisatsu o dete mo yūkō desu ka?",
+            context: "途中駅での改札出場時の切符の有効性を確認する表現です。",
+            example: "客：途中の駅で改札を出ても有効ですか？\n駅員：はい、途中下車が可能です。"
+          },
+        ],
+      },
+      {
         id: "bus",
-        title: "2. Bus",
+        title: "3. Bus",
         phrases: [
           { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
           { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
