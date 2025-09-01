@@ -1402,116 +1402,116 @@ const DATA = [
           { jp: "週末は何をしますか？", en: "What do you do on weekends?", ro: "Shūmatsu wa nani o shimasu ka?" },
         ],
       },
-    ],
-  },
       {
         id: "price-discount-points",
         title: "4. Price, Discount & Points（価格・割引・ポイント）",
         phrases: [
-      { 
-        jp: "表示価格は税込みですか？税別ですか？", 
-        en: "Is the displayed price including tax or excluding tax?", 
-        ro: "Hyōji kakaku wa zeikomi desu ka? Zeibetsu desu ka?",
-        context: "商品の表示価格が税込みか税別かを確認する表現です。日本では税込み価格が一般的ですが、確認が必要です。",
-        example: "客：表示価格は税込みですか？税別ですか？\n店員：税込み価格でございます。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "セールはいつまでですか？", 
-        en: "Until when is the sale?", 
-        ro: "Sēru wa itsu made desu ka?",
-        context: "セール期間の終了日を確認する表現です。",
-        example: "客：セールはいつまでですか？\n店員：今月末までとなっております。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "本日限定の割引はありますか？", 
-        en: "Do you have any today-only discounts?", 
-        ro: "Honjitsu gentei no waribiki wa arimasu ka?",
-        context: "当日限定の特別割引の有無を確認する表現です。",
-        example: "客：本日限定の割引はありますか？\n店員：はい、本日限定で20%オフとなっております。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "まとめ買いで安くなりますか？", 
-        en: "Do you get a discount for bulk purchases?", 
-        ro: "Matomegai de yasuku narimasu ka?",
-        context: "まとめ買いによる割引の有無を確認する表現です。",
-        example: "客：まとめ買いで安くなりますか？\n店員：はい、3個以上で10%オフとなります。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "学生割引（学割）はありますか？", 
-        en: "Do you have student discounts?", 
-        ro: "Gakusei waribiki (gakuwari) wa arimasu ka?",
-        context: "学生向けの割引サービスの有無を確認する表現です。学生証の提示が必要な場合があります。",
-        example: "客：学生割引はありますか？\n店員：はい、学生証をご提示いただければ15%オフとなります。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "型落ちやアウトレットはありますか？", 
-        en: "Do you have discontinued items or outlet items?", 
-        ro: "Katachi ochi ya autoretto wa arimasu ka?",
-        context: "旧モデルやアウトレット商品の有無を確認する表現です。",
-        example: "客：型落ちやアウトレットはありますか？\n店員：はい、2階にアウトレットコーナーがございます。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "クーポンは使えますか？", 
-        en: "Can I use coupons?", 
-        ro: "Kūpon wa tsukaemasu ka?",
-        context: "クーポンの使用可否を確認する表現です。",
-        example: "客：クーポンは使えますか？\n店員：はい、クーポンをご利用いただけます。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "送料無料ですか？", 
-        en: "Is shipping free?", 
-        ro: "Sōryō muryō desu ka?",
-        context: "送料の有無を確認する表現です。",
-        example: "客：送料無料ですか？\n店員：5000円以上のお買い上げで送料無料となります。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "貯まっているポイントを使えますか？", 
-        en: "Can I use my accumulated points?", 
-        ro: "Tamatte iru pointo o tsukaemasu ka?",
-        context: "ポイントカードの使用可否を確認する表現です。",
-        example: "客：貯まっているポイントを使えますか？\n店員：はい、ポイントカードをご提示ください。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "ちょっとサービス（値引き）してもらえませんか？", 
-        en: "Could you give me a little discount?", 
-        ro: "Chotto sābisu (nebiki) shite moraemasen ka?",
-        context: "値引きを依頼する表現です。日本では交渉による値引きは一般的ではありませんが、一部の店では可能です。",
-        example: "客：ちょっとサービスしてもらえませんか？\n店員：申し訳ございませんが、定価での販売となっております。\n客：分かりました。"
-      },
-      { 
-        jp: "免税できますか？（誤用：日本在住者は対象外）", 
-        en: "Can I get tax-free? (Note: Not applicable to Japanese residents)", 
-        ro: "Menzei dekimasu ka?",
-        context: "免税サービスの有無を確認する表現です。日本では外国人観光客のみが対象で、日本在住者は対象外です。",
-        example: "客：免税できますか？\n店員：外国人観光客の方のみ対象となっております。\n客：分かりました。"
-      },
-      { 
-        jp: "セットにすると安くなりますか？", 
-        en: "Is it cheaper if I buy it as a set?", 
-        ro: "Setto ni suru to yasuku narimasu ka?",
-        context: "セット購入による割引の有無を確認する表現です。",
-        example: "客：セットにすると安くなりますか？\n店員：はい、セット購入で15%オフとなります。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "予算は◯◯円くらいです。おすすめはありますか？", 
-        en: "My budget is around ____ yen. Do you have any recommendations?", 
-        ro: "Yosan wa ____ en kurai desu. Osusume wa arimasu ka?",
-        context: "予算内での商品の提案を依頼する表現です。",
-        example: "客：予算は5000円くらいです。おすすめはありますか？\n店員：はい、こちらの商品がおすすめです。\n客：ありがとうございます。"
-      },
-      { 
-        jp: "こちら、再入荷すると値下げされますか？", 
-        en: "Will this go on sale when it's restocked?", 
-        ro: "Kochira, sainyūka suru to nedage saremasu ka?",
-        context: "再入荷時の価格変更について確認する表現です。",
-        example: "客：こちら、再入荷すると値下げされますか？\n店員：申し訳ございませんが、価格は変動いたしません。\n客：分かりました。"
-      },
-      { 
-        jp: "返品は可能ですか？", 
-        en: "Is return possible?", 
-        ro: "Henpin wa kanō desu ka?",
-        context: "商品の返品可否を確認する表現です。返品条件や期間についても確認が必要です。",
-        example: "客：返品は可能ですか？\n店員：はい、7日以内でしたら返品可能です。\n客：ありがとうございます。"
+          { 
+            jp: "表示価格は税込みですか？税別ですか？", 
+            en: "Is the displayed price including tax or excluding tax?", 
+            ro: "Hyōji kakaku wa zeikomi desu ka? Zeibetsu desu ka?",
+            context: "商品の表示価格が税込みか税別かを確認する表現です。日本では税込み価格が一般的ですが、確認が必要です。",
+            example: "客：表示価格は税込みですか？税別ですか？\n店員：税込み価格でございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "セールはいつまでですか？", 
+            en: "Until when is the sale?", 
+            ro: "Sēru wa itsu made desu ka?",
+            context: "セール期間の終了日を確認する表現です。",
+            example: "客：セールはいつまでですか？\n店員：今月末までとなっております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "本日限定の割引はありますか？", 
+            en: "Do you have any today-only discounts?", 
+            ro: "Honjitsu gentei no waribiki wa arimasu ka?",
+            context: "当日限定の特別割引の有無を確認する表現です。",
+            example: "客：本日限定の割引はありますか？\n店員：はい、本日限定で20%オフとなっております。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "まとめ買いで安くなりますか？", 
+            en: "Do you get a discount for bulk purchases?", 
+            ro: "Matomegai de yasuku narimasu ka?",
+            context: "まとめ買いによる割引の有無を確認する表現です。",
+            example: "客：まとめ買いで安くなりますか？\n店員：はい、3個以上で10%オフとなります。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "学生割引（学割）はありますか？", 
+            en: "Do you have student discounts?", 
+            ro: "Gakusei waribiki (gakuwari) wa arimasu ka?",
+            context: "学生向けの割引サービスの有無を確認する表現です。学生証の提示が必要な場合があります。",
+            example: "客：学生割引はありますか？\n店員：はい、学生証をご提示いただければ15%オフとなります。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "型落ちやアウトレットはありますか？", 
+            en: "Do you have discontinued items or outlet items?", 
+            ro: "Katachi ochi ya autoretto wa arimasu ka?",
+            context: "旧モデルやアウトレット商品の有無を確認する表現です。",
+            example: "客：型落ちやアウトレットはありますか？\n店員：はい、2階にアウトレットコーナーがございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "クーポンは使えますか？", 
+            en: "Can I use coupons?", 
+            ro: "Kūpon wa tsukaemasu ka?",
+            context: "クーポンの使用可否を確認する表現です。",
+            example: "客：クーポンは使えますか？\n店員：はい、クーポンをご利用いただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "送料無料ですか？", 
+            en: "Is shipping free?", 
+            ro: "Sōryō muryō desu ka?",
+            context: "送料の有無を確認する表現です。",
+            example: "客：送料無料ですか？\n店員：5000円以上のお買い上げで送料無料となります。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "貯まっているポイントを使えますか？", 
+            en: "Can I use my accumulated points?", 
+            ro: "Tamatte iru pointo o tsukaemasu ka?",
+            context: "ポイントカードの使用可否を確認する表現です。",
+            example: "客：貯まっているポイントを使えますか？\n店員：はい、ポイントカードをご提示ください。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ちょっとサービス（値引き）してもらえませんか？", 
+            en: "Could you give me a little discount?", 
+            ro: "Chotto sābisu (nebiki) shite moraemasen ka?",
+            context: "値引きを依頼する表現です。日本では交渉による値引きは一般的ではありませんが、一部の店では可能です。",
+            example: "客：ちょっとサービスしてもらえませんか？\n店員：申し訳ございませんが、定価での販売となっております。\n客：分かりました。"
+          },
+          { 
+            jp: "免税できますか？（誤用：日本在住者は対象外）", 
+            en: "Can I get tax-free? (Note: Not applicable to Japanese residents)", 
+            ro: "Menzei dekimasu ka?",
+            context: "免税サービスの有無を確認する表現です。日本では外国人観光客のみが対象で、日本在住者は対象外です。",
+            example: "客：免税できますか？\n店員：外国人観光客の方のみ対象となっております。\n客：分かりました。"
+          },
+          { 
+            jp: "セットにすると安くなりますか？", 
+            en: "Is it cheaper if I buy it as a set?", 
+            ro: "Setto ni suru to yasuku narimasu ka?",
+            context: "セット購入による割引の有無を確認する表現です。",
+            example: "客：セットにすると安くなりますか？\n店員：はい、セット購入で15%オフとなります。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "予算は◯◯円くらいです。おすすめはありますか？", 
+            en: "My budget is around ____ yen. Do you have any recommendations?", 
+            ro: "Yosan wa ____ en kurai desu. Osusume wa arimasu ka?",
+            context: "予算内での商品の提案を依頼する表現です。",
+            example: "客：予算は5000円くらいです。おすすめはありますか？\n店員：はい、こちらの商品がおすすめです。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "こちら、再入荷すると値下げされますか？", 
+            en: "Will this go on sale when it's restocked?", 
+            ro: "Kochira, sainyūka suru to nedage saremasu ka?",
+            context: "再入荷時の価格変更について確認する表現です。",
+            example: "客：こちら、再入荷すると値下げされますか？\n店員：申し訳ございませんが、価格は変動いたしません。\n客：分かりました。"
+          },
+          { 
+            jp: "返品は可能ですか？", 
+            en: "Is return possible?", 
+            ro: "Henpin wa kanō desu ka?",
+            context: "商品の返品可否を確認する表現です。返品条件や期間についても確認が必要です。",
+            example: "客：返品は可能ですか？\n店員：はい、7日以内でしたら返品可能です。\n客：ありがとうございます。"
+          },
+        ],
       },
     ],
   },
