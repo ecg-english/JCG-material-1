@@ -2045,8 +2045,168 @@ const DATA = [
         ],
       },
       {
+        id: "route-transfers",
+        title: "3. Route & Transfers（経路・乗り換え案内）",
+        phrases: [
+          { 
+            jp: "◯◯まで一番早い行き方はどれですか？", 
+            en: "What's the fastest way to get to ____?", 
+            ro: "____ made ichiban hayai ikikata wa dore desu ka?",
+            context: "目的地までの最速ルートを確認する表現です。",
+            example: "客：渋谷まで一番早い行き方はどれですか？\n駅員：山手線が一番早いです。"
+          },
+          { 
+            jp: "◯◯駅で△△線に乗り換えれば着きますか？", 
+            en: "If I transfer to the ____ line at ____ station, will I get there?", 
+            ro: "____ eki de ____ sen ni norikaereba tsukimasu ka?",
+            context: "特定の駅での乗り換えによる到着可否を確認する表現です。",
+            example: "客：新宿駅で中央線に乗り換えれば着きますか？\n駅員：はい、新宿駅で中央線に乗り換えれば到着できます。"
+          },
+          { 
+            jp: "乗り換え時間はどれくらい見ておくべきですか？", 
+            en: "How much time should I allow for transfers?", 
+            ro: "Norikae jikan wa dore kurai mite oku beki desu ka?",
+            context: "乗り換えに必要な時間を確認する表現です。",
+            example: "客：乗り換え時間はどれくらい見ておくべきですか？\n駅員：約5分程度見ておくことをお勧めします。"
+          },
+          { 
+            jp: "同じホームで乗り換えできますか？", 
+            en: "Can I transfer on the same platform?", 
+            ro: "Onaji hōmu de norikae dekimasu ka?",
+            context: "同一ホームでの乗り換え可否を確認する表現です。",
+            example: "客：同じホームで乗り換えできますか？\n駅員：はい、同じホームで乗り換えが可能です。"
+          },
+          { 
+            jp: "いったん改札を出る必要はありますか？", 
+            en: "Do I need to exit the gate once?", 
+            ro: "Ittan kaisatsu o deru hitsuyō wa arimasu ka?",
+            context: "改札外での乗り換えの必要性を確認する表現です。",
+            example: "客：いったん改札を出る必要はありますか？\n駅員：いいえ、改札内で乗り換えが可能です。"
+          },
+          { 
+            jp: "エレベーターで乗り換えできますか？（段差の有無）", 
+            en: "Can I transfer using elevators? (checking for level differences)", 
+            ro: "Erebētā de norikae dekimasu ka?",
+            context: "エレベーター利用での乗り換え可否を確認する表現です。",
+            example: "客：エレベーターで乗り換えできますか？\n駅員：はい、エレベーターで乗り換えが可能です。"
+          },
+          { 
+            jp: "直通列車はありますか？", 
+            en: "Are there direct trains?", 
+            ro: "Chokutsū ressha wa arimasu ka?",
+            context: "直通列車の有無を確認する表現です。",
+            example: "客：直通列車はありますか？\n駅員：はい、直通列車がございます。"
+          },
+          { 
+            jp: "急行と準急、どちらに乗ればいいですか？", 
+            en: "Should I take the express or semi-express?", 
+            ro: "Kyūkō to junkū, dochira ni noreba ii desu ka?",
+            context: "列車の種類の選択について確認する表現です。",
+            example: "客：急行と準急、どちらに乗ればいいですか？\n駅員：急行の方が早いのでお勧めです。"
+          },
+          { 
+            jp: "この電車は◯◯に停まりますか？", 
+            en: "Does this train stop at ____?", 
+            ro: "Kono densha wa ____ ni tomarimasu ka?",
+            context: "特定の駅での停車可否を確認する表現です。",
+            example: "客：この電車は池袋に停まりますか？\n駅員：はい、池袋に停車いたします。"
+          },
+          { 
+            jp: "前寄りの車両だと乗り換えが楽ですか？", 
+            en: "Is it easier to transfer from the front cars?", 
+            ro: "Mae yori no sharyō da to norikae ga raku desu ka?",
+            context: "車両位置による乗り換えの利便性を確認する表現です。",
+            example: "客：前寄りの車両だと乗り換えが楽ですか？\n駅員：はい、前寄りの車両の方が乗り換えが楽です。"
+          },
+          { 
+            jp: "バスに乗り継ぐ場合、どの出口が近いですか？", 
+            en: "If I'm transferring to a bus, which exit is closest?", 
+            ro: "Basu ni noritsugu baai, dono deguchi ga chikai desu ka?",
+            context: "バス乗り継ぎ時の最適出口を確認する表現です。",
+            example: "客：バスに乗り継ぐ場合、どの出口が近いですか？\n駅員：東口が一番近いです。"
+          },
+          { 
+            jp: "振替輸送は利用できますか？（遅延時）", 
+            en: "Can I use alternative transportation? (during delays)", 
+            ro: "Furikae yusō wa riyō dekimasu ka?",
+            context: "遅延時の振替輸送利用可否を確認する表現です。",
+            example: "客：振替輸送は利用できますか？\n駅員：はい、振替輸送が利用できます。"
+          },
+          { 
+            jp: "乗り過ごしたら、どこで折り返せばいいですか？", 
+            en: "If I miss my stop, where should I turn back?", 
+            ro: "Norisugoshitara, doko de orikaeseba ii desu ka?",
+            context: "乗り過ごした場合の対処法を確認する表現です。",
+            example: "客：乗り過ごしたら、どこで折り返せばいいですか？\n駅員：次の駅で折り返してください。"
+          },
+          { 
+            jp: "途中で快速に追い越されますか？", 
+            en: "Will I be overtaken by an express train on the way?", 
+            ro: "Tochū de kaisoku ni oikosaremasu ka?",
+            context: "途中での快速列車による追い越しの有無を確認する表現です。",
+            example: "客：途中で快速に追い越されますか？\n駅員：はい、途中で快速に追い越されます。"
+          },
+          { 
+            jp: "平日と休日でダイヤは違いますか？", 
+            en: "Is the schedule different on weekdays and holidays?", 
+            ro: "Heijitsu to kyūjitsu de daiya wa chigaimasu ka?",
+            context: "平日と休日のダイヤの違いを確認する表現です。",
+            example: "客：平日と休日でダイヤは違いますか？\n駅員：はい、休日は本数が少なくなります。"
+          },
+          { 
+            jp: "時間帯で運行本数は変わりますか？", 
+            en: "Does the frequency change by time of day?", 
+            ro: "Jikantai de unkō honsū wa kawarimasu ka?",
+            context: "時間帯による運行本数の変化を確認する表現です。",
+            example: "客：時間帯で運行本数は変わりますか？\n駅員：はい、朝晩は本数が多くなります。"
+          },
+          { 
+            jp: "目的地まで階段を避けたいのですが、ルートありますか？", 
+            en: "I want to avoid stairs to my destination. Are there routes?", 
+            ro: "Mokutekichi made kaidan o saketai no desu ga, rūto arimasu ka?",
+            context: "階段を避けたルートの有無を確認する表現です。",
+            example: "客：目的地まで階段を避けたいのですが、ルートありますか？\n駅員：はい、エレベーターを使ったルートがございます。"
+          },
+          { 
+            jp: "バスの最終は何時発ですか？", 
+            en: "What time is the last bus?", 
+            ro: "Basu no saishū wa nanji hatsu desu ka?",
+            context: "最終バスの時刻を確認する表現です。",
+            example: "客：バスの最終は何時発ですか？\n運転手：23時30分発でございます。"
+          },
+          { 
+            jp: "どの出口（◯◯口）が近いですか？", 
+            en: "Which exit (____ exit) is closest?", 
+            ro: "Dono deguchi (____ guchi) ga chikai desu ka?",
+            context: "最適な出口を確認する表現です。",
+            example: "客：どの出口が近いですか？\n駅員：東口が一番近いです。"
+          },
+          { 
+            jp: "路面電車の乗り換えはどの停留所ですか？", 
+            en: "Which stop should I transfer to the streetcar?", 
+            ro: "Romen densha no norikae wa dono teiryūjo desu ka?",
+            context: "路面電車への乗り換え停留所を確認する表現です。",
+            example: "客：路面電車の乗り換えはどの停留所ですか？\n駅員：3番出口の停留所でございます。"
+          },
+          { 
+            jp: "空港行きの直行便はありますか？", 
+            en: "Are there direct services to the airport?", 
+            ro: "Kūkō yuki no chokkō bin wa arimasu ka?",
+            context: "空港行き直行便の有無を確認する表現です。",
+            example: "客：空港行きの直行便はありますか？\n駅員：はい、空港行きの直行便がございます。"
+          },
+          { 
+            jp: "英語の路線図はありますか？", 
+            en: "Do you have route maps in English?", 
+            ro: "Eigo no rosen zu wa arimasu ka?",
+            context: "英語版路線図の有無を確認する表現です。",
+            example: "客：英語の路線図はありますか？\n駅員：はい、英語版の路線図がございます。"
+          },
+        ],
+      },
+      {
         id: "bus",
-        title: "3. Bus",
+        title: "4. Bus",
         phrases: [
           { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
           { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
