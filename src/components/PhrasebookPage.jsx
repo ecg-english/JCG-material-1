@@ -1162,14 +1162,172 @@ const DATA = [
         ],
       },
       {
-        id: "checkout",
-        title: "3. Checkout",
+        id: "trying-on",
+        title: "3. Trying On / Fit / Size & Color（試着・サイズ・色）",
         phrases: [
-          { jp: "袋はいりません。", en: "I don't need a bag.", ro: "Fukuro wa irimasen." },
-          { jp: "領収書をお願いします。", en: "A receipt, please.", ro: "Ryōshūsho o onegaishimasu." },
-          { jp: "クレジットでお願いします。", en: "Credit card, please.", ro: "Kurejitto de onegaishimasu." },
+          { 
+            jp: "試着してもいいですか？", 
+            en: "Can I try this on?", 
+            ro: "Shichaku shite mo ii desu ka?",
+            context: "商品の試着許可を確認する表現です。日本では多くの店で試着が可能です。",
+            example: "客：試着してもいいですか？\n店員：はい、試着室は奥にございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "靴を試してもいいですか？（靴下ありますか？）", 
+            en: "Can I try on the shoes? (Do you have socks?)", 
+            ro: "Kutsu o tameshite mo ii desu ka?",
+            context: "靴の試着許可と靴下の有無を確認する表現です。衛生上の理由で靴下が必要です。",
+            example: "客：靴を試してもいいですか？靴下ありますか？\n店員：はい、靴下もご用意いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "フィッティング用のカバーありますか？（メイクよけ）", 
+            en: "Do you have fitting covers? (makeup protectors)", 
+            ro: "Fitting yō no kābā arimasu ka?",
+            context: "試着時のメイク汚れ防止用カバーの有無を確認する表現です。",
+            example: "客：フィッティング用のカバーありますか？\n店員：はい、メイクよけのカバーがございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "一つ上（下）のサイズありますか？", 
+            en: "Do you have one size up (down)?", 
+            ro: "Hitotsu ue (shita) no saizu arimasu ka?",
+            context: "隣接するサイズの有無を確認する表現です。",
+            example: "客：一つ上のサイズありますか？\n店員：はい、Mサイズがございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "サイズ表記は海外サイズですか？日本サイズですか？", 
+            en: "Are the sizes in international or Japanese sizing?", 
+            ro: "Saizu hyōji wa kaigai saizu desu ka? Nihon saizu desu ka?",
+            context: "サイズ表記の基準を確認する表現です。海外と日本ではサイズが異なることがあります。",
+            example: "客：サイズ表記は海外サイズですか？\n店員：日本サイズでございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "肩幅（袖丈／着丈）が合っているか見てもらえますか？", 
+            en: "Could you check if the shoulder width (sleeve length/body length) fits?", 
+            ro: "Kata haba (sode take / ki take) ga atte iru ka mite moraemasu ka?",
+            context: "服のフィット感を店員に確認してもらう表現です。",
+            example: "客：肩幅が合っているか見てもらえますか？\n店員：はい、肩幅はちょうどいいですよ。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "もう少しゆったりめ（細め）はありますか？", 
+            en: "Do you have something a bit looser (tighter)?", 
+            ro: "Mō sukoshi yuttarime (hosome) wa arimasu ka?",
+            context: "より適したサイズの有無を確認する表現です。",
+            example: "客：もう少しゆったりめはありますか？\n店員：はい、ワンサイズ上のMサイズがございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ウエストがきつい（ゆるい）です。", 
+            en: "The waist is too tight (loose).", 
+            ro: "Uesuto ga kitsui (yurui) desu.",
+            context: "ウエストのフィット感について伝える表現です。",
+            example: "客：ウエストがきついです。\n店員：ワンサイズ上のMサイズをお試しください。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "丈を詰めてもらえますか？（裾上げ）", 
+            en: "Could you shorten the length? (hem adjustment)", 
+            ro: "Take o tsumete moraemasu ka?",
+            context: "服の丈を短くしてもらうよう依頼する表現です。",
+            example: "客：丈を詰めてもらえますか？\n店員：はい、裾上げいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "裾上げはどれくらいでできますか？", 
+            en: "How long does hemming take?", 
+            ro: "Susoage wa dore kurai de dekimasu ka?",
+            context: "裾上げの所要時間を確認する表現です。",
+            example: "客：裾上げはどれくらいでできますか？\n店員：約30分で完了いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ヒールだと当たるので、ワンサイズ上を試したいです。", 
+            en: "The heel rubs, so I'd like to try one size up.", 
+            ro: "Hīru da to ataru node, wansaizu ue o tameshitai desu.",
+            context: "靴のサイズ調整の理由を説明する表現です。",
+            example: "客：ヒールだと当たるので、ワンサイズ上を試したいです。\n店員：かしこまりました。ワンサイズ上をお持ちいたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "インソールを入れた状態で試せますか？", 
+            en: "Can I try them on with insoles?", 
+            ro: "Insōru o ireta jōtai de tamesemasu ka?",
+            context: "インソールを入れた状態での試着可否を確認する表現です。",
+            example: "客：インソールを入れた状態で試せますか？\n店員：はい、インソールもご用意いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "色違いも試せますか？", 
+            en: "Can I try different colors?", 
+            ro: "Iro chigai mo tamesemasu ka?",
+            context: "他の色での試着可否を確認する表現です。",
+            example: "客：色違いも試せますか？\n店員：はい、他の色もお試しいただけます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "自然光で色味を確認してもいいですか？", 
+            en: "Can I check the color in natural light?", 
+            ro: "Shizen kō de iro aji o kakunin shite mo ii desu ka?",
+            context: "自然光での色確認許可を求める表現です。店内の照明と自然光では色味が異なることがあります。",
+            example: "客：自然光で色味を確認してもいいですか？\n店員：はい、窓際でお確かめください。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "透けていないか見てもらえますか？", 
+            en: "Could you check if it's see-through?", 
+            ro: "Sukete inai ka mite moraemasu ka?",
+            context: "服の透け具合を店員に確認してもらう表現です。",
+            example: "客：透けていないか見てもらえますか？\n店員：はい、少し透けていますね。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "生地のチクチク感は少ないですか？", 
+            en: "Does the fabric have minimal prickliness?", 
+            ro: "Kiji no chikuchiku kan wa sukunai desu ka?",
+            context: "生地の肌触りについて確認する表現です。",
+            example: "客：生地のチクチク感は少ないですか？\n店員：はい、とても柔らかくてチクチクしません。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "洗うと縮みますか？", 
+            en: "Does it shrink when washed?", 
+            ro: "Arau to chijimimasu ka?",
+            context: "洗濯時の縮み具合を確認する表現です。",
+            example: "客：洗うと縮みますか？\n店員：少し縮む可能性がございます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "帽子のサイズ調整はできますか？", 
+            en: "Can you adjust the hat size?", 
+            ro: "Bōshi no saizu chōsei wa dekimasu ka?",
+            context: "帽子のサイズ調整サービスの有無を確認する表現です。",
+            example: "客：帽子のサイズ調整はできますか？\n店員：はい、サイズ調整いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "ベルト穴を増やせますか？", 
+            en: "Can you add more belt holes?", 
+            ro: "Beruto ana o fuyase masu ka?",
+            context: "ベルトの穴を追加で作ってもらえるかを確認する表現です。",
+            example: "客：ベルト穴を増やせますか？\n店員：はい、追加で穴を開けます。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "指輪のサイズ直しは可能ですか？", 
+            en: "Is ring resizing possible?", 
+            ro: "Yubiwa no saizu naoshi wa kanō desu ka?",
+            context: "指輪のサイズ調整サービスの有無を確認する表現です。",
+            example: "客：指輪のサイズ直しは可能ですか？\n店員：はい、サイズ調整いたします。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "似たデザインでもっと安いものはありますか？", 
+            en: "Do you have similar designs for less?", 
+            ro: "Nita dezain de motto yasui mono wa arimasu ka?",
+            context: "より手頃な価格の類似商品の有無を確認する表現です。",
+            example: "客：似たデザインでもっと安いものはありますか？\n店員：はい、こちらの商品がお手頃です。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "コーディネートの提案をいただけますか？", 
+            en: "Could you suggest some coordinating items?", 
+            ro: "Kōdinēto no teian o itadakemasu ka?",
+            context: "コーディネートの提案を依頼する表現です。",
+            example: "客：コーディネートの提案をいただけますか？\n店員：はい、こちらのアイテムと合わせるのがおすすめです。\n客：ありがとうございます。"
+          },
+          { 
+            jp: "試着したものはどうすれば良いですか？", 
+            en: "What should I do with the items I tried on?", 
+            ro: "Shichaku shita mono wa dō sureba yoi desu ka?",
+            context: "試着後の商品の扱い方を確認する表現です。",
+            example: "客：試着したものはどうすれば良いですか？\n店員：試着室の外のカゴにお入れください。\n客：ありがとうございます。"
+          },
         ],
-      },
+      }
     ],
   },
   {
@@ -1246,10 +1404,10 @@ const DATA = [
       },
     ],
   },
-  {
-    id: "price-discount-points",
-    title: "4. Price, Discount & Points（価格・割引・ポイント）",
-    phrases: [
+      {
+        id: "price-discount-points",
+        title: "4. Price, Discount & Points（価格・割引・ポイント）",
+        phrases: [
       { 
         jp: "表示価格は税込みですか？税別ですか？", 
         en: "Is the displayed price including tax or excluding tax?", 
