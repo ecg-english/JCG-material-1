@@ -2656,7 +2656,194 @@ const DATA = [
           },
         ],
       },
-
+      {
+        id: "taxis",
+        title: "7. Taxis（タクシー）",
+        phrases: [
+          { 
+            jp: "タクシー乗り場はどこですか？", 
+            en: "Where is the taxi stand?", 
+            ro: "Takushī noriba wa doko desu ka?",
+            context: "タクシー乗り場の場所を確認する表現です。",
+            example: "客：タクシー乗り場はどこですか？\n駅員：東口の外にございます。"
+          },
+          { 
+            jp: "ここで流しのタクシー、捕まえられますか？", 
+            en: "Can I catch a passing taxi here?", 
+            ro: "Koko de nagashi no takushī, tsukamaeraremasu ka?",
+            context: "流しのタクシーを捕まえる可否を確認する表現です。",
+            example: "客：ここで流しのタクシー、捕まえられますか？\n駅員：はい、手を挙げれば止まります。"
+          },
+          { 
+            jp: "（手を挙げて）空車、止めてもらえますか？", 
+            en: "(raising hand) Can you stop? I need a taxi.", 
+            ro: "Kūsha, tomete moraemasu ka?",
+            context: "空車のタクシーを止める際の表現です。",
+            example: "客：（手を挙げて）空車、止めてもらえますか？\n運転手：はい、どうぞ。"
+          },
+          { 
+            jp: "〇〇までお願いします。（住所／施設名）", 
+            en: "To ____, please. (address/facility name)", 
+            ro: "____ made onegaishimasu.",
+            context: "目的地を伝える基本的な表現です。",
+            example: "客：渋谷駅までお願いします。\n運転手：かしこまりました。"
+          },
+          { 
+            jp: "この住所までお願いします。（スマホの地図を見せながら）", 
+            en: "To this address, please. (showing smartphone map)", 
+            ro: "Kono jūsho made onegaishimasu.",
+            context: "スマホの地図を見せながら目的地を伝える表現です。",
+            example: "客：この住所までお願いします。\n運転手：はい、確認いたします。"
+          },
+          { 
+            jp: "〇〇駅の〇〇口までお願いします。", 
+            en: "To the ____ exit of ____ station, please.", 
+            ro: "____ eki no ____ guchi made onegaishimasu.",
+            context: "駅の特定の出口まで行くよう依頼する表現です。",
+            example: "客：新宿駅の東口までお願いします。\n運転手：かしこまりました。"
+          },
+          { 
+            jp: "一番近い入口（正面玄関／裏口）までお願いします。", 
+            en: "To the nearest entrance (main entrance/back entrance), please.", 
+            ro: "Ichiban chikai iriguchi made onegaishimasu.",
+            context: "最寄りの入口まで行くよう依頼する表現です。",
+            example: "客：一番近い入口までお願いします。\n運転手：はい、正面玄関まで行きます。"
+          },
+          { 
+            jp: "できるだけ早いルートでお願いします。", 
+            en: "Please take the fastest route possible.", 
+            ro: "Dekiru dake hayai rūto de onegaishimasu.",
+            context: "最速ルートでの移動を依頼する表現です。",
+            example: "客：できるだけ早いルートでお願いします。\n運転手：はい、高速道路を使います。"
+          },
+          { 
+            jp: "渋滞を避けられる道でお願いします。", 
+            en: "Please take a route that avoids traffic jams.", 
+            ro: "Jūtai o sakerareru michi de onegaishimasu.",
+            context: "渋滞を避けたルートでの移動を依頼する表現です。",
+            example: "客：渋滞を避けられる道でお願いします。\n運転手：はい、裏道を使います。"
+          },
+          { 
+            jp: "高速を使ってください／下道でお願いします。", 
+            en: "Please use the highway / Please take the local roads.", 
+            ro: "Kōsoku o tsukatte kudasai / Shitamichi de onegaishimasu.",
+            context: "高速道路または一般道の使用を指定する表現です。",
+            example: "客：高速を使ってください。\n運転手：はい、高速道路を使います。"
+          },
+          { 
+            jp: "このルートでお願いします。（ナビ画面を指しながら）", 
+            en: "Please take this route. (pointing at navigation screen)", 
+            ro: "Kono rūto de onegaishimasu.",
+            context: "ナビ画面で特定のルートを指定する表現です。",
+            example: "客：このルートでお願いします。\n運転手：はい、このルートで行きます。"
+          },
+          { 
+            jp: "次の角を右でお願いします。（手前／奥）", 
+            en: "Please turn right at the next corner. (near/far)", 
+            ro: "Tsugi no kado o migi de onegaishimasu.",
+            context: "次の角での右折を指示する表現です。",
+            example: "客：次の角を右でお願いします。\n運転手：はい、右折します。"
+          },
+          { 
+            jp: "信号の手前で停めてください。", 
+            en: "Please stop before the traffic light.", 
+            ro: "Shingō no temae de tomete kudasai.",
+            context: "信号の手前での停車を依頼する表現です。",
+            example: "客：信号の手前で停めてください。\n運転手：はい、信号の手前で停車します。"
+          },
+          { 
+            jp: "ここは停められますか？（駐停車の可否）", 
+            en: "Can you stop here? (checking if parking/stopping is allowed)", 
+            ro: "Koko wa tomeraremasu ka?",
+            context: "特定の場所での停車可否を確認する表現です。",
+            example: "客：ここは停められますか？\n運転手：はい、停車可能です。"
+          },
+          { 
+            jp: "反対側で降りたいので、回り込んでもらえますか？", 
+            en: "I want to get out on the opposite side, so could you go around?", 
+            ro: "Hantai gawa de oritai node, mawarikonde moraemasu ka?",
+            context: "反対側で降車するために回り込んでもらうよう依頼する表現です。",
+            example: "客：反対側で降りたいので、回り込んでもらえますか？\n運転手：はい、回り込みます。"
+          },
+          { 
+            jp: "雨なので、屋根のあるところで降ろしてください。", 
+            en: "It's raining, so please drop me off under a roof.", 
+            ro: "Ame na node, yane no aru tokoro de oroshite kudasai.",
+            context: "雨の日に屋根のある場所で降車するよう依頼する表現です。",
+            example: "客：雨なので、屋根のあるところで降ろしてください。\n運転手：はい、ビルの入口まで行きます。"
+          },
+          { 
+            jp: "トランクを開けてもらえますか？（荷物の出し入れ）", 
+            en: "Could you open the trunk? (for loading/unloading luggage)", 
+            ro: "Toranku o akete moraemasu ka?",
+            context: "トランクの開閉を依頼する表現です。",
+            example: "客：トランクを開けてもらえますか？\n運転手：はい、トランクを開けます。"
+          },
+          { 
+            jp: "エアコンを少し弱めてもらえますか？", 
+            en: "Could you turn down the air conditioning a bit?", 
+            ro: "Eakon o sukoshi yowamete moraemasu ka?",
+            context: "エアコンの温度調整を依頼する表現です。",
+            example: "客：エアコンを少し弱めてもらえますか？\n運転手：はい、調整いたします。"
+          },
+          { 
+            jp: "もう少しゆっくりで大丈夫です。", 
+            en: "It's okay to go a bit slower.", 
+            ro: "Mō sukoshi yukkuri de daijōbu desu.",
+            context: "速度を落としてもらうよう依頼する表現です。",
+            example: "客：もう少しゆっくりで大丈夫です。\n運転手：はい、速度を落とします。"
+          },
+          { 
+            jp: "少し寄り道してもいいですか？このATMに寄ってください。", 
+            en: "Is it okay to make a small detour? Please stop at this ATM.", 
+            ro: "Sukoshi yorimichi shite mo ii desu ka? Kono ATM ni yotte kudasai.",
+            context: "寄り道の許可を求める表現です。",
+            example: "客：少し寄り道してもいいですか？このATMに寄ってください。\n運転手：はい、ATMに寄ります。"
+          },
+          { 
+            jp: "すみません、やっぱり行き先を変更してもいいですか？", 
+            en: "Excuse me, can I change the destination after all?", 
+            ro: "Sumimasen, yappari ikisaki o henkō shite mo ii desu ka?",
+            context: "行き先の変更を依頼する表現です。",
+            example: "客：すみません、やっぱり行き先を変更してもいいですか？\n運転手：はい、どこに変更しますか？"
+          },
+          { 
+            jp: "おおよそいくらくらいになりそうですか？（目安）", 
+            en: "About how much will it cost? (estimate)", 
+            ro: "Oyoso ikura kurai ni narisō desu ka?",
+            context: "料金の目安を確認する表現です。",
+            example: "客：おおよそいくらくらいになりそうですか？\n運転手：約2000円程度だと思います。"
+          },
+          { 
+            jp: "メーターお願いします。（乗車直後の確認）", 
+            en: "Please use the meter. (confirmation right after boarding)", 
+            ro: "Mētā onegaishimasu.",
+            context: "メーター使用の確認を依頼する表現です。",
+            example: "客：メーターお願いします。\n運転手：はい、メーターを使います。"
+          },
+          { 
+            jp: "カード／交通系IC／QR決済、使えますか？", 
+            en: "Can I use cards/transportation IC cards/QR payments?", 
+            ro: "Kādo / kōtsū kei IC / QR kessai, tsukaemasu ka?",
+            context: "支払い方法の確認をする表現です。",
+            example: "客：カード使えますか？\n運転手：はい、カードがご利用いただけます。"
+          },
+          { 
+            jp: "領収書をお願いします。宛名は空欄（上様）で。", 
+            en: "Please give me a receipt. Leave the recipient name blank (or write 'To whom it may concern').", 
+            ro: "Ryōshūsho o onegaishimasu. Ate na wa kūran de.",
+            context: "領収書の発行を依頼する表現です。",
+            example: "客：領収書をお願いします。宛名は空欄で。\n運転手：はい、領収書を発行いたします。"
+          },
+          { 
+            jp: "前の車を追いかけてください！", 
+            en: "Please chase that car in front!", 
+            ro: "Mae no kuruma o oikakete kudasai!",
+            context: "前の車を追跡するよう依頼する表現です。",
+            example: "客：前の車を追いかけてください！\n運転手：申し訳ございませんが、追跡はできません。"
+          },
+        ],
+      }
     ],
   },
   {
