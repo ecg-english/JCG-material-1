@@ -1438,6 +1438,145 @@ const DATA = [
             example: "客：返品は可能ですか？\n店員：はい、7日以内でしたら返品可能です。\n客：ありがとうございます。"
           },
         ],
+      },
+      {
+        id: "checkout-payment",
+        title: "5. Checkout & Payment（レジ・支払い）",
+        phrases: [
+          { 
+            jp: "お会計お願いします。", 
+            en: "Please ring me up.", 
+            ro: "Okaikei onegaishimasu.",
+            context: "レジでの会計を依頼する基本的な表現です。",
+            example: "客：お会計お願いします。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "袋はいりません／袋をお願いします。", 
+            en: "I don't need a bag / Please give me a bag.", 
+            ro: "Fukuro wa irimasen / Fukuro o onegaishimasu.",
+            context: "レジ袋の要否を伝える表現です。環境配慮の観点から袋を断ることもあります。",
+            example: "客：袋はいりません。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "レジ袋はいくらですか？", 
+            en: "How much are the shopping bags?", 
+            ro: "Reji bukuro wa ikura desu ka?",
+            context: "レジ袋の価格を確認する表現です。",
+            example: "客：レジ袋はいくらですか？\n店員：5円でございます。"
+          },
+          { 
+            jp: "レジ袋はいりません。", 
+            en: "I don't need a shopping bag.", 
+            ro: "Reji bukuro wa irimasen.",
+            context: "レジ袋を断る表現です。",
+            example: "客：レジ袋はいりません。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "温かいものと冷たいものは分けてください。", 
+            en: "Please separate the hot and cold items.", 
+            ro: "Atatakai mono to tsumetai mono wa wakete kudasai.",
+            context: "温度の異なる商品を別々の袋に分けてもらうよう依頼する表現です。",
+            example: "客：温かいものと冷たいものは分けてください。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "割れ物なので、緩衝材を入れてください。", 
+            en: "Please add cushioning material since it's fragile.", 
+            ro: "Waremono na node, kanshōzai o irete kudasai.",
+            context: "割れ物商品の梱包を依頼する表現です。",
+            example: "客：割れ物なので、緩衝材を入れてください。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "テープで口を留めてもらえますか？", 
+            en: "Could you seal the bag with tape?", 
+            ro: "Tēpu de kuchi o tomete moraemasu ka?",
+            context: "袋の口をテープで留めてもらうよう依頼する表現です。",
+            example: "客：テープで口を留めてもらえますか？\n店員：はい、テープで留めます。"
+          },
+          { 
+            jp: "二つの袋に分けてもらえますか？", 
+            en: "Could you split this into two bags?", 
+            ro: "Futatsu no fukuro ni wakete moraemasu ka?",
+            context: "商品を複数の袋に分けてもらうよう依頼する表現です。",
+            example: "客：二つの袋に分けてもらえますか？\n店員：はい、分けてお入れします。"
+          },
+          { 
+            jp: "保冷剤（ドライアイス）は付けられますか？", 
+            en: "Can you add ice packs (dry ice)?", 
+            ro: "Horeizai (dorai ais) wa tsukeraremasu ka?",
+            context: "保冷剤の追加を依頼する表現です。",
+            example: "客：保冷剤は付けられますか？\n店員：はい、保冷剤を入れます。"
+          },
+          { 
+            jp: "クレジットカードで支払います。", 
+            en: "I'll pay by credit card.", 
+            ro: "Kurejitto kādo de shiharaimasu.",
+            context: "クレジットカードでの支払いを伝える表現です。",
+            example: "客：クレジットカードで支払います。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "一括払いでお願いします。", 
+            en: "Please charge it all at once.", 
+            ro: "Ikkatsu barai de onegaishimasu.",
+            context: "分割払いではなく一括払いを希望する表現です。",
+            example: "客：一括払いでお願いします。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "タッチ決済で支払います。", 
+            en: "I'll pay by touch payment.", 
+            ro: "Tatchi kessai de shiharaimasu.",
+            context: "タッチ決済での支払いを伝える表現です。",
+            example: "客：タッチ決済で支払います。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "交通系ICで支払います。（Suicaなど）", 
+            en: "I'll pay with a transportation IC card. (Suica, etc.)", 
+            ro: "Kōtsū kei IC de shiharaimasu.",
+            context: "交通系ICカードでの支払いを伝える表現です。",
+            example: "客：交通系ICで支払います。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "QRコード決済でお願いします。（PayPayなど）", 
+            en: "Please use QR code payment. (PayPay, etc.)", 
+            ro: "QR kōdo kessai de onegaishimasu.",
+            context: "QRコード決済での支払いを依頼する表現です。",
+            example: "客：QRコード決済でお願いします。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "現金とカードを併用できますか？", 
+            en: "Can I use both cash and card?", 
+            ro: "Genkin to kādo o heiyō dekimasu ka?",
+            context: "現金とカードの併用可否を確認する表現です。",
+            example: "客：現金とカードを併用できますか？\n店員：はい、可能でございます。"
+          },
+          { 
+            jp: "レシートください／レシートは結構です。", 
+            en: "Please give me a receipt / I don't need a receipt.", 
+            ro: "Reshīto kudasai / Reshīto wa kekkō desu.",
+            context: "レシートの要否を伝える表現です。",
+            example: "客：レシートください。\n店員：はい、どうぞ。"
+          },
+          { 
+            jp: "領収書お願いします。宛名は◯◯でお願いします。", 
+            en: "Please give me a receipt. Please make it out to ____.", 
+            ro: "Ryōshūsho onegaishimasu. Ate na wa ____ de onegaishimasu.",
+            context: "領収書の宛名を指定して依頼する表現です。",
+            example: "客：領収書お願いします。宛名は田中でお願いします。\n店員：かしこまりました。"
+          },
+          { 
+            jp: "小分けの袋を数枚いただけますか？", 
+            en: "Could you give me several small bags?", 
+            ro: "Kowake no fukuro o sūmai itadakemasu ka?",
+            context: "小分け用の袋を複数枚もらうよう依頼する表現です。",
+            example: "客：小分けの袋を数枚いただけますか？\n店員：はい、どうぞ。"
+          },
+          { 
+            jp: "熱いので、持ち手を二重にしてもらえますか？", 
+            en: "It's hot, so could you double the bag handles?", 
+            ro: "Atsui node, mochite o nijū ni shite moraemasu ka?",
+            context: "熱い商品の持ち手を二重にして安全に持てるよう依頼する表現です。",
+            example: "客：熱いので、持ち手を二重にしてもらえますか？\n店員：はい、二重にしておきます。"
+          },
+        ],
       }
     ],
   },
