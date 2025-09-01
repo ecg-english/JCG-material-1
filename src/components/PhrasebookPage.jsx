@@ -2344,8 +2344,161 @@ const DATA = [
         ],
       },
       {
+        id: "fare-adjustment-receipts",
+        title: "5. Fare Adjustment & Receipts（運賃精算・清算・領収書）",
+        phrases: [
+          { 
+            jp: "乗り越してしまいました。精算はどこでできますか？", 
+            en: "I went past my destination. Where can I adjust the fare?", 
+            ro: "Norikoshite shimaimashita. Seisan wa doko de dekimasu ka?",
+            context: "乗り越し時の運賃精算場所を確認する表現です。",
+            example: "客：乗り越してしまいました。精算はどこでできますか？\n駅員：精算機で精算できます。"
+          },
+          { 
+            jp: "切符に不足分を足せますか？", 
+            en: "Can I add the shortfall to my ticket?", 
+            ro: "Kippu ni busokubun o tasemasu ka?",
+            context: "切符の不足分を追加で支払う可否を確認する表現です。",
+            example: "客：切符に不足分を足せますか？\n駅員：はい、精算機で追加精算できます。"
+          },
+          { 
+            jp: "ICの入場記録がないと言われました。どうすればいいですか？", 
+            en: "I was told there's no entry record on my IC card. What should I do?", 
+            ro: "IC no nyūjō kiroku ga nai to iwaremashita. Dō sureba ii desu ka?",
+            context: "ICカードの入場記録がない場合の対処法を確認する表現です。",
+            example: "客：ICの入場記録がないと言われました。どうすればいいですか？\n駅員：有人改札で対応いたします。"
+          },
+          { 
+            jp: "タッチし忘れました。有人改札で対応できますか？", 
+            en: "I forgot to touch in. Can you help at the manned gate?", 
+            ro: "Tatchi shi wasuremashita. Yūjin kaisatsu de taiō dekimasu ka?",
+            context: "ICカードのタッチし忘れ時の対応可否を確認する表現です。",
+            example: "客：タッチし忘れました。有人改札で対応できますか？\n駅員：はい、有人改札で対応いたします。"
+          },
+          { 
+            jp: "残高不足で改札を通れませんでした。ここでチャージできますか？", 
+            en: "I couldn't pass through the gate due to insufficient balance. Can I charge here?", 
+            ro: "Zangaku busoku de kaisatsu o tōremasen deshita. Koko de chāji dekimasu ka?",
+            context: "残高不足時のチャージ可否を確認する表現です。",
+            example: "客：残高不足で改札を通れませんでした。ここでチャージできますか？\n駅員：はい、券売機でチャージできます。"
+          },
+          { 
+            jp: "誤って二重タッチしました。返金は可能ですか？", 
+            en: "I accidentally double-tapped. Can I get a refund?", 
+            ro: "Ayamatte nijū tatchi shimashita. Henkin wa kanō desu ka?",
+            context: "誤操作による二重タッチ時の返金可否を確認する表現です。",
+            example: "客：誤って二重タッチしました。返金は可能ですか？\n駅員：はい、返金いたします。"
+          },
+          { 
+            jp: "払い戻しはできますか？（未使用の切符）", 
+            en: "Can I get a refund? (for unused tickets)", 
+            ro: "Haraimodoshi wa dekimasu ka?",
+            context: "未使用切符の払い戻し可否を確認する表現です。",
+            example: "客：払い戻しはできますか？\n駅員：はい、払い戻しが可能です。"
+          },
+          { 
+            jp: "指定席券の変更は可能ですか？", 
+            en: "Can I change my reserved seat ticket?", 
+            ro: "Shiteki seki ken no henkō wa kanō desu ka?",
+            context: "指定席券の変更可否を確認する表現です。",
+            example: "客：指定席券の変更は可能ですか？\n駅員：はい、指定席券の変更が可能です。"
+          },
+          { 
+            jp: "予定が変わったので特急券をキャンセルしたいです。", 
+            en: "My plans changed, so I'd like to cancel my express ticket.", 
+            ro: "Yotei ga kawatta node tokkyū ken o kyanseru shitai desu.",
+            context: "特急券のキャンセルを依頼する表現です。",
+            example: "客：予定が変わったので特急券をキャンセルしたいです。\n駅員：はい、キャンセルいたします。"
+          },
+          { 
+            jp: "遅延で乗れなかった特急券は返金対象ですか？", 
+            en: "Is my express ticket refundable due to delays?", 
+            ro: "Chien de norenakatta tokkyū ken wa henkin taishō desu ka?",
+            context: "遅延による特急券の返金対象性を確認する表現です。",
+            example: "客：遅延で乗れなかった特急券は返金対象ですか？\n駅員：はい、返金対象となります。"
+          },
+          { 
+            jp: "領収書をお願いします。宛名は◯◯で。", 
+            en: "Please give me a receipt. Please make it out to ____.", 
+            ro: "Ryōshūsho o onegaishimasu. Ate na wa ____ de.",
+            context: "領収書の宛名を指定して依頼する表現です。",
+            example: "客：領収書をお願いします。宛名は田中で。\n駅員：かしこまりました。"
+          },
+          { 
+            jp: "但し書きは「交通費」でお願いします。", 
+            en: "Please write 'transportation expenses' in the remarks.", 
+            ro: "Tadashigaki wa 'kōtsūhi' de onegaishimasu.",
+            context: "領収書の但し書きを指定する表現です。",
+            example: "客：但し書きは「交通費」でお願いします。\n駅員：かしこまりました。"
+          },
+          { 
+            jp: "クレジット決済の明細を確認したいです。", 
+            en: "I'd like to check the details of my credit card payment.", 
+            ro: "Kurejitto kessai no meisai o kakunin shitai desu.",
+            context: "クレジット決済の明細確認を依頼する表現です。",
+            example: "客：クレジット決済の明細を確認したいです。\n駅員：はい、明細をご確認いたします。"
+          },
+          { 
+            jp: "ICカードの利用履歴を印字できますか？", 
+            en: "Can I print my IC card usage history?", 
+            ro: "IC kādo no riyō rekishi o insatsu dekimasu ka?",
+            context: "ICカードの利用履歴印字可否を確認する表現です。",
+            example: "客：ICカードの利用履歴を印字できますか？\n駅員：はい、券売機で印字できます。"
+          },
+          { 
+            jp: "定期券の区間変更をしたいです。", 
+            en: "I'd like to change the section of my commuter pass.", 
+            ro: "Teikiken no kukan henkō o shitai desu.",
+            context: "定期券の区間変更を依頼する表現です。",
+            example: "客：定期券の区間変更をしたいです。\n駅員：はい、区間変更いたします。"
+          },
+          { 
+            jp: "小児運賃の適用年齢を教えてください。", 
+            en: "Please tell me the age for child fares.", 
+            ro: "Shōni unchin no tekiyō nenrei o oshiete kudasai.",
+            context: "小児運賃の適用年齢を確認する表現です。",
+            example: "客：小児運賃の適用年齢を教えてください。\n駅員：6歳以上12歳未満が対象です。"
+          },
+          { 
+            jp: "身体障害者割引の手続きはどこでできますか？", 
+            en: "Where can I apply for the disabled person discount?", 
+            ro: "Shintai shōgaisha waribiki no tetsuzuki wa doko de dekimasu ka?",
+            context: "身体障害者割引の手続き場所を確認する表現です。",
+            example: "客：身体障害者割引の手続きはどこでできますか？\n駅員：窓口で手続きいたします。"
+          },
+          { 
+            jp: "紛失再発行手数料はいくらですか？", 
+            en: "How much is the reissue fee for lost items?", 
+            ro: "Funshitsu sai hakken tesūryō wa ikura desu ka?",
+            context: "紛失再発行手数料を確認する表現です。",
+            example: "客：紛失再発行手数料はいくらですか？\n駅員：500円でございます。"
+          },
+          { 
+            jp: "片道のきっぷを往復に変更できますか？", 
+            en: "Can I change my one-way ticket to a round-trip ticket?", 
+            ro: "Katamichi no kippu o ōfuku ni henkō dekimasu ka?",
+            context: "片道切符を往復切符に変更する可否を確認する表現です。",
+            example: "客：片道のきっぷを往復に変更できますか？\n駅員：はい、変更が可能です。"
+          },
+          { 
+            jp: "乗車証明（車内発行）を精算機で使えますか？", 
+            en: "Can I use the boarding certificate (issued on board) at the fare adjustment machine?", 
+            ro: "Jōsha shōmei (shanai hakkō) o seisan ki de tsukaemasu ka?",
+            context: "車内発行の乗車証明書の精算機利用可否を確認する表現です。",
+            example: "客：乗車証明を精算機で使えますか？\n駅員：はい、精算機で使用できます。"
+          },
+          { 
+            jp: "遅延証明書をいただけますか？", 
+            en: "Could you give me a delay certificate?", 
+            ro: "Chien shōmeisho o itadakemasu ka?",
+            context: "遅延証明書の発行を依頼する表現です。",
+            example: "客：遅延証明書をいただけますか？\n駅員：はい、遅延証明書を発行いたします。"
+          },
+        ],
+      },
+      {
         id: "bus",
-        title: "5. Bus",
+        title: "6. Bus",
         phrases: [
           { jp: "〇〇まで行くバスはありますか？", en: "Is there a bus to ____?", ro: "____ made iku basu wa arimasu ka?" },
           { jp: "バス停はどこですか？", en: "Where is the bus stop?", ro: "Basutei wa doko desu ka?" },
