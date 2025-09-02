@@ -3490,25 +3490,25 @@ const DATA = [
             example: "客：この部屋の広さはどのくらいですか？\nスタッフ：この部屋は25平方メートルです。"
           },
           { 
-            jp: "エレベーターはありますか？", 
-            en: "Do you have an elevator?", 
-            ro: "Erebētā wa arimasu ka?",
-            context: "エレベーターの有無を確認する表現です。",
-            example: "客：エレベーターはありますか？\nスタッフ：はい、エレベーターがございます。"
+            jp: "和室はありますか？布団で寝たいです。", 
+            en: "Do you have Japanese-style rooms? I would like to sleep on a futon.", 
+            ro: "Washitsu wa arimasu ka? Futon de netai desu.",
+            context: "和室の有無と布団での宿泊を希望する表現です。",
+            example: "客：和室はありますか？布団で寝たいです。\nスタッフ：はい、和室がございます。布団での宿泊が可能です。"
           },
           { 
-            jp: "24時間フロントサービスはありますか？", 
-            en: "Do you have 24-hour front desk service?", 
-            ro: "24-jikan furonto sābisu wa arimasu ka?",
-            context: "24時間フロントサービスの有無を確認する表現です。",
-            example: "客：24時間フロントサービスはありますか？\nスタッフ：はい、24時間フロントサービスがございます。"
+            jp: "バスタブ付きですか？シャワーのみですか？", 
+            en: "Does it have a bathtub? Or is it shower only?", 
+            ro: "Basutabu tsuki desu ka? Shawā nomi desu ka?",
+            context: "バスタブの有無とシャワーのみかどうかを確認する表現です。",
+            example: "客：バスタブ付きですか？シャワーのみですか？\nスタッフ：バスタブ付きのお部屋でございます。"
           },
           { 
-            jp: "予約確認のメールを送っていただけますか？", 
-            en: "Can you send me a confirmation email?", 
-            ro: "Yoyaku kakunin no mēru o okutte itadakemasu ka?",
-            context: "予約確認メールの送信を依頼する表現です。",
-            example: "客：予約確認のメールを送っていただけますか？\nスタッフ：はい、確認メールをお送りいたします。"
+            jp: "英語対応できるスタッフはいますか？", 
+            en: "Do you have staff who can speak English?", 
+            ro: "Eigo taiō dekiru sutaffu wa imasu ka?",
+            context: "英語対応可能なスタッフの有無を確認する表現です。",
+            example: "客：英語対応できるスタッフはいますか？\nスタッフ：はい、英語が話せるスタッフがおります。"
           }
         ],
       }
