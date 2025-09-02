@@ -3340,6 +3340,180 @@ const DATA = [
       }
     ],
   },
+  {
+    id: "accommodation-lodging",
+    emoji: "🏨",
+    title: "Accommodation & Lodging",
+    sections: [
+      {
+        id: "searching-booking",
+        title: "1. Searching & Booking（宿探し・予約）",
+        phrases: [
+          { 
+            jp: "ホテルの予約を取りたいのですが。", 
+            en: "I would like to make a hotel reservation.", 
+            ro: "Hoteru no yoyaku o toritai no desu ga.",
+            context: "ホテルの予約を希望する際の基本的な表現です。",
+            example: "客：ホテルの予約を取りたいのですが。\nスタッフ：はい、いつからご宿泊でしょうか？"
+          },
+          { 
+            jp: "◯月◯日から◯泊で予約したいです。", 
+            en: "I would like to make a reservation from ____ to ____ for ____ nights.", 
+            ro: "____ gatsu ____ nichi kara ____ haku de yoyaku shitai desu.",
+            context: "具体的な宿泊期間を指定して予約する表現です。",
+            example: "客：12月25日から2泊で予約したいです。\nスタッフ：12月25日から27日までですね。"
+          },
+          { 
+            jp: "シングルルームは空いていますか？", 
+            en: "Do you have any single rooms available?", 
+            ro: "Shinguru rūmu wa suite imasu ka?",
+            context: "シングルルームの空き状況を確認する表現です。",
+            example: "客：シングルルームは空いていますか？\nスタッフ：はい、シングルルームがございます。"
+          },
+          { 
+            jp: "ダブルルームとツインルーム、どちらがお得ですか？", 
+            en: "Which is more cost-effective, a double room or a twin room?", 
+            ro: "Daburu rūmu to tsuin rūmu, dochira ga otoku desu ka?",
+            context: "部屋タイプの価格比較を確認する表現です。",
+            example: "客：ダブルルームとツインルーム、どちらがお得ですか？\nスタッフ：ツインルームの方が少しお安くなっております。"
+          },
+          { 
+            jp: "禁煙ルームをお願いします。", 
+            en: "I would like a non-smoking room, please.", 
+            ro: "Kinen rūmu o onegai shimasu.",
+            context: "禁煙ルームを希望する表現です。",
+            example: "客：禁煙ルームをお願いします。\nスタッフ：はい、禁煙ルームでご予約いたします。"
+          },
+          { 
+            jp: "朝食付きのプランはありますか？", 
+            en: "Do you have any plans that include breakfast?", 
+            ro: "Chōshoku tsuki no puran wa arimasu ka?",
+            context: "朝食付きプランの有無を確認する表現です。",
+            example: "客：朝食付きのプランはありますか？\nスタッフ：はい、朝食付きプランがございます。"
+          },
+          { 
+            jp: "チェックインは何時からですか？", 
+            en: "What time is check-in from?", 
+            ro: "Chekkuin wa nan ji kara desu ka?",
+            context: "チェックイン開始時刻を確認する表現です。",
+            example: "客：チェックインは何時からですか？\nスタッフ：チェックインは15時からとなっております。"
+          },
+          { 
+            jp: "チェックアウトは何時までですか？", 
+            en: "What time is check-out until?", 
+            ro: "Chekkuauto wa nan ji made desu ka?",
+            context: "チェックアウト終了時刻を確認する表現です。",
+            example: "客：チェックアウトは何時までですか？\nスタッフ：チェックアウトは11時までとなっております。"
+          },
+          { 
+            jp: "空港からの送迎サービスはありますか？", 
+            en: "Do you have airport shuttle service?", 
+            ro: "Kūkō kara no sōgei sābisu wa arimasu ka?",
+            context: "空港送迎サービスの有無を確認する表現です。",
+            example: "客：空港からの送迎サービスはありますか？\nスタッフ：はい、空港送迎サービスがございます。"
+          },
+          { 
+            jp: "駐車場は無料ですか？", 
+            en: "Is parking free?", 
+            ro: "Chūshajō wa muryō desu ka?",
+            context: "駐車場の料金を確認する表現です。",
+            example: "客：駐車場は無料ですか？\nスタッフ：はい、駐車場は無料でご利用いただけます。"
+          },
+          { 
+            jp: "Wi-Fiは使えますか？", 
+            en: "Can I use Wi-Fi?", 
+            ro: "Wi-Fi wa tsukaemasu ka?",
+            context: "Wi-Fiの利用可否を確認する表現です。",
+            example: "客：Wi-Fiは使えますか？\nスタッフ：はい、Wi-Fiは無料でご利用いただけます。"
+          },
+          { 
+            jp: "温泉はありますか？", 
+            en: "Do you have hot springs?", 
+            ro: "Onsen wa arimasu ka?",
+            context: "温泉の有無を確認する表現です。",
+            example: "客：温泉はありますか？\nスタッフ：はい、大浴場がございます。"
+          },
+          { 
+            jp: "ペットと一緒に宿泊できますか？", 
+            en: "Can I stay with my pet?", 
+            ro: "Petto to issho ni shukuhaku dekimasu ka?",
+            context: "ペット同伴宿泊の可否を確認する表現です。",
+            example: "客：ペットと一緒に宿泊できますか？\nスタッフ：申し訳ございませんが、ペット同伴はお断りしております。"
+          },
+          { 
+            jp: "キャンセル料はかかりますか？", 
+            en: "Are there any cancellation fees?", 
+            ro: "Kyanseru ryō wa kakarimasu ka?",
+            context: "キャンセル料の有無を確認する表現です。",
+            example: "客：キャンセル料はかかりますか？\nスタッフ：前日まででしたらキャンセル料はかかりません。"
+          },
+          { 
+            jp: "予約の変更は可能ですか？", 
+            en: "Can I change my reservation?", 
+            ro: "Yoyaku no henkō wa kanō desu ka?",
+            context: "予約変更の可否を確認する表現です。",
+            example: "客：予約の変更は可能ですか？\nスタッフ：はい、変更可能です。"
+          },
+          { 
+            jp: "最寄り駅はどこですか？", 
+            en: "What is the nearest station?", 
+            ro: "Moyori eki wa doko desu ka?",
+            context: "最寄り駅の場所を確認する表現です。",
+            example: "客：最寄り駅はどこですか？\nスタッフ：最寄り駅は東京駅です。"
+          },
+          { 
+            jp: "駅からホテルまで歩けますか？", 
+            en: "Can I walk from the station to the hotel?", 
+            ro: "Eki kara hoteru made arukemasu ka?",
+            context: "駅からの徒歩距離を確認する表現です。",
+            example: "客：駅からホテルまで歩けますか？\nスタッフ：はい、徒歩5分程度です。"
+          },
+          { 
+            jp: "観光地へのアクセスは良いですか？", 
+            en: "Is the access to tourist spots good?", 
+            ro: "Kankōchi e no akusesu wa yoi desu ka?",
+            context: "観光地へのアクセスの良さを確認する表現です。",
+            example: "客：観光地へのアクセスは良いですか？\nスタッフ：はい、多くの観光地にアクセスしやすい立地です。"
+          },
+          { 
+            jp: "部屋の写真を見せていただけますか？", 
+            en: "Can you show me photos of the room?", 
+            ro: "Heya no shashin o misete itadakemasu ka?",
+            context: "部屋の写真を見せてもらうよう依頼する表現です。",
+            example: "客：部屋の写真を見せていただけますか？\nスタッフ：はい、こちらが部屋の写真です。"
+          },
+          { 
+            jp: "この部屋の広さはどのくらいですか？", 
+            en: "How big is this room?", 
+            ro: "Kono heya no hirosa wa dono kurai desu ka?",
+            context: "部屋の広さを確認する表現です。",
+            example: "客：この部屋の広さはどのくらいですか？\nスタッフ：この部屋は25平方メートルです。"
+          },
+          { 
+            jp: "エレベーターはありますか？", 
+            en: "Do you have an elevator?", 
+            ro: "Erebētā wa arimasu ka?",
+            context: "エレベーターの有無を確認する表現です。",
+            example: "客：エレベーターはありますか？\nスタッフ：はい、エレベーターがございます。"
+          },
+          { 
+            jp: "24時間フロントサービスはありますか？", 
+            en: "Do you have 24-hour front desk service?", 
+            ro: "24-jikan furonto sābisu wa arimasu ka?",
+            context: "24時間フロントサービスの有無を確認する表現です。",
+            example: "客：24時間フロントサービスはありますか？\nスタッフ：はい、24時間フロントサービスがございます。"
+          },
+          { 
+            jp: "予約確認のメールを送っていただけますか？", 
+            en: "Can you send me a confirmation email?", 
+            ro: "Yoyaku kakunin no mēru o okutte itadakemasu ka?",
+            context: "予約確認メールの送信を依頼する表現です。",
+            example: "客：予約確認のメールを送っていただけますか？\nスタッフ：はい、確認メールをお送りいたします。"
+          }
+        ],
+      }
+    ],
+  },
 
 ];
 
@@ -3695,8 +3869,6 @@ function ProgressBar({ learnedPhrases, totalPhrases }) {
     </div>
   );
 }
-
-
 
 // ======= メイン =======
 export default function PhrasebookPage() {
