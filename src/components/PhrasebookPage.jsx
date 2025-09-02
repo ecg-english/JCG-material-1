@@ -3198,6 +3198,145 @@ const DATA = [
             example: "患者：以前にも同じ症状がありました。\n医師：いつ頃に同じ症状がありましたか？"
           }
         ],
+      },
+      {
+        id: "during-consultation",
+        title: "3. During the Consultation（診察中のやりとり）",
+        phrases: [
+          { 
+            jp: "上着を脱ぎますか？／袖をまくればいいですか？", 
+            en: "Should I take off my outer clothing? / Should I roll up my sleeves?", 
+            ro: "Uwagi o nugimasu ka? / Sode o makureba ii desu ka?",
+            context: "診察時の服装について確認する表現です。",
+            example: "医師：上着を脱いでください。\n患者：袖をまくればいいですか？\n医師：はい、それで大丈夫です。"
+          },
+          { 
+            jp: "深呼吸してくださいね。吸って、吐いて。", 
+            en: "Please take a deep breath. Breathe in, breathe out.", 
+            ro: "Shinkokyū shite kudasai ne. Sute, haite.",
+            context: "医師が患者に深呼吸を指示する表現です。",
+            example: "医師：深呼吸してくださいね。吸って、吐いて。\n患者：はい、こうですか？\n医師：はい、その通りです。"
+          },
+          { 
+            jp: "口を開けて「アー」と言ってください。", 
+            en: "Please open your mouth and say 'Ah'.", 
+            ro: "Kuchi o akete 'Ā' to itte kudasai.",
+            context: "医師が患者に口を開けるよう指示する表現です。",
+            example: "医師：口を開けて「アー」と言ってください。\n患者：アー。\n医師：はい、ありがとうございます。"
+          },
+          { 
+            jp: "触ると痛いところはありますか？→ここが痛いです。", 
+            en: "Does it hurt when I touch here? → Yes, it hurts here.", 
+            ro: "Sawaru to itai tokoro wa arimasu ka? → Koko ga itai desu.",
+            context: "医師が患部を触診する際の痛みの確認と患者の回答例です。",
+            example: "医師：触ると痛いところはありますか？\n患者：ここが痛いです。\n医師：ここですね。どのくらい痛いですか？"
+          },
+          { 
+            jp: "体の力を抜いてください。", 
+            en: "Please relax your body.", 
+            ro: "Karada no chikara o nuite kudasai.",
+            context: "医師が患者に体をリラックスさせるよう指示する表現です。",
+            example: "医師：体の力を抜いてください。\n患者：はい、こうですか？\n医師：はい、その通りです。"
+          },
+          { 
+            jp: "痛みが走ったら教えてください。", 
+            en: "Please let me know if you feel any sharp pain.", 
+            ro: "Itami ga hashittara oshiete kudasai.",
+            context: "医師が患者に痛みの有無を確認する表現です。",
+            example: "医師：痛みが走ったら教えてください。\n患者：はい、分かりました。\n医師：では、ここを押してみますね。"
+          },
+          { 
+            jp: "その姿勢はつらいので、横向きでもいいですか？", 
+            en: "This position is uncomfortable. Can I lie on my side?", 
+            ro: "Sono shisei wa tsurai node, yokomuki demo ii desu ka?",
+            context: "患者が診察姿勢の変更を希望する表現です。",
+            example: "患者：その姿勢はつらいので、横向きでもいいですか？\n医師：はい、横向きでも大丈夫です。"
+          },
+          { 
+            jp: "立ち上がると少しふらつきます。", 
+            en: "I feel a bit dizzy when I stand up.", 
+            ro: "Tachiagaru to sukoshi furatsukimasu.",
+            context: "患者が立ちくらみの症状を伝える表現です。",
+            example: "患者：立ち上がると少しふらつきます。\n医師：それは貧血の可能性がありますね。"
+          },
+          { 
+            jp: "この薬で眠気は出ますか？", 
+            en: "Will this medication make me drowsy?", 
+            ro: "Kono kusuri de nemuke wa demasu ka?",
+            context: "患者が薬の副作用について確認する表現です。",
+            example: "患者：この薬で眠気は出ますか？\n医師：はい、少し眠気が出る可能性があります。"
+          },
+          { 
+            jp: "処方はできれば弱めからお願いします。", 
+            en: "If possible, please prescribe a milder medication.", 
+            ro: "Shohō wa dekitara yowame kara onegai shimasu.",
+            context: "患者が弱い薬の処方を希望する表現です。",
+            example: "患者：処方はできれば弱めからお願いします。\n医師：はい、まずは弱い薬から始めましょう。"
+          },
+          { 
+            jp: "仕事に支障が出ない薬だと助かります。", 
+            en: "I'd appreciate medication that won't interfere with my work.", 
+            ro: "Shigoto ni shishō ga denai kusuri da to tasukarimasu.",
+            context: "患者が仕事に影響しない薬を希望する表現です。",
+            example: "患者：仕事に支障が出ない薬だと助かります。\n医師：はい、仕事に影響しない薬を処方しますね。"
+          },
+          { 
+            jp: "運転しても大丈夫な薬ですか？", 
+            en: "Is it safe to drive while taking this medication?", 
+            ro: "Unten shite mo daijōbu na kusuri desu ka?",
+            context: "患者が薬の服用後の運転安全性を確認する表現です。",
+            example: "患者：運転しても大丈夫な薬ですか？\n医師：この薬は運転に影響しません。"
+          },
+          { 
+            jp: "食前／食後どちらで飲みますか？", 
+            en: "Should I take this before or after meals?", 
+            ro: "Shokumae / shokugo dochira de nomimasu ka?",
+            context: "患者が薬の服用タイミングを確認する表現です。",
+            example: "患者：食前／食後どちらで飲みますか？\n医師：食後に飲んでください。"
+          },
+          { 
+            jp: "何日くらいで良くなりますか？", 
+            en: "About how many days will it take to get better?", 
+            ro: "Nan nichi kurai de yoku narimasu ka?",
+            context: "患者が回復までの期間を確認する表現です。",
+            example: "患者：何日くらいで良くなりますか？\n医師：1週間程度で良くなると思います。"
+          },
+          { 
+            jp: "悪化した場合はどこに連絡すればいいですか？", 
+            en: "Where should I contact if my condition worsens?", 
+            ro: "Akka shita baai wa doko ni renraku sureba ii desu ka?",
+            context: "患者が症状悪化時の連絡先を確認する表現です。",
+            example: "患者：悪化した場合はどこに連絡すればいいですか？\n医師：この電話番号に連絡してください。"
+          },
+          { 
+            jp: "今日は安静にした方がいいですか？入浴は可能ですか？", 
+            en: "Should I rest today? Can I take a bath?", 
+            ro: "Kyō wa ansei ni shita hō ga ii desu ka? Nyūyoku wa kanō desu ka?",
+            context: "患者が安静の必要性と入浴の可否を確認する表現です。",
+            example: "患者：今日は安静にした方がいいですか？入浴は可能ですか？\n医師：はい、今日は安静にしてください。入浴は大丈夫です。"
+          },
+          { 
+            jp: "会社に提出する診断書を書いていただけますか？", 
+            en: "Can you write a medical certificate for my company?", 
+            ro: "Kaisha ni teishutsu suru shindansho o kaite itadakemasu ka?",
+            context: "患者が会社提出用の診断書を依頼する表現です。",
+            example: "患者：会社に提出する診断書を書いていただけますか？\n医師：はい、診断書を書きますね。"
+          },
+          { 
+            jp: "しばらく様子見で大丈夫ですか？", 
+            en: "Is it okay to wait and see for a while?", 
+            ro: "Shibaraku yōsu mi de daijōbu desu ka?",
+            context: "患者が経過観察の可否を確認する表現です。",
+            example: "患者：しばらく様子見で大丈夫ですか？\n医師：はい、1週間様子を見てみましょう。"
+          },
+          { 
+            jp: "抗生物質を出してください", 
+            en: "Please prescribe antibiotics.", 
+            ro: "Kōseibusshitsu o dashite kudasai.",
+            context: "患者が抗生物質の処方を希望する表現です。",
+            example: "患者：抗生物質を出してください。\n医師：はい、抗生物質を処方しますね。"
+          }
+        ],
       }
     ],
   },
