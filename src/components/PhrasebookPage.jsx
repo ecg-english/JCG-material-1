@@ -3613,7 +3613,7 @@ function Section({ title, phrases, learnedPhrases, updateLearnedPhrases }) {
   };
 
   const onChatGPT = (text) => {
-    const chatGPTUrl = "https://chatgpt.com/g/g-68a950f74a088191bafa2dd0a552ab4f-earthian";
+    const chatGPTUrl = "https://chatgpt.com/g/g-68ba503af370819190575f56f3db2a57-siyahanisu";
     // 新しいタブでChatGPTを開く
     window.open(chatGPTUrl, '_blank');
   };
